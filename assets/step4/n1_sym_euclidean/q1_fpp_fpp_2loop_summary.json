@@ -1,0 +1,149 @@
+{
+  "graph_count": 134924,
+  "by_insertion_term": {
+    "O12_Aldb_A": 4936,
+    "O12_Aldb_AA": 414,
+    "O12_dlb_A": 57176,
+    "O12_dlb_AA": 4936,
+    "O21_AA_Aldb": 414,
+    "O21_AA_dlb": 4936,
+    "O21_A_Aldb": 4936,
+    "O21_A_dlb": 57176
+  },
+  "top_action_multisets": [
+    {
+      "action_vertices": {
+        "V_AAA": 4
+      },
+      "count": 93312
+    },
+    {
+      "action_vertices": {
+        "V_AAA": 3
+      },
+      "count": 15552
+    },
+    {
+      "action_vertices": {
+        "V_AAA": 3,
+        "V_A_lambda_lambdabar": 1
+      },
+      "count": 7776
+    },
+    {
+      "action_vertices": {
+        "V_AAA": 2,
+        "V_AAAA": 1
+      },
+      "count": 5760
+    },
+    {
+      "action_vertices": {
+        "V_AAA": 2,
+        "V_A_lambda_lambdabar": 2
+      },
+      "count": 2448
+    },
+    {
+      "action_vertices": {
+        "V_AAA": 2,
+        "V_A_lambda_lambdabar": 1
+      },
+      "count": 1584
+    },
+    {
+      "action_vertices": {
+        "V_A_lambda_lambdabar": 4
+      },
+      "count": 1392
+    },
+    {
+      "action_vertices": {
+        "V_AAA": 1,
+        "V_A_lambda_lambdabar": 3
+      },
+      "count": 1224
+    },
+    {
+      "action_vertices": {
+        "V_AAA": 1,
+        "V_AAAA": 1
+      },
+      "count": 1056
+    },
+    {
+      "action_vertices": {
+        "V_AAA": 2,
+        "V_cbar_A_c": 2
+      },
+      "count": 720
+    },
+    {
+      "action_vertices": {
+        "V_AAA": 2
+      },
+      "count": 648
+    },
+    {
+      "action_vertices": {
+        "V_AAA": 1,
+        "V_A_lambda_lambdabar": 2
+      },
+      "count": 624
+    },
+    {
+      "action_vertices": {
+        "V_AAA": 1,
+        "V_AAAA": 1,
+        "V_A_lambda_lambdabar": 1
+      },
+      "count": 528
+    },
+    {
+      "action_vertices": {
+        "V_A_lambda_lambdabar": 3
+      },
+      "count": 504
+    },
+    {
+      "action_vertices": {
+        "V_AAAA": 2
+      },
+      "count": 384
+    },
+    {
+      "action_vertices": {
+        "V_AAA": 1,
+        "V_cbar_A_c": 3
+      },
+      "count": 216
+    },
+    {
+      "action_vertices": {
+        "V_AAA": 1,
+        "V_cbar_A_c": 2
+      },
+      "count": 192
+    },
+    {
+      "action_vertices": {
+        "V_cbar_A_c": 4
+      },
+      "count": 192
+    },
+    {
+      "action_vertices": {
+        "V_AAAA": 1,
+        "V_A_lambda_lambdabar": 2
+      },
+      "count": 144
+    },
+    {
+      "action_vertices": {
+        "V_AAAA": 1,
+        "V_A_lambda_lambdabar": 1
+      },
+      "count": 96
+    }
+  ]
+}

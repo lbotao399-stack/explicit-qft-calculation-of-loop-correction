@@ -1,0 +1,5 @@
+.DS_Store
+__pycache__/
+*.pyc
+assets/step4/n1_sym_euclidean/q1_fpp_fpp_2loop_graphs.json
+assets/step4/n1_sym_euclidean/q1_fpp_fpp_2loop_graphs.md
