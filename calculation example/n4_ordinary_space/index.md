@@ -12,7 +12,8 @@ Q_1\big(\Tr(F_{\rm raw}F_{\rm raw})\big),
    - first true seed page
    - input \(\mathcal O_{FF}=\Tr(F_{\rm raw}F_{\rm raw})\)
    - raw one-loop basis \(\{\mathcal K_{F\bar\Lambda}^{\rm raw},\mathcal K_{\Psi X}^{\rm raw}\}\)
-   - first coefficients to extract: \(c_{F\bar\Lambda}^{\rm raw}\), \(c_{\Psi X}^{\rm raw}\)
+   - five-class sum reduction fixed
+   - \(c_{F\bar\Lambda}^{\rm raw}=\frac{iC_A}{2}\), \(\;c_{\Psi X}^{\rm raw}=\frac{\sqrt2\,C_A}{2}\)
 
 ## Deferred legacy \(2\to1\) pages
 

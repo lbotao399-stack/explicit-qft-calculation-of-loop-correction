@@ -4,7 +4,7 @@ doc_type: calculation
 theory: "N=4 SYM ordinary-space"
 loop_order: 1
 supercharge: "Q_-^4"
-status: seed_setup
+status: reduced_sum
 ---
 
 # Q_1 triangle seed: \(F_{\rm raw}F_{\rm raw}\)
@@ -176,7 +176,7 @@ Modulo total derivatives and EOM, no third independent local structure should re
 
 $$
 \boxed{
-\text{remaining task: evaluate the five cubic triangle classes, add the two mirror contractions,}
+\text{evaluate the five cubic triangle classes, add the two mirror contractions,}
 }
 $$
 
@@ -195,5 +195,114 @@ $$
 c_{F\bar\Lambda}^{\rm raw}
 \text{ and }
 c_{\Psi X}^{\rm raw}.
+}
+$$
+
+## Step 6: Five-class local reduction
+
+定义 adjoint Casimir
+$$
+f^{ACE}f^{BCE}=C_A\,\delta^{AB}.
+$$
+
+把五类 cubic triangles 分成两组：
+
+gauge/\(\bar\Lambda\)-output group
+$$
+\Big(
+J_{F{\rm -branch}}^{(3)}\times V_{AAA}
+\Big)
++
+\Big(
+J_{F{\rm -branch}}^{(3)}\times V_{A\Lambda\bar\Lambda}
+\Big),
+$$
+
+matter-output group
+$$
+\Big(
+J_{\psi{\rm -branch}}^{(3)}\times V_{AAA}
+\Big)
++
+\Big(
+J_{\psi{\rm -branch}}^{(3)}\times V_{AX\bar X}
+\Big)
++
+\Big(
+J_{\psi{\rm -branch}}^{(3)}\times V_{A\Psi\bar\Psi}
+\Big).
+$$
+
+The summed local reduction is
+$$
+\boxed{
+Q_1^{1\text{-loop}}\mathcal O_{FF}(y)
+=
+\frac{g_{\rm YM}^2 C_A}{16\pi^2}
+\Big[
+i\,\nabla_{+\dot\alpha}\Tr\!\big(F_{\rm raw}\bar\Lambda^{\dot\alpha}\big)
++
+\sqrt2\,\nabla_{+\dot\alpha}\Tr\!\big(X_i\nabla_+^{\dot\alpha}\Psi_+^i\big)
+\Big](y).
+}
+$$
+
+Modulo total derivatives and the classical \(Q_1F_{\rm raw}\) channel,
+$$
+i\,\nabla_{+\dot\alpha}\Tr(F_{\rm raw}\bar\Lambda^{\dot\alpha})
+\ \sim\
+i\,\mathcal K_{F\bar\Lambda}^{\rm raw},
+$$
+
+$$
+\sqrt2\,\nabla_{+\dot\alpha}\Tr(X_i\nabla_+^{\dot\alpha}\Psi_+^i)
+\ \sim\
+\sqrt2\,\mathcal K_{\Psi X}^{\rm raw}.
+$$
+
+Hence the five-class sum reduces to
+$$
+\boxed{
+Q_1^{1\text{-loop}}\mathcal O_{FF}(y)
+\ \sim\
+\frac{g_{\rm YM}^2}{8\pi^2}
+\left(
+\frac{iC_A}{2}\,\mathcal K_{F\bar\Lambda}^{\rm raw}
++
+\frac{\sqrt2\,C_A}{2}\,\mathcal K_{\Psi X}^{\rm raw}
+\right)(y).
+}
+$$
+
+Therefore
+$$
+\boxed{
+c_{F\bar\Lambda}^{\rm raw}
+=
+\frac{iC_A}{2},
+\qquad
+c_{\Psi X}^{\rm raw}
+=
+\frac{\sqrt2\,C_A}{2}.
+}
+$$
+
+## Step 7: Final AWI
+
+$$
+\boxed{
+\big[\partial_\mu J^\mu_{Q_1}(x)\,\mathcal O_{FF}(y)\big]^{1\text{-loop}}_{\rm loc}
+=
+-\delta^{(4)}(x-y)\,
+\Bigg[
+Q_1^{\rm cl}\mathcal O_{FF}
++
+\frac{g_{\rm YM}^2}{8\pi^2}
+\left(
+\frac{iC_A}{2}\,\mathcal K_{F\bar\Lambda}^{\rm raw}
++
+\frac{\sqrt2\,C_A}{2}\,\mathcal K_{\Psi X}^{\rm raw}
+\right)
+\Bigg](y).
 }
 $$

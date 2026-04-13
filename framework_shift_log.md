@@ -73,3 +73,9 @@
   - `FF` 输入的一圈局域余项必须落在导数二字母基底 `{ \mathcal K_{F\bar\Lambda}^{\rm raw}, \mathcal K_{\Psi X}^{\rm raw} }`；
   - `FF` 页只保留五类 cubic triangle：`J_F^{(3)} x V_AAA`, `J_F^{(3)} x V_{A\Lambda\bar\Lambda}`, `J_\psi^{(3)} x V_AAA`, `J_\psi^{(3)} x V_{AX\bar X}`, `J_\psi^{(3)} x V_{A\Psi\bar\Psi}`；
   - 旧 `XX->Psi`, `XPsi->F`, `PsiX->F` 页面全部降级为 deferred legacy pages，等待 input-by-input basis classification 完成后再重新判定其角色。
+- 同日继续完成 `FF` 页的 five-class sum reduction：
+  - 采用先前 `n4_sym` 的 DR local result 作为 cross-check；
+  - 五类 cubic triangles 的总和压到 `Q_1^{1-loop}\Tr(F_{\rm raw}F_{\rm raw})` 的两维 raw basis 上；
+  - 得到 `c_{F\bar\Lambda}^{\rm raw}=iC_A/2`；
+  - 得到 `c_{\Psi X}^{\rm raw}=\sqrt2\,C_A/2`；
+  - 因而当前 `n4_ordinary_space` 的第一条已闭合输入是 `FF`。
