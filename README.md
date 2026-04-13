@@ -14,6 +14,8 @@
   - 工作入口。强调标准工作流、核心对象定义、最重要的几个已得结论。
 - `working guidance.md`
   - 工作指导文件。把这套算法流程固定成后续继续扩展时的统一口径。
+- `framework_shift_log.md`
+  - 简短记录这次从旧 component workflow 切到 current-divergence / local-term extraction 的框架变化。
 - `theory/`
   - 按理论分桶放背景输入。当前主桶是 `n1_sym_euclidean/`、`n1_general/`、`n4_sym/`。
 - `calculation example/`

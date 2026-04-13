@@ -112,6 +112,56 @@ $$
 5. 每个具体算例只保留真正相关的 supercurrent / current-divergence 分量。
 6. 对 1-loop local coefficient，无关的 improvement terms 可以省略。
 
+## N=1 SYM 当前工作约定
+
+对 `n1_sym_euclidean`，当前统一采用 gauge-invariant FZ / Belinfante supercurrent。
+
+若 `conventions_and_rules.md` 中
+
+$$
+\delta\lambda_\alpha=c_f\,f_{\alpha\beta}\,\varepsilon^\beta+\cdots,
+$$
+
+则 current 的 relevant piece 固定为
+
+$$
+J_{\mu\alpha}^{(f\bar\lambda)}
+=
+c_f\,f_{\alpha\beta}(\sigma_\mu)^{\beta\dot\beta}\bar\lambda_{\dot\beta}.
+$$
+
+对具体 supercharge `Q_1`，工作投影统一写成
+
+$$
+J^\mu_{Q_1}:=v_{Q_1}^\alpha J^\mu_\alpha,
+\qquad
+\partial_\mu J^\mu_{Q_1}\ \text{as the insertion}.
+$$
+
+在 diagrammatics 中，必须同时保留
+
+$$
+J^{(2)}\sim (\partial A)\bar\lambda,
+\qquad
+J^{(3)}\sim [A,A]\bar\lambda.
+$$
+
+对 `Q_1(f_{++}f_{++})` 及其同族页面，不把
+
+$$
+X_{\rm gf}+X_{c\bar c},
+\qquad
+X_{\rm Fierz},
+\qquad
+\partial^\nu U_{\nu\mu\alpha},
+\qquad
+\bar J_{\mu\dot\alpha},
+\qquad
+D\text{-piece}
+$$
+
+作为独立 anomaly-channel insertion。
+
 ## 原始材料
 
 未经整理的总笔记、原始图、旧尝试版本，继续保留在 `source_archive/`。

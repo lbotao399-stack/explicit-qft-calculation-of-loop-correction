@@ -14,7 +14,7 @@
 ## Component approach
 
 - `n1_sym_euclidean/`
-  - 纯 `N=1 SYM (Euclidean)` 的记号、raw SUSY、BPS letters、Feynman rules。
+  - 纯 `N=1 SYM (Euclidean)` 的记号、raw SUSY、BPS letters、Feynman rules，以及 current-divergence 工作约定。
 - `n1_general/`
   - 一般 `N=1` component 理论，包含 chiral matter、superpotential、general SUSY 与 BPS 数据。
 - `n4_sym/`
