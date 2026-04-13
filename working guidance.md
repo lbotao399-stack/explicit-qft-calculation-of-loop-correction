@@ -80,25 +80,37 @@ $$
 \text{classical / formal-4d collapse}.
 $$
 
-### Step 4: DR integral
+### Step 4: Regularization and final local anomaly
 
-对 Step 3 剩下的 evanescent local term 施加 DR / DRED-style 计算，完成极限并得到有限局域系数。
+对 Step 3 剩下的局域项施加当前所用正规化并完成积分。
 
-### Step 5: Final local anomaly
+主线优先采用 DR / DRED-style；历史文件若仍保留 PV，则在同一步写出对应的 regulated local extraction。
 
-写出最终的 momentum-space local term、`q\to0` 极限下的 `Q^{\mathrm{Loop}}O`、以及对应的 local operator form。
+### Step 5: Simplification examples
 
-### Step 6: Simplification examples
-
-这一步可选。
-
-仅当当前算例额外做了 single-trace、特定表示、特定群论化简、或其他非主结果所必需的化简时，才把这些内容放入这一步。
+写出 single-trace、特定表示、特定群论化简、或其他非主结果所必需的化简。
 
 ## 旧文件说明
 
 旧的 component-style 计算页里仍可能保留“先写 raw SUSY，再减 classical SUSY”的老编号。
 
 后续新写或重写的文件，统一优先采用上面的 `current / Ward identity / local term extraction` 版本。
+
+## Current-divergence implementation rules
+
+1. 保持 `q\neq0`，直到 local Taylor subtraction 被明确写出。
+2. 不从 ordinary triangle 的 naive `q\to0` 极限直接读取 anomaly。
+3. anomaly sector 统一写成
+
+$$
+t^0(\text{relevant contractions})
+\;-\;
+\Gamma_{\rm cl}.
+$$
+
+4. 在 DR / DRED-style 中，有限 anomaly 系数来自 `\widehat k^2\times \Gamma(\epsilon)`。
+5. 每个具体算例只保留真正相关的 supercurrent / current-divergence 分量。
+6. 对 1-loop local coefficient，无关的 improvement terms 可以省略。
 
 ## 原始材料
 

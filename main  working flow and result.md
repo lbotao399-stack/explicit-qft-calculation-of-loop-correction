@@ -36,6 +36,8 @@ $$
 
 ordinary triangle 振幅先保留 `q\neq0`。
 
+不能把 anomaly 直接从 naive `q\to0` 的 ordinary triangle 读出来。
+
 ### 2. 用 Ward identity 实现 `Q_{\mathrm{bare}}-Q_0`
 
 概念定义仍是
@@ -67,6 +69,12 @@ $$
 $$
 
 后续主线统一采用 DR / DRED-style。
+
+在这个口径下，有限 anomaly 系数来自
+
+$$
+\widehat k^2\times \Gamma(\epsilon).
+$$
 
 ### 5. 取 `q\to0` 并识别为 local operator
 

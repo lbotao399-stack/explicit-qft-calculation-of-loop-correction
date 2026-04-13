@@ -48,6 +48,16 @@ v_{+\dot\alpha}:=v_{\alpha\dot\alpha}\big|_{\alpha=+},\qquad
 v_{-\dot\alpha}:=v_{\alpha\dot\alpha}\big|_{\alpha=-}.
 $$
 
+$$
+x_{\alpha\dot\alpha}=(\sigma^\mu)_{\alpha\dot\alpha}x_\mu,
+\qquad
+\partial_{\alpha\dot\alpha}=(\sigma^\mu)_{\alpha\dot\alpha}\partial_\mu,
+\qquad
+\sigma^{\mu\nu}
+=
+\frac14\left(\sigma^\mu\bar\sigma^\nu-\sigma^\nu\bar\sigma^\mu\right).
+$$
+
 ## Momentum-space measure
 
 $$
@@ -72,6 +82,12 @@ k_{\alpha\dot\alpha}=\bar k_{\alpha\dot\alpha},\qquad
 $$
 
 $$
+\bar g^\mu{}_\mu=4,
+\qquad
+\widehat g^\mu{}_\mu=-2\epsilon.
+$$
+
+$$
 \int_\Delta:=\int_0^1dx\,dy\,dz\,\delta(1-x-y-z).
 $$
 
@@ -91,6 +107,18 @@ $$
 \int\frac{d^d\ell}{(2\pi)^d}
 \frac{\widehat\ell^2\,\ell_{+\dot\beta}}{(\ell^2+\Delta)^3}
 =0.
+$$
+
+## Gauge-covariant derivatives
+
+$$
+\nabla_\mu\phi^i=\partial_\mu\phi^i-igA_\mu^a(T^a)^i{}_j\phi^j,
+\qquad
+\nabla_\mu\psi^i=\partial_\mu\psi^i-igA_\mu^a(T^a)^i{}_j\psi^j.
+$$
+
+$$
+(D_\mu\lambda)^a=\partial_\mu\lambda^a+gf^{abc}A_\mu^b\lambda^c.
 $$
 
 ## Fourier conventions

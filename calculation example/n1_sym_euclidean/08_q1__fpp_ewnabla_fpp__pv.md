@@ -9,7 +9,7 @@ operator: 'f_{++}e^{w\nabla}f_{++}'
 status: canonical
 ---
 
-## Step 1: Operator set up
+## Step 1: Operator / current / vertex
 
 $$
 w\cdot\nabla_+ := w^{+\dot\alpha}\nabla_{+\dot\alpha},
@@ -26,41 +26,7 @@ f_{++}^A(p_1)\,
 \delta_{p-p_1-p_2}.
 $$
 
-## Step 2: Act supercharge Q on O (off-shell)
-
-$$
-Q\equiv Q_-,
-\qquad
-Qf_{++}=i\nabla_{+\dot\rho}\widetilde\lambda^{\dot\rho}.
-$$
-
-$$
-Q\mathcal O_w
-=
-\big(i\nabla_{+\dot\rho}\widetilde\lambda^{\dot\rho}\big)\,
-e^{w\cdot\nabla_+}f_{++}
-+
-f_{++}\,
-e^{w\cdot\nabla_+}\big(i\nabla_{+\dot\rho}\widetilde\lambda^{\dot\rho}\big).
-$$
-
-## Step 3: Subtracting tree level Q
-
-$$
-Q_0\mathcal O_w=0.
-$$
-
-$$
-Q_1\mathcal O_w
-=
-\big(i\nabla_{+\dot\rho}\widetilde\lambda^{\dot\rho}\big)\,
-e^{w\cdot\nabla_+}f_{++}
-+
-f_{++}\,
-e^{w\cdot\nabla_+}\big(i\nabla_{+\dot\rho}\widetilde\lambda^{\dot\rho}\big).
-$$
-
-## Step 4: All related Feynman Diagrams (Wick contractions) at this order
+## Step 2: Wick contraction
 
 ![](../../assets/step4/calculation_triangles/n1_q1_fpp_expw_fpp_triangle_pair.png)
 
@@ -72,7 +38,7 @@ $$
 \Gamma_{21}^{AB}(w).
 $$
 
-## Step 5: Estimate the Feynman Diagrams
+## Step 3: Local part
 
 $$
 \Gamma_{12;M}^{(\rm anom)}(w)
@@ -94,7 +60,7 @@ e^{\,i w\cdot(p_1-q)}
 \mathscr F_{21}^{\dot\beta}.
 $$
 
-## Step 6: Do the regularization and Estimate the ultimate result
+## Step 4: Regularization and final local anomaly
 
 $$
 Y_{12}:=y\,p_1+(x+y)\,p_2,
@@ -156,7 +122,7 @@ f^{CE}{}_{A}f^{DE}{}_{B}
 }
 $$
 
-## Step 7: Simplification examples
+## Step 5: Simplification examples
 
 $$
 \mathcal G_{12,+\dot\beta}

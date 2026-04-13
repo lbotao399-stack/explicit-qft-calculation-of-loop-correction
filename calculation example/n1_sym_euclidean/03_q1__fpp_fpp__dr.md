@@ -9,7 +9,7 @@ operator: 'f_{++}f_{++}'
 status: canonical
 ---
 
-## Step 1: Operator set up
+## Step 1: Operator / current / vertex
 
 $$
 \mathcal O_{ff}^{AB}(p):=\int_{p_1,p_2}f_{++}^A(p_1)f_{++}^B(p_2)\,\delta_{p-p_1-p_2},
@@ -17,42 +17,7 @@ $$
 p=p_1+p_2.
 $$
 
-## Step 2: Act supercharge Q on O (off-shell)
-
-$$
-Q\equiv Q_-,\qquad
-Qf_{++}^A=i\nabla_{+\dot\alpha}\widetilde\lambda^{A\dot\alpha}.
-$$
-
-$$
-Q\mathcal O_{ff}^{AB}(p)
-=
-\int_{p_1,p_2}\delta_{p-p_1-p_2}
-\Big[
-\big(i\nabla_{+\dot\alpha}\widetilde\lambda^{A\dot\alpha}\big)(p_1)f_{++}^B(p_2)
-+
-f_{++}^A(p_1)\big(i\nabla_{+\dot\alpha}\widetilde\lambda^{B\dot\alpha}\big)(p_2)
-\Big].
-$$
-
-## Step 3: Subtracting tree level Q
-
-$$
-Q_0\mathcal O_{ff}^{AB}(p)=0.
-$$
-
-$$
-Q_1\mathcal O_{ff}^{AB}(p)
-=
-\int_{p_1,p_2}\delta_{p-p_1-p_2}
-\Big[
-\big(i\nabla_{+\dot\alpha}\widetilde\lambda^{A\dot\alpha}\big)(p_1)f_{++}^B(p_2)
-+
-f_{++}^A(p_1)\big(i\nabla_{+\dot\alpha}\widetilde\lambda^{B\dot\alpha}\big)(p_2)
-\Big].
-$$
-
-## Step 4: All related Feynman Diagrams (Wick contractions) at this order
+## Step 2: Wick contraction
 
 ![](../../assets/step4/calculation_triangles/n1_q1_fpp_fpp_triangle_pair.png)
 
@@ -115,7 +80,7 @@ f_{++}^C\widetilde\lambda^{D\dot\beta}
 \Big)(x).
 $$
 
-## Step 5: Estimate the Feynman Diagrams
+## Step 3: Local part
 
 $$
 \mathcal I\!\left[Q_1\mathcal O_{ff}^{AB}(p)\right]^{[A,\widetilde\lambda]}
@@ -211,7 +176,7 @@ f^{CE}{}_{A}f^{DE}{}_{B}\,
 f_{++}^C(p_2)\widetilde\lambda^{D\dot\beta}(p_1).
 $$
 
-## Step 6: Do the regularization and Estimate the ultimate result
+## Step 4: Regularization and final local anomaly
 
 $$
 \frac{1}{q^2(q+p_1)^2(q-p_2)^2}
@@ -374,7 +339,7 @@ f_{++}^C\widetilde\lambda^{D\dot\beta}
 \Big)(x).
 $$
 
-## Step 7: Simplification examples
+## Step 5: Simplification examples
 
 $$
 Q_1\,\operatorname{Tr}(f_{++}f_{++})(p)\Big|_{\rm DR,\,loc}^{[A,\widetilde\lambda]}
