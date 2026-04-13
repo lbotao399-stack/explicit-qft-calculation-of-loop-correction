@@ -41,3 +41,8 @@
   - component track source of truth 固定到 `theory/n1_sym_euclidean/component_diagram_master_targets.md`；
   - freeze 拍板为 `Q_1\equiv Q_-`, `\kappa_A=i/2`, `\partial_\mu J_-^\mu` WT-only；
   - superspace track 明确降级为 second-track cross-check，不再回写 component divergence pages。
+- 同日封口完成：
+  - `01` 到 `11` 全部改成统一的 page-closing template；
+  - 各页 Step C 只保留 target-matching 的 local WT pieces；
+  - 各页 Step D 统一写成 `\sum_{\rm diagrams}[\partial_\mu J_-^\mu\cdot \mathcal O]_{\rm local}=-\delta^{(4)}Q_-^{\rm cl}\mathcal O` 与 `t^0(\cdots)-\Gamma_{\rm cl}=0`；
+  - `component track status = sealed`。
