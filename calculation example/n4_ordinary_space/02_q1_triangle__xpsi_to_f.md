@@ -28,32 +28,19 @@ Q_1^{[1\to2]}\mathcal O_{i,{\rm raw}}{}^j(y)
 $$
 
 $$
-J^\mu_{F{\rm -branch}}{}^{\rm raw}
+J^\mu_{F{\rm -branch},+}{}^{\rm raw}
 =
--\frac1{2g_{\rm YM}^2}
+-\frac1{g_{\rm YM}^2}
 \Tr\!\left[
-F_{\rho\sigma}(\sigma^{\rho\sigma}\sigma^\mu\bar\Lambda)_-
+f^{\rm raw}_{+\beta}\,
+\sigma^{\mu\,\beta\dot\beta}\bar\Lambda_{\dot\beta}
 \right].
 $$
 
 $$
-J_{F{\rm -branch}}^{(2)\mu,\rm raw}
+\langle \Lambda_+^a(z)\,\bar\Lambda_{\dot\beta}^{\,b}(x)\rangle_0
 =
--\frac1{2g_{\rm YM}^2}
-\Tr\!\left[
-(\partial_\rho A_\sigma-\partial_\sigma A_\rho)
-(\sigma^{\rho\sigma}\sigma^\mu\bar\Lambda)_-
-\right],
-$$
-
-$$
-J_{F{\rm -branch}}^{(3)\mu,\rm raw}
-=
-\frac{i}{2g_{\rm YM}^2}
-\Tr\!\left[
-[A_\rho,A_\sigma]
-(\sigma^{\rho\sigma}\sigma^\mu\bar\Lambda)_-
-\right].
+i\,g_{\rm YM}^2\,\delta^{ab}\,\partial_{+\dot\beta}\Delta(z-x).
 $$
 
 $$
@@ -76,6 +63,16 @@ $$
 b_{L,{\rm raw}}\,\delta_i^{\,j}\operatorname{Tr}(F_{\rm raw})(y).
 $$
 
+Operational local collapse:
+$$
+\partial_\mu^x
+J_{F{\rm -branch},+}^{\mu,{\rm raw}}(x)
+\quad
+\xrightarrow[\langle \bar\Lambda\,\Lambda_+\rangle_0]{{\rm local}}
+\quad
+i\,F_{\rm raw}(x)\,\delta^{(4)}(x-z).
+$$
+
 ## Step 3: Reduced coefficient form
 
 $$
@@ -85,7 +82,7 @@ b_{L,{\rm raw}}
 \times
 (\text{color factor})_{X\Psi\to F}
 \times
-I_\triangle^{\rm loc}.
+I_\triangle^{\rm loc}(x-y).
 $$
 
 $$
@@ -100,8 +97,10 @@ $$
 
 $$
 \boxed{
-\text{input still needed for the explicit value of }b_{L,{\rm raw}}:
-\text{ the raw spinor projector reduction in }J_{F{\rm -branch}}^{\rm raw}
-\text{ and the honest Yukawa contraction with }V_{X\Lambda\Psi}.
+\text{remaining task: use the collapse }
+\partial_\mu J_{F{\rm -branch},+}^{\mu,{\rm raw}}\to iF_{\rm raw}\delta^{(4)}
+\text{ and evaluate the ordered raw Wick contraction with }V_{X\Lambda\Psi}
+\text{ in the amputated correlator that uses a conjugate probe to receive }F_{\rm raw},
+\text{ to read off }b_{L,{\rm raw}}.
 }
 $$

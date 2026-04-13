@@ -172,13 +172,48 @@ $$
 ## 5. Universal local triangle integral
 
 $$
-I_{\triangle}^{\rm loc}.
+[\Delta(x)^2]_{\rm R}
+=
+-\frac{1}{64\pi^4}\,
+\square\!\left(\frac{\ln(\mu^2 x^2)}{x^2}\right).
+$$
+
+$$
+I_{\triangle}^{\rm loc}(x)
+:=
+\mu\frac{\partial}{\partial\mu}[\Delta(x)^2]_{\rm R}
+=
+\frac{1}{8\pi^2}\,\delta^{(4)}(x).
 $$
 
 $$
 \boxed{
 \text{all seed channels should be reduced to }
-(\text{spinor factor})\times(\text{color factor})\times I_{\triangle}^{\rm loc}.
+(\text{spinor factor})\times(\text{color factor})\times I_{\triangle}^{\rm loc}(x-y).
+}
+$$
+
+DR-compatible statement:
+$$
+\Delta_\epsilon(x)
+=
+\frac{\Gamma(1-\epsilon)}{4\pi^{2-\epsilon}}\,
+\frac{1}{(x^2)^{1-\epsilon}},
+$$
+
+$$
+\mu^{2\epsilon}\Delta_\epsilon(x)^2
+=
+-\frac{1}{16\pi^2}\frac{1}{\epsilon}\,\delta^{(4)}(x)
+-\frac{1}{64\pi^4}\,
+\square\!\left(\frac{\ln(\mu^2 x^2)}{x^2}\right)
++O(\epsilon),
+$$
+
+$$
+\boxed{
+\text{minimal subtraction leaves }
+I_{\triangle}^{\rm loc}(x)=\frac{1}{8\pi^2}\delta^{(4)}(x).
 }
 $$
 

@@ -7,6 +7,38 @@ status: working
 
 # N=4 ordinary-space: Q_1 current relevant branches
 
+## 0. Global ordinary-space conventions
+
+$$
+[T^a,T^b]=i f^{abc}T^c,
+\qquad
+\Tr(T^aT^b)=\delta^{ab}.
+$$
+
+$$
+\Delta(x):=\frac{1}{4\pi^2 x^2},
+\qquad
+-\square\,\Delta(x)=\delta^{(4)}(x).
+$$
+
+$$
+\partial_{\alpha\dot\alpha}:=\sigma^\mu_{\alpha\dot\alpha}\partial_\mu,
+\qquad
+\partial^{\alpha\dot\alpha}:=\epsilon^{\alpha\beta}\epsilon^{\dot\alpha\dot\beta}\partial_{\beta\dot\beta}.
+$$
+
+$$
+\partial^{\beta\dot\beta}\partial_{\alpha\dot\beta}
+=
+\delta^\beta_{\ \alpha}\,\square.
+$$
+
+$$
+\mathcal L_{\rm gf}
+=
+\frac{1}{2g_{\rm YM}^2}\,(\partial_\mu A^\mu)^2.
+$$
+
 ## 1. Raw off-shell layer
 
 $$
@@ -63,7 +95,82 @@ $$
 \bar{\mathcal W}^i\propto \epsilon^{ijk}[X_j,X_k].
 $$
 
-## 3. Localized Noether identity
+## 3. Raw free propagators
+
+Quadratic action:
+$$
+S_2
+=
+\frac{1}{g_{\rm YM}^2}\int d^4x\,
+\Tr\Big[
+\bar X^i(-\square)X_i
+-i\,\Lambda^\alpha\partial_{\alpha\dot\beta}\bar\Lambda^{\dot\beta}
+-i\,\Psi^{i\alpha}\partial_{\alpha\dot\beta}\bar\Psi_i^{\dot\beta}
++\frac12 A_\mu(-\square\delta_{\mu\nu})A_\nu
++\frac12 D^2
++\bar G_i G^i
+\Big].
+$$
+
+$$
+\langle X_i^a(x)\,\bar X^{j\,b}(y)\rangle_0
+=
+g_{\rm YM}^2\,\delta_i^{\ j}\,\delta^{ab}\,\Delta(x-y).
+$$
+
+$$
+\langle \Lambda_\alpha^a(x)\,\bar\Lambda_{\dot\beta}^{\,b}(y)\rangle_0
+=
+i\,g_{\rm YM}^2\,\delta^{ab}\,\partial_{\alpha\dot\beta}\Delta(x-y).
+$$
+
+$$
+\langle \Psi^{i\,a}_\alpha(x)\,\bar\Psi_{j\dot\beta}^{\,b}(y)\rangle_0
+=
+i\,g_{\rm YM}^2\,\delta^i_{\ j}\,\delta^{ab}\,\partial_{\alpha\dot\beta}\Delta(x-y).
+$$
+
+$$
+\langle A_\mu^a(x)\,A_\nu^b(y)\rangle_0
+=
+g_{\rm YM}^2\,\delta^{ab}\,\delta_{\mu\nu}\,\Delta(x-y).
+$$
+
+$$
+A_{\alpha\dot\alpha}:=\sigma^\mu_{\alpha\dot\alpha}A_\mu
+\qquad\Longrightarrow\qquad
+\langle A_{\alpha\dot\alpha}^a(x)\,A_{\beta\dot\beta}^b(y)\rangle_0
+=
+2\,g_{\rm YM}^2\,\delta^{ab}\,\epsilon_{\alpha\beta}\epsilon_{\dot\alpha\dot\beta}\,\Delta(x-y).
+$$
+
+$$
+\langle D^a(x)D^b(y)\rangle_0
+=
+g_{\rm YM}^2\,\delta^{ab}\,\delta^{(4)}(x-y),
+\qquad
+\langle G^{i\,a}(x)\,\bar G_{j}^{\,b}(y)\rangle_0
+=
+g_{\rm YM}^2\,\delta^i_{\ j}\,\delta^{ab}\,\delta^{(4)}(x-y).
+$$
+
+$$
+\langle X X\rangle_0
+=
+\langle \bar X\bar X\rangle_0
+=
+\langle \Lambda\Lambda\rangle_0
+=
+\langle \bar\Lambda\bar\Lambda\rangle_0
+=
+\langle \Psi\Psi\rangle_0
+=
+\langle \bar\Psi\bar\Psi\rangle_0
+=
+0.
+$$
+
+## 4. Localized Noether identity
 
 $$
 \eta^\alpha_A(x)=\eta^\alpha_4(x)\,\delta_A^{\,4},
@@ -91,7 +198,7 @@ $$
 
 工作上直接从 localized variation 读取 \((\partial_\mu\eta^\alpha_4)\)-coefficient。
 
-## 4. Raw SUSY transformations needed for current derivation
+## 5. Raw SUSY transformations needed for current derivation
 
 $$
 \Delta_{4\alpha}A_{\beta\dot\beta}
@@ -126,7 +233,7 @@ $$
 \delta_{\eta}\bar\Lambda_{\dot\beta}=0.
 $$
 
-## 5. Raw current split
+## 6. Raw current split
 
 $$
 J^\mu_{Q_1}{}^{\rm raw}
@@ -138,7 +245,7 @@ J^\mu_{F\text{-branch}}{}^{\rm raw}
 (\text{other raw branches, ignored for no-derivative }2\to1).
 $$
 
-### 5.1 \(\psi\)-output branch
+### 6.1 \(\psi\)-output branch
 
 从
 $$
@@ -210,7 +317,7 @@ J_{\psi{\rm -branch}}^{(3)\mu,\rm raw}
 \right].
 $$
 
-### 5.2 \(F\)-output branch
+### 6.2 \(F\)-output branch
 
 从
 $$
@@ -256,36 +363,124 @@ F_{\rho\sigma}(\sigma^{\rho\sigma}\sigma^\mu\bar\Lambda)_\alpha
 \right].
 $$
 
+## 7. Self-dual projector and unified \(F\)-branch formula
+
 $$
-J^\mu_{F{\rm -branch}}^{\rm raw}
+f^{\rm raw}_{\alpha\beta}
+:=
+\nabla_{(\alpha|\dot\gamma|}A_{\beta)}{}^{\dot\gamma},
+\qquad
+F_{\rho\sigma}(\sigma^{\rho\sigma})_{\alpha\beta}
 =
--\frac1{2g_{\rm YM}^2}
+2\,f^{\rm raw}_{\alpha\beta}.
+$$
+
+$$
+F_{\rm raw}:=f^{\rm raw}_{++}.
+$$
+
+$$
+F_{\rho\sigma}(\sigma^{\rho\sigma}\sigma^\mu\bar\Lambda)_\alpha
+=
+2\,f^{\rm raw}_{\alpha\beta}\,
+\sigma^{\mu\,\beta\dot\beta}\bar\Lambda_{\dot\beta}.
+$$
+
+$$
+J^{\mu,{\rm raw}}_{F{\rm -branch},\alpha}
+=
+-\frac{1}{g_{\rm YM}^2}
 \Tr\!\left[
-F_{\rho\sigma}(\sigma^{\rho\sigma}\sigma^\mu\bar\Lambda)_-
+f^{\rm raw}_{\alpha\beta}\,
+\sigma^{\mu\,\beta\dot\beta}\bar\Lambda_{\dot\beta}
+\right].
+$$
+
+$$
+J^{\mu,{\rm raw}}_{F{\rm -branch}}
+=
+-\frac{1}{g_{\rm YM}^2}
+\Tr\!\left[
+f^{\rm raw}_{-\beta}\,
+\sigma^{\mu\,\beta\dot\beta}\bar\Lambda_{\dot\beta}
 \right].
 $$
 
 $$
 J_{F{\rm -branch}}^{(2)\mu,\rm raw}
 =
--\frac1{2g_{\rm YM}^2}
+-\frac1{g_{\rm YM}^2}
 \Tr\!\left[
-(\partial_\rho A_\sigma-\partial_\sigma A_\rho)
-(\sigma^{\rho\sigma}\sigma^\mu\bar\Lambda)_-
+f^{(2)\,{\rm raw}}_{-\beta}\,
+\sigma^{\mu\,\beta\dot\beta}\bar\Lambda_{\dot\beta}
 \right],
-$$
-
-$$
+\qquad
 J_{F{\rm -branch}}^{(3)\mu,\rm raw}
 =
-\frac{i}{2g_{\rm YM}^2}
+-\frac1{g_{\rm YM}^2}
 \Tr\!\left[
-[A_\rho,A_\sigma]
-(\sigma^{\rho\sigma}\sigma^\mu\bar\Lambda)_-
+f^{(3)\,{\rm raw}}_{-\beta}\,
+\sigma^{\mu\,\beta\dot\beta}\bar\Lambda_{\dot\beta}
 \right].
 $$
 
-## 6. Honest action-level cubic vertices
+with
+$$
+f^{(2)\,{\rm raw}}_{\alpha\beta}
+:=
+\partial_{(\alpha|\dot\gamma|}A_{\beta)}{}^{\dot\gamma},
+\qquad
+f^{(3)\,{\rm raw}}_{\alpha\beta}
+:=
+-i[A_{(\alpha|\dot\gamma|},A_{\beta)}{}^{\dot\gamma}].
+$$
+
+For the \(F_{\rm raw}\)-output seed pages the operational collapse uses the \(\Lambda_+\) line:
+$$
+\langle \Lambda_+^a(z)\,\bar\Lambda_{\dot\beta}^{\,b}(x)\rangle_0
+=
+i\,g_{\rm YM}^2\,\delta^{ab}\,\partial_{+\dot\beta}\Delta(z-x).
+$$
+
+$$
+\partial_\mu^x
+J_{F{\rm -branch},\alpha}^{\mu,{\rm raw}}(x)
+\quad
+\xrightarrow{\text{contract }\bar\Lambda(x)\text{ with }\Lambda_+(z)}
+\quad
+-\frac{i}{g_{\rm YM}^2}\,
+f^{\rm raw}_{\alpha\beta}(x)\,
+\partial^{\beta\dot\beta}_x\partial_{+\dot\beta}^x\Delta(x-z).
+$$
+
+$$
+\partial^{\beta\dot\beta}\partial_{+\dot\beta}\Delta(x-z)
+=
+-\delta^\beta_{\ +}\,\delta^{(4)}(x-z),
+$$
+
+$$
+\partial_\mu^x
+J_{F{\rm -branch},\alpha}^{\mu,{\rm raw}}(x)
+\quad
+\xrightarrow[\langle \bar\Lambda\,\Lambda_+\rangle_0]{{\rm local}}
+\quad
+i\,f^{\rm raw}_{\alpha +}(x)\,\delta^{(4)}(x-z).
+$$
+
+For the actual \(F_{\rm raw}\)-output channel choose \(\alpha=+\):
+$$
+\boxed{
+\partial_\mu^x
+J_{F{\rm -branch},+}^{\mu,{\rm raw}}(x)
+\quad
+\xrightarrow[\langle \bar\Lambda\,\Lambda_+\rangle_0]{{\rm local}}
+\quad
+i\,F_{\rm raw}(x)\,\delta^{(4)}(x-z)
+}
+$$
+
+## 8. Honest action-level cubic vertices
 
 $$
 \boxed{
@@ -344,7 +539,7 @@ V_{X\Psi\bar\Lambda}^{\rm eff}
 \text{ and the action vertex is }V_{X\Lambda\Psi}.
 $$
 
-## 7. Conversion to normalized alphabet
+## 9. Conversion to normalized alphabet
 
 $$
 \Psi_{\rm raw}^i=-2i\,\Psi^i,
@@ -362,18 +557,28 @@ J^\mu_{\psi{\rm -branch}}
 \right].
 $$
 
-而 \(F\)-branch 先保持 raw spinor projector：
+而 \(F\)-output collapse 在 normalized language 中满足
 $$
-J^\mu_{F{\rm -branch}}{}^{\rm raw}
+i\,F_{\rm raw}
 =
--\frac1{2g_{\rm YM}^2}
-\Tr\!\left[
-F_{\rho\sigma}(\sigma^{\rho\sigma}\sigma^\mu\bar\Lambda)_-
-\right].
+i(-2\sqrt2 i)F
+=
+2\sqrt2\,F.
 $$
 
 $$
 \boxed{
-\text{replace }F_{\rho\sigma}\sigma^{\rho\sigma}\text{ by the project-level }f_{++}\text{ decomposition only once, not page-by-page.}
+\partial_\mu^x
+J_{F{\rm -branch},+}^{\mu,{\rm raw}}(x)
+\quad
+\xrightarrow[\langle \bar\Lambda\,\Lambda_+\rangle_0]{{\rm local}}
+\quad
+2\sqrt2\,F(x)\,\delta^{(4)}(x-z)
+}
+$$
+
+$$
+\boxed{
+\text{do not use the normalized }F\text{-collapse inside raw seed pages; use it only when converting }b_{L,{\rm raw}},b_{R,{\rm raw}}.
 }
 $$

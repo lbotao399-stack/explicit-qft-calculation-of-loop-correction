@@ -54,3 +54,9 @@
   - `J_{\psi{\rm -branch}}^{\rm raw}` 与 `J_{F{\rm -branch}}^{\rm raw}` 成为 seed pages 的真正 current input；
   - bare action vertices 固定为 `V_{A X\bar X}` 与 `V_{X\Lambda\Psi}`，旧 `V_{AXX}`, `V_{X\Psi\bar\Lambda}` 降为 effective shorthand；
   - raw triangle remainder 只在最终一步归一到 normalized pair-kernel `{a,b_L,b_R}`。
+- 同日继续固定 `n4_ordinary_space` 的 exact convention block：
+  - free propagators 统一采用 Feynman gauge ordinary-space normalization；
+  - self-dual projector 固定为 `F_{\rho\sigma}(\sigma^{\rho\sigma})_{\alpha\beta}=2f^{\rm raw}_{\alpha\beta}`；
+  - `J_{F{\rm -branch}}^{\rm raw}` 全局改写成 `-(1/g_{\rm YM}^2)f^{\rm raw}_{\alpha\beta}\sigma^{\mu\,\beta\dot\beta}\bar\Lambda_{\dot\beta}`；
+  - `F`-output seed pages 统一使用 `\partial_\mu J_{F{\rm -branch},+}^{\mu,{\rm raw}}\to iF_{\rm raw}\delta^{(4)}` 的 operational collapse；
+  - universal local triangle kernel 固定为 `I_\triangle^{\rm loc}(x)=\frac{1}{8\pi^2}\delta^{(4)}(x)`，并与 DR 口径对齐。

@@ -60,6 +60,16 @@ $$
 V_{A X\bar X}.
 $$
 
+$$
+\langle X_i^a(x)\,\bar X^{j\,b}(y)\rangle_0
+=
+g_{\rm YM}^2\,\delta_i^{\ j}\,\delta^{ab}\,\Delta(x-y),
+\qquad
+\langle A_\mu^a(x)\,A_\nu^b(y)\rangle_0
+=
+g_{\rm YM}^2\,\delta^{ab}\,\delta_{\mu\nu}\,\Delta(x-y).
+$$
+
 ## Step 2: Triangle local remainder
 
 $$
@@ -85,7 +95,7 @@ a_{\rm raw}
 \times
 (\text{color factor})_{XX\to\Psi}
 \times
-I_\triangle^{\rm loc}.
+I_\triangle^{\rm loc}(x-y).
 $$
 
 $$
@@ -98,7 +108,10 @@ $$
 
 $$
 \boxed{
-\text{input still needed for the explicit value of }a_{\rm raw}:
-\text{ the raw propagator/projector contraction for }J_{\psi{\rm -branch}}^{\rm raw}\text{ with }V_{A X\bar X}.
+\text{remaining task: perform the ordered raw Wick contraction of }
+J_{\psi{\rm -branch}}^{(2,3)\mu,{\rm raw}}
+\text{ with }V_{A X\bar X}
+\text{ inside the amputated correlator that uses a conjugate probe to receive }\Psi_{\rm raw}^k,
+\text{ and reduce the local part to }a_{\rm raw}\,I_\triangle^{\rm loc}(x-y).
 }
 $$
