@@ -191,10 +191,12 @@ $$
 - `theory/n1_sym_euclidean/`：`N=1 SYM (Euclidean)` 的 component 输入；
 - `theory/n1_general/`：一般 `N=1` component 理论；
 - `theory/n4_sym/`：`N=4 SYM` 的 component 输入；
+- `theory/n4_ordinary_space/`：`N=4 SYM` 在 ordinary-space AWI 路线下的 no-derivative bi-letter kernel master pages；
 - `theory/superspace_approach/`：独立的 superspace 公式体系；
 - `calculation example/n1_sym_euclidean/`：`N=1 SYM (Euclidean)` 显式算例；
 - `calculation example/n1_general/`：一般 `N=1` 理论显式算例，当前已加入 Konishi anomaly 的 DR current-diagram 版本；
 - `calculation example/n4_sym/`：`N=4 SYM` 显式算例；
+- `calculation example/n4_ordinary_space/`：`N=4 SYM` no-derivative bi-letter triangle seed pages；
 - `source_archive/`：完整原始材料。
 
 ## 当前双轨组织

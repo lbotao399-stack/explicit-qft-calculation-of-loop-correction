@@ -46,3 +46,7 @@
   - 各页 Step C 只保留 target-matching 的 local WT pieces；
   - 各页 Step D 统一写成 `\sum_{\rm diagrams}[\partial_\mu J_-^\mu\cdot \mathcal O]_{\rm local}=-\delta^{(4)}Q_-^{\rm cl}\mathcal O` 与 `t^0(\cdots)-\Gamma_{\rm cl}=0`；
   - `component track status = sealed`。
+- 次日开启：
+  - 新建 `n4_ordinary_space` track；
+  - 目标改写为 no-derivative bi-letter universal pair kernel；
+  - 当前阶段只开 `{a,b_L,b_R}` 三个 seed pages，不从 “all operators” 直接展开。

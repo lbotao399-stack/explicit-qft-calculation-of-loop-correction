@@ -19,6 +19,8 @@
   - 一般 `N=1` component 理论，包含 chiral matter、superpotential、general SUSY 与 BPS 数据。
 - `n4_sym/`
   - `N=4 SYM` 的作用量、SUSY、BPS letters 与 Feynman rules。
+- `n4_ordinary_space/`
+  - 当前 ordinary-space AWI 路线下的 `N=4 SYM` no-derivative bi-letter kernel master pages。
 
 ## Superspace approach
 

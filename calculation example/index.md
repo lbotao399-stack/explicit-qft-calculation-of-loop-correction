@@ -22,6 +22,8 @@
   - 一般 `N=1` 理论的显式算例，当前已加入 Konishi anomaly 的 DR current-diagram 版本。
 - `n4_sym/`
   - 已加入 `N=4 SYM` 的 `Q_1(f_{++}f_{++})` 及其 generating-kernel PV / DR 笔记。
+- `n4_ordinary_space/`
+  - 当前 ordinary-space AWI 路线下的 no-derivative bi-letter seed triangle pages。
 - `archive/grouped_archive/`
   - 旧的主题打包稿，只作归档与对照。
 
@@ -63,6 +65,21 @@
    - `Q_1(O)（f_{++}e^{w\nabla}f_{++}） / PV`
 3. `n4_sym/03_q1__fpp_ewnabla_fpp__dr.md`
    - `Q_1(O)（f_{++}e^{w\nabla}f_{++}） / DR`
+
+### N=4 ordinary-space
+
+1. `n4_ordinary_space/01_q1_triangle__xx_to_psi.md`
+   - seed page for \(a\)
+2. `n4_ordinary_space/02_q1_triangle__xpsi_to_f.md`
+   - seed page for \(b_L\)
+3. `n4_ordinary_space/03_q1_triangle__psix_to_f.md`
+   - seed page for \(b_R\)
+4. `n4_ordinary_space/04_q1_triangle__zero_channels_summary.md`
+   - zero channels by quantum numbers
+5. `n4_ordinary_space/05_q1_triangle__nilpotency_check.md`
+   - low-length nilpotency check
+6. `n4_ordinary_space/06_q1_triangle__lift_to_long_words.md`
+   - planar lift template
 
 ## 归档
 
