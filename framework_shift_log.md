@@ -36,3 +36,8 @@
   - 统一采用 `\delta_{Q_-}^{\rm cl}f_{++}=2\kappa_A\nabla_{+\dot\beta}\bar\lambda^{\dot\beta}`；
   - `\nabla_{+\dot\alpha}` 与 `e^{w\cdot\nabla_+}` 的 Step 1 target 已全部改成 explicit tree-level formula；
   - pure-SYM divergence channel 的 Step 2/3/4 结构保持不变，仍以 `t^0(\cdots)-\Gamma_{\rm cl}=0` 收束。
+- 同日再整理：
+  - component / superspace 正式拆成 two-track organization；
+  - component track source of truth 固定到 `theory/n1_sym_euclidean/component_diagram_master_targets.md`；
+  - freeze 拍板为 `Q_1\equiv Q_-`, `\kappa_A=i/2`, `\partial_\mu J_-^\mu` WT-only；
+  - superspace track 明确降级为 second-track cross-check，不再回写 component divergence pages。

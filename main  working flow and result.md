@@ -197,8 +197,18 @@ $$
 - `calculation example/n4_sym/`：`N=4 SYM` 显式算例；
 - `source_archive/`：完整原始材料。
 
+## 当前双轨组织
+
+- component current-diagram track
+  - source of truth：`theory/n1_sym_euclidean/component_diagram_master_targets.md`
+  - frozen convention：`Q_1\equiv Q_-`, `\kappa_A=i/2`, `\partial_\mu J_-^\mu` 只作 WT insertion
+  - diagram pages 只负责把局域短程项重组回 explicit classical target
+- superspace track
+  - 只做 operator dictionary 与 anomaly multiplet bookkeeping
+  - 不把 superspace anomaly equation 直接回写到 component divergence pages
+
 ## 下一步最自然的延伸
 
-- 把现有仍保留 PV 的 component 计算逐步重写成 DR / DRED-style；
-- 用同一套 current-diagram 口径继续做更一般的 `N=1` matter / superpotential 算符；
-- 在 superspace approach 里建立与 component Ward-identity 计算相容的 supergraph 版本。
+- 先继续完成 component diagram pages 的封口与 DR 化；
+- 再单独推进 superspace track，不再和 component coefficient 混写；
+- 用同一套 current-diagram 口径继续做更一般的 `N=1` matter / superpotential 算符。

@@ -7,6 +7,20 @@ status: working
 
 # N=1 SYM (Euclidean): current-divergence working convention
 
+## Track split
+
+$$
+\boxed{
+\text{component diagram pages first,\qquad superspace track second.}
+}
+$$
+
+$$
+\boxed{
+\text{explicit page targets are now collected in }component\_diagram\_master\_targets.md
+}
+$$
+
 ## Global alias
 
 $$
