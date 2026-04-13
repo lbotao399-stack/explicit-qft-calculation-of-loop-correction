@@ -114,7 +114,13 @@ $$
 
 ## N=1 SYM 当前工作约定
 
-对 `n1_sym_euclidean`，当前统一采用 gauge-invariant FZ / Belinfante supercurrent。
+对 `n1_sym_euclidean`，当前统一采用 properly-normalized canonical / WZ-gauge supercurrent
+
+$$
+S_\mu^{\rm adopt}
+=
+-\frac{1}{2g_0}\sigma_{\rho\sigma}\gamma_\mu\psi^aF_{\rho\sigma}^a.
+$$
 
 若 `conventions_and_rules.md` 中
 
@@ -122,12 +128,12 @@ $$
 \delta\lambda_\alpha=c_f\,f_{\alpha\beta}\,\varepsilon^\beta+\cdots,
 $$
 
-则 current 的 relevant piece 固定为
+则 working current 的 relevant piece 固定为
 
 $$
-J_{\mu\alpha}^{(f\bar\lambda)}
+J_{\mu\alpha}^{\rm rel}
 =
-c_f\,f_{\alpha\beta}(\sigma_\mu)^{\beta\dot\beta}\bar\lambda_{\dot\beta}.
+-\frac{c_f}{2g_0}\,f_{\alpha\beta}(\sigma_\mu)^{\beta\dot\beta}\bar\lambda_{\dot\beta}.
 $$
 
 对具体 supercharge `Q_1`，工作投影统一写成
@@ -138,6 +144,17 @@ J^\mu_{Q_1}:=v_{Q_1}^\alpha J^\mu_\alpha,
 \partial_\mu J^\mu_{Q_1}\ \text{as the insertion}.
 $$
 
+pure SYM 的这组页面里，
+
+$$
+\partial_\mu J^\mu_{Q_1}
+\text{ 只通过 WT contact term 起作用，}
+$$
+
+$$
+\text{no separate pure-SYM divergence anomaly insertion.}
+$$
+
 在 diagrammatics 中，必须同时保留
 
 $$
@@ -146,7 +163,21 @@ J^{(2)}\sim (\partial A)\bar\lambda,
 J^{(3)}\sim [A,A]\bar\lambda.
 $$
 
-对 `Q_1(f_{++}f_{++})` 及其同族页面，不把
+对 `Q_1(f_{++}f_{++})` 及其同族页面，只保留那些足以重建
+
+$$
+\delta_{Q_1}^{\rm cl}f_{++}\sim D\bar\lambda
+$$
+
+的 contraction，并要求
+
+$$
+t^0(\cdots)-\Gamma_{\rm cl}=0
+$$
+
+作为一致性条件。
+
+不把
 
 $$
 X_{\rm gf}+X_{c\bar c},
@@ -161,6 +192,8 @@ D\text{-piece}
 $$
 
 作为独立 anomaly-channel insertion。
+
+pure SYM 的真正一圈 anomaly 保留在 gamma-trace / superconformal channel，不并入这些 \(\partial_\mu J^\mu\) 页面。
 
 ## 原始材料
 

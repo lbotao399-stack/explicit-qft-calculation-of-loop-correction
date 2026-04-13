@@ -17,349 +17,165 @@ $$
 p=p_1+p_2.
 $$
 
+$$
+J^\mu_{Q_1}:=v_{Q_1}^\alpha J^\mu_\alpha,
+\qquad
+J_{\mu\alpha}^{\rm rel}=-\frac{c_f}{2g_0}\,f_{\alpha\beta}^C(\sigma_\mu)^{\beta\dot\beta}\bar\lambda_{\dot\beta}^C.
+$$
+
+$$
+\partial_\mu J^\mu_{Q_1}(x)\cdot \mathcal O_{ff}^{AB}(y).
+$$
+
+$$
+\mathcal I[f_{++}^a(p)]
+=
+\mathcal I^{(1)}[f_{++}^a(p)]
++\mathcal I^{(2)}[f_{++}^a(p)].
+$$
+
+$$
+\mathcal I^{(1)}[f_{++}^a(p)]
+=
+\frac{i}{2}\big(p_{+\dot+}A_{+\dot-}^a(p)-p_{+\dot-}A_{+\dot+}^a(p)\big).
+$$
+
+$$
+\mathcal I^{(2)}[f_{++}^a(p)]
+=
+\frac{g}{2}f^{abc}\int_q A_{+\dot+}^b(q)A_{+\dot-}^c(p-q).
+$$
+
+$$
+J^\mu_{Q_1}
+=
+J^{\mu,(2)}_{Q_1}+J^{\mu,(3)}_{Q_1},
+\qquad
+J^{(2)}_{Q_1}\sim (\partial A)\bar\lambda,
+\qquad
+J^{(3)}_{Q_1}\sim [A,A]\bar\lambda.
+$$
+
+$$
+\langle f_{++}^a(p)A_{-\dot\alpha}^b(-p)\rangle=-\frac{i\delta^{ab}p_{+\dot\alpha}}{p^2},
+\qquad
+\langle \lambda_\alpha^a(p)\bar\lambda_{\dot\beta}^b(-p)\rangle=-\frac{i\delta^{ab}p_{\alpha\dot\beta}}{p^2}.
+$$
+
 ## Step 2: Wick contraction
 
 ![](../../assets/step4/calculation_triangles/n1_q1_fpp_fpp_triangle_pair.png)
 
 $$
-\mathcal I\!\left[Q_1\mathcal O_{ff}^{AB}\right]_{\rm 1\text{-}loop,\,conn}
+\big\langle \partial_\mu J^\mu_{Q_1}(x)\,\mathcal O_{ff}^{AB}(y)\big\rangle_{\rm conn,loc}
 =
-\mathcal I\!\left[Q_1\mathcal O_{ff}^{AB}\right]^{[A,\widetilde\lambda]}
-+
-\mathcal I\!\left[Q_1\mathcal O_{ff}^{AB}\right]^{[A,A,\widetilde\lambda]}
-+
-\mathcal I\!\left[Q_1\mathcal O_{ff}^{AB}\right]^{[A,A,A,\widetilde\lambda]}.
+T_{\rm lin-lin}^{AB}(x,y)
++T_{\rm lin-quad}^{AB}(x,y)
++T_{\rm quad-lin}^{AB}(x,y).
 $$
 
 $$
-N_{\rm raw}^{[A,\widetilde\lambda]}=20,
-\qquad
-N_{\rm top}^{[A,\widetilde\lambda]}=6.
-$$
-
-$$
-N_{\rm raw}^{[A,A,\widetilde\lambda]}=348,
-\qquad
-N_{\rm top}^{[A,A,\widetilde\lambda]}=20.
-$$
-
-$$
-N_{\rm raw}^{[A,A,A,\widetilde\lambda]}=9152,
-\qquad
-N_{\rm top}^{[A,A,A,\widetilde\lambda]}=66.
-$$
-
-$$
-N_{\rm top}^{[A,A,\widetilde\lambda]}
-=
-2\times 10,
-\qquad
-10=4+2+1+3.
-$$
-
-$$
-\mathcal C_1=V_{AAA}\big(V_{A\lambda\widetilde\lambda}\big)^2,
-\qquad
-\mathcal C_2=\big(V_{AAA}\big)^2V_{A\lambda\widetilde\lambda}.
-$$
-
-$$
-\mathcal C_3=V_{AAAA}V_{A\lambda\widetilde\lambda},
-\qquad
-\mathcal C_4=\big(V_{A\lambda\widetilde\lambda}\big)^3.
-$$
-
-$$
-Q_1\mathcal O_{ff}^{AB}(x)\Big|_{\rm DR,\,loc}^{[A,A,\widetilde\lambda]\oplus[A,A,A,\widetilde\lambda]}_{\rm conn}
-\stackrel{?}{=}
-\frac{g^2}{16\pi^2}\,
-i\big(\nabla_{+\dot\beta}-\partial_{+\dot\beta}\big)
-\Big(
-f^{CE}{}_{A}f^{DE}{}_{B}\,
-f_{++}^C\widetilde\lambda^{D\dot\beta}
-\Big)(x).
-$$
-
-## Step 3: Local part
-
-$$
-\mathcal I\!\left[Q_1\mathcal O_{ff}^{AB}(p)\right]^{[A,\widetilde\lambda]}
-=
-\Gamma_{12}^{AB}(p)+\Gamma_{21}^{AB}(p).
-$$
-
-$$
-\Gamma_{12}^{AB}(p)
-=
-2g^2
-\int_{p_1,p_2}\delta_{p-p_1-p_2}
-\int_q^d
-D(q)\,D(q-p_2)\,
-\Big[-(q+p_1)_{+\dot\alpha}\big(S(q+p_1)P_L\big)_\rho{}^{\dot\alpha}\Big]
-(q-p_2)_{+\dot\beta}
-$$
-
-$$
-\qquad\qquad\times\,
-f^{CE}{}_{A}f^{DE}{}_{B}\,
-f_{++}^C(p_1)\widetilde\lambda^{D\dot\beta}(p_2).
-$$
-
-$$
-\Gamma_{21}^{AB}(p)
-=
-2g^2
-\int_{p_1,p_2}\delta_{p-p_1-p_2}
-\int_q^d
-D(q)\,D(q-p_1)\,
-\Big[-(q+p_2)_{+\dot\alpha}\big(S(q+p_2)P_L\big)_\rho{}^{\dot\alpha}\Big]
-(q-p_1)_{+\dot\beta}
-$$
-
-$$
-\qquad\qquad\times\,
-f^{CE}{}_{A}f^{DE}{}_{B}\,
-f_{++}^C(p_2)\widetilde\lambda^{D\dot\beta}(p_1).
-$$
-
-$$
--(q+p_1)_{+\dot\alpha}\big(S(q+p_1)P_L\big)_\rho{}^{\dot\alpha}
-=
-i\Big(1-\frac{\widehat q^2}{(q+p_1)^2}\Big)\epsilon_{+\rho},
-$$
-
-$$
--(q+p_2)_{+\dot\alpha}\big(S(q+p_2)P_L\big)_\rho{}^{\dot\alpha}
-=
-i\Big(1-\frac{\widehat q^2}{(q+p_2)^2}\Big)\epsilon_{+\rho}.
-$$
-
-$$
-\Gamma_{12}^{AB}(p)
-=
-2g^2
-\int_{p_1,p_2}\delta_{p-p_1-p_2}
-\int_q^d
-\frac{(q-p_2)_{+\dot\beta}}{q^2(q-p_2)^2}\,
-f^{CE}{}_{A}f^{DE}{}_{B}\,
-f_{++}^C(p_1)\widetilde\lambda^{D\dot\beta}(p_2)
-$$
-
-$$
-\qquad
--2g^2
-\int_{p_1,p_2}\delta_{p-p_1-p_2}
-\int_q^d
-\frac{\widehat q^2\,(q-p_2)_{+\dot\beta}}{q^2(q+p_1)^2(q-p_2)^2}\,
-f^{CE}{}_{A}f^{DE}{}_{B}\,
-f_{++}^C(p_1)\widetilde\lambda^{D\dot\beta}(p_2).
-$$
-
-$$
-\Gamma_{21}^{AB}(p)
-=
-2g^2
-\int_{p_1,p_2}\delta_{p-p_1-p_2}
-\int_q^d
-\frac{(q-p_1)_{+\dot\beta}}{q^2(q-p_1)^2}\,
-f^{CE}{}_{A}f^{DE}{}_{B}\,
-f_{++}^C(p_2)\widetilde\lambda^{D\dot\beta}(p_1)
-$$
-
-$$
-\qquad
--2g^2
-\int_{p_1,p_2}\delta_{p-p_1-p_2}
-\int_q^d
-\frac{\widehat q^2\,(q-p_1)_{+\dot\beta}}{q^2(q+p_2)^2(q-p_1)^2}\,
-f^{CE}{}_{A}f^{DE}{}_{B}\,
-f_{++}^C(p_2)\widetilde\lambda^{D\dot\beta}(p_1).
-$$
-
-## Step 4: Regularization and final local anomaly
-
-$$
-\frac{1}{q^2(q+p_1)^2(q-p_2)^2}
-=
-2\int_\Delta
-\frac{1}{\big[(q+yp_1-zp_2)^2+\Delta\big]^3},
-$$
-
-$$
-\Delta=xy\,p_1^2+xz\,p_2^2+yz\,p^2.
-$$
-
-$$
-\ell=q+yp_1-zp_2.
-$$
-
-$$
-\Gamma_{12}^{AB}(p)\Big|_{\rm DR,\,loc}
-=
--4g^2
-\int_{p_1,p_2}\delta_{p-p_1-p_2}
-\int_\Delta
-\big(yp_1+(x+y)p_2\big)_{+\dot\beta}
-$$
-
-$$
-\qquad\qquad\times\,
-\mu^{2\epsilon}\int\frac{d^d\ell}{(2\pi)^d}
-\frac{\widehat\ell^2}{(\ell^2+\Delta)^3}\,
-f^{CE}{}_{A}f^{DE}{}_{B}\,
-f_{++}^C(p_1)\widetilde\lambda^{D\dot\beta}(p_2)
-$$
-
-$$
-\qquad
-=
--\frac{g^2}{8\pi^2}
-\int_{p_1,p_2}\delta_{p-p_1-p_2}
-\int_\Delta
-\big(yp_1+(x+y)p_2\big)_{+\dot\beta}\,
-f^{CE}{}_{A}f^{DE}{}_{B}\,
-f_{++}^C(p_1)\widetilde\lambda^{D\dot\beta}(p_2).
-$$
-
-$$
-\Gamma_{21}^{AB}(p)\Big|_{\rm DR,\,loc}
-=
--4g^2
-\int_{p_1,p_2}\delta_{p-p_1-p_2}
-\int_\Delta
-\big((x+y)p_1+yp_2\big)_{+\dot\beta}
-$$
-
-$$
-\qquad\qquad\times\,
-\mu^{2\epsilon}\int\frac{d^d\ell}{(2\pi)^d}
-\frac{\widehat\ell^2}{(\ell^2+\Delta)^3}\,
-f^{CE}{}_{A}f^{DE}{}_{B}\,
-f_{++}^C(p_2)\widetilde\lambda^{D\dot\beta}(p_1)
-$$
-
-$$
-\qquad
-=
--\frac{g^2}{8\pi^2}
-\int_{p_1,p_2}\delta_{p-p_1-p_2}
-\int_\Delta
-\big((x+y)p_1+yp_2\big)_{+\dot\beta}\,
-f^{CE}{}_{A}f^{DE}{}_{B}\,
-f_{++}^C(p_2)\widetilde\lambda^{D\dot\beta}(p_1).
-$$
-
-$$
-\int_\Delta\big(yp_1+(x+y)p_2\big)_{+\dot\beta}
-=
-\frac16(p_1+2p_2)_{+\dot\beta},
-\qquad
-\int_\Delta\big((x+y)p_1+yp_2\big)_{+\dot\beta}
-=
-\frac16(2p_1+p_2)_{+\dot\beta}.
-$$
-
-$$
-\Gamma_{12}^{AB}(p)\Big|_{\rm DR,\,loc}
-=
--\frac{g^2}{48\pi^2}
-\int_{p_1,p_2}\delta_{p-p_1-p_2}\,
-(p_1+2p_2)_{+\dot\beta}\,
-f^{CE}{}_{A}f^{DE}{}_{B}\,
-f_{++}^C(p_1)\widetilde\lambda^{D\dot\beta}(p_2),
-$$
-
-$$
-\Gamma_{21}^{AB}(p)\Big|_{\rm DR,\,loc}
-=
--\frac{g^2}{48\pi^2}
-\int_{p_1,p_2}\delta_{p-p_1-p_2}\,
-(2p_1+p_2)_{+\dot\beta}\,
-f^{CE}{}_{A}f^{DE}{}_{B}\,
-f_{++}^C(p_2)\widetilde\lambda^{D\dot\beta}(p_1).
-$$
-
-$$
-\mathcal I\!\left[Q_1\mathcal O_{ff}^{AB}(p)\right]_{\rm DR,\,loc}^{[A,\widetilde\lambda]}
-=
--\frac{g^2}{48\pi^2}
-\int_{p_1,p_2}\delta_{p-p_1-p_2}
+T_{\rm lin-lin}^{AB}(x,y)
+\Longrightarrow
+\delta^{(4)}(x-y)\,
 \Big[
-(p_1+2p_2)_{+\dot\beta}\,
-f^{CE}{}_{A}f^{DE}{}_{B}\,
-f_{++}^C(p_1)\widetilde\lambda^{D\dot\beta}(p_2)
+i\,\partial_{+\dot\beta}\bar\lambda^{A\dot\beta}\,f_{++}^B
++f_{++}^A\,i\,\partial_{+\dot\beta}\bar\lambda^{B\dot\beta}
+\Big](y).
 $$
 
 $$
-\qquad\qquad\qquad\qquad
-+
-(2p_1+p_2)_{+\dot\beta}\,
-f^{CE}{}_{A}f^{DE}{}_{B}\,
-f_{++}^C(p_2)\widetilde\lambda^{D\dot\beta}(p_1)
-\Big].
+T_{\rm lin-quad}^{AB}(x,y)
+\Longrightarrow
+\delta^{(4)}(x-y)\,
+\Big[
+\frac{i}{2}[A_{+\dot\beta},\bar\lambda^{\dot\beta}]^A\,f_{++}^B
++f_{++}^A\,\frac{i}{2}[A_{+\dot\beta},\bar\lambda^{\dot\beta}]^B
+\Big](y).
 $$
 
 $$
-\mathcal I\!\left[Q_1\mathcal O_{ff}^{AB}(p)\right]_{\rm DR,\,loc}^{[A,\widetilde\lambda]}
+T_{\rm quad-lin}^{AB}(x,y)
+\Longrightarrow
+\delta^{(4)}(x-y)\,
+\Big[
+\frac{i}{2}[A_{+\dot\beta},\bar\lambda^{\dot\beta}]^A\,f_{++}^B
++f_{++}^A\,\frac{i}{2}[A_{+\dot\beta},\bar\lambda^{\dot\beta}]^B
+\Big](y).
+$$
+
+## Step 3: Local WT contact reconstruction
+
+$$
+T_{\rm lin-lin}^{AB}
++T_{\rm lin-quad}^{AB}
++T_{\rm quad-lin}^{AB}
+\Longrightarrow
+\delta^{(4)}(x-y)\,
+\Big[
+iD_{+\dot\beta}\bar\lambda^{A\dot\beta}\,f_{++}^B
++f_{++}^A\,iD_{+\dot\beta}\bar\lambda^{B\dot\beta}
+\Big](y).
+$$
+
+$$
+\delta_{Q_1}^{\rm cl}f_{++}^A
 =
--\frac{g^2}{16\pi^2}\,
-p_{+\dot\beta}
-\int_{p_1,p_2}\delta_{p-p_1-p_2}\,
-f^{CE}{}_{A}f^{DE}{}_{B}\,
-f_{++}^C(p_1)\widetilde\lambda^{D\dot\beta}(p_2).
+iD_{+\dot\beta}\bar\lambda^{A\dot\beta}.
 $$
 
 $$
-Q_1\mathcal O_{ff}^{AB}(x)\Big|_{\rm DR,\,loc}^{[A,\widetilde\lambda]}
+\big\langle \partial_\mu J^\mu_{Q_1}(x)\,\mathcal O_{ff}^{AB}(y)\big\rangle_{\rm conn,loc}
+\Longrightarrow
+\delta^{(4)}(x-y)\,
+\delta_{Q_1}^{\rm cl}\mathcal O_{ff}^{AB}(y).
+$$
+
+$$
+t^0(\cdots)=\Gamma_{\rm cl}.
+$$
+
+## Step 4: Regularization and consistency condition
+
+$$
+\big\langle \partial_\mu J^\mu_{Q_1}(x)\,\mathcal O_{ff}^{AB}(y)\big\rangle_{\rm DR,loc}
 =
-\frac{g^2}{16\pi^2}\,
-i\partial_{+\dot\beta}
-\Big(
-f^{CE}{}_{A}f^{DE}{}_{B}\,
-f_{++}^C\widetilde\lambda^{D\dot\beta}
-\Big)(x).
+\delta^{(4)}(x-y)\,
+\delta_{Q_1}^{\rm cl}\mathcal O_{ff}^{AB}(y).
 $$
 
 $$
-(\nabla_{\alpha\dot\alpha}\mathcal O)^{AB}
-:=
-\partial_{\alpha\dot\alpha}\mathcal O^{AB}
-+f^{AC}{}_{D}A_{\alpha\dot\alpha}^C\mathcal O^{DB}
-+f^{BC}{}_{D}A_{\alpha\dot\alpha}^C\mathcal O^{AD}.
+t^0(\cdots)-\Gamma_{\rm cl}=0.
 $$
 
 $$
-Q_1\mathcal O_{ff}^{AB}(x)\Big|_{\rm DR,\,loc}^{\rm letter\text{-}conn}
-\stackrel{?}{=}
-\frac{g^2}{16\pi^2}\,
-i\nabla_{+\dot\beta}
-\Big(
-f^{CE}{}_{A}f^{DE}{}_{B}\,
-f_{++}^C\widetilde\lambda^{D\dot\beta}
-\Big)(x).
+\delta_{Q_1}^{\rm cl}\mathcal O_{ff}^{AB}(x)
+=
+\big(iD_{+\dot\beta}\bar\lambda^{A\dot\beta}\big)f_{++}^B
++f_{++}^A\big(iD_{+\dot\beta}\bar\lambda^{B\dot\beta}\big).
+$$
+
+$$
+\boxed{
+\text{no new pure-SYM gauge-invariant local remainder in the }\partial_\mu J^\mu_{Q_1}\text{ channel}
+}.
 $$
 
 ## Step 5: Simplification examples
 
 $$
-Q_1\,\operatorname{Tr}(f_{++}f_{++})(p)\Big|_{\rm DR,\,loc}^{[A,\widetilde\lambda]}
-=
--\frac{g^2}{16\pi^2}\,
-p_{+\dot\beta}
-\int_{p_1,p_2}\delta_{p-p_1-p_2}\,
-\operatorname{Tr}\big(f_{++}(p_1)\widetilde\lambda^{\dot\beta}(p_2)\big).
+\big\langle \partial_\mu J^\mu_{Q_1}(x)\,\operatorname{Tr}(f_{++}f_{++})(y)\big\rangle_{\rm conn,loc}
+\Longrightarrow
+2\,\delta^{(4)}(x-y)\,
+\operatorname{Tr}\!\big((Q_1^{\rm cl}f_{++})f_{++}\big)(y).
 $$
 
 $$
-Q_1\,\operatorname{Tr}(f_{++}f_{++})(x)\Big|_{\rm DR,\,loc}^{[A,\widetilde\lambda]}
+\delta_{Q_1}^{\rm cl}\operatorname{Tr}(f_{++}f_{++})
 =
-\frac{g^2}{16\pi^2}\,
-i\partial_{+\dot\beta}\operatorname{Tr}\big(f_{++}\widetilde\lambda^{\dot\beta}\big)(x).
+2\,\operatorname{Tr}\!\big((Q_1^{\rm cl}f_{++})f_{++}\big).
 $$
 
 $$
-Q_1\,\operatorname{Tr}(f_{++}f_{++})(x)\Big|_{\rm DR,\,loc}^{\rm letter\text{-}conn}
-\stackrel{?}{=}
-\frac{g^2}{16\pi^2}\,
-i\nabla_{+\dot\beta}\operatorname{Tr}\big(f_{++}\widetilde\lambda^{\dot\beta}\big)(x).
+t^0(\cdots)-\Gamma_{\rm cl}=0.
 $$
