@@ -48,22 +48,22 @@ $$
 $$
 X_iX_j\to\Psi^k
 \quad\Longleftrightarrow\quad
-J^\mu_{\psi\text{-branch}}
-\ \text{and}\ V_{A X X}.
+J^\mu_{\psi\text{-branch}}{}^{\rm raw}
+\ \text{and the honest bare vertex }\ V_{A X\bar X}.
 $$
 
 $$
 X_i\Psi^j\to F
 \quad\Longleftrightarrow\quad
-J^\mu_{F\text{-branch}}
-\ \text{and}\ V_{X\Psi\bar\Lambda}.
+J^\mu_{F\text{-branch}}{}^{\rm raw}
+\ \text{and the honest bare vertex }\ V_{X\Lambda\Psi}.
 $$
 
 $$
 \Psi^jX_i\to F
 \quad\Longleftrightarrow\quad
-J^\mu_{F\text{-branch}}
-\ \text{and}\ V_{X\Psi\bar\Lambda},
+J^\mu_{F\text{-branch}}{}^{\rm raw}
+\ \text{and}\ V_{X\Lambda\Psi},
 \ \text{with reversed external ordering}.
 $$
 

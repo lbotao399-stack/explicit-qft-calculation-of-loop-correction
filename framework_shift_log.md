@@ -50,3 +50,7 @@
   - 新建 `n4_ordinary_space` track；
   - 目标改写为 no-derivative bi-letter universal pair kernel；
   - 当前阶段只开 `{a,b_L,b_R}` 三个 seed pages，不从 “all operators” 直接展开。
+  - 随后改为：先用 localized Noether identity 推 raw off-shell current；
+  - `J_{\psi{\rm -branch}}^{\rm raw}` 与 `J_{F{\rm -branch}}^{\rm raw}` 成为 seed pages 的真正 current input；
+  - bare action vertices 固定为 `V_{A X\bar X}` 与 `V_{X\Lambda\Psi}`，旧 `V_{AXX}`, `V_{X\Psi\bar\Lambda}` 降为 effective shorthand；
+  - raw triangle remainder 只在最终一步归一到 normalized pair-kernel `{a,b_L,b_R}`。

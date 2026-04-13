@@ -32,7 +32,61 @@ Q_{1,\triangle}^{[2\to1]}(LM)=\mathfrak q_{1,\triangle}^{[2\to1]}(L,M),
 L,M\in\mathbb B_0.
 $$
 
-## 2. Three-coefficient ansatz
+## 2. Raw-to-normalized workflow
+
+$$
+\boxed{
+\text{raw action}
+\ \to\
+\text{raw Noether current}
+\ \to\
+\text{raw triangle remainder}
+\ \to\
+\text{normalized pair-kernel}.
+}
+$$
+
+令 raw seed coefficients 为
+$$
+\mathfrak q_{1,\triangle}^{\rm raw}(X_i,X_j)
+=
+a_{\rm raw}\,\epsilon_{ijk}\Psi_{\rm raw}^k,
+$$
+
+$$
+\mathfrak q_{1,\triangle}^{\rm raw}(X_i,\Psi_{\rm raw}^j)
+=
+b_{L,{\rm raw}}\,\delta_i^{\,j}F_{\rm raw},
+$$
+
+$$
+\mathfrak q_{1,\triangle}^{\rm raw}(\Psi_{\rm raw}^j,X_i)
+=
+b_{R,{\rm raw}}\,\delta_i^{\,j}F_{\rm raw}.
+$$
+
+又因为
+$$
+\Psi_{\rm raw}^i=c_\psi\,\Psi^i,
+\qquad
+F_{\rm raw}=c_f\,F,
+\qquad
+c_\psi=-2i,
+\qquad
+c_f=-2\sqrt2 i,
+$$
+所以 normalized coefficients 为
+$$
+a=c_\psi\,a_{\rm raw}=-2i\,a_{\rm raw},
+$$
+
+$$
+b_L=\frac{c_f}{c_\psi}\,b_{L,{\rm raw}}=\sqrt2\,b_{L,{\rm raw}},
+\qquad
+b_R=\frac{c_f}{c_\psi}\,b_{R,{\rm raw}}=\sqrt2\,b_{R,{\rm raw}}.
+$$
+
+## 3. Three-coefficient ansatz
 
 $$
 \mathfrak q_{1,\triangle}(X_i,X_j)
@@ -77,7 +131,7 @@ $$
 }
 $$
 
-## 3. AWI master equation
+## 4. AWI master equation
 
 $$
 \mathcal O_{LM}(y):=\operatorname{Tr}(LM)(y),
@@ -106,7 +160,16 @@ $$
 \mathfrak q_{1,\triangle}(L,M).
 $$
 
-## 4. Universal local triangle integral
+对 raw seed pages，对应写法是
+$$
+\text{triangle local remainder}^{\rm raw}
+=
+-\delta^{(4)}(x-y)\,
+\frac{g_{\rm YM}^2}{8\pi^2}\,
+\mathfrak q_{1,\triangle}^{\rm raw}(L,M).
+$$
+
+## 5. Universal local triangle integral
 
 $$
 I_{\triangle}^{\rm loc}.
@@ -119,7 +182,7 @@ $$
 }
 $$
 
-## 5. Planar lift after seed stage
+## 6. Planar lift after seed stage
 
 $$
 Q_{1,\triangle}^{[2\to1]}\operatorname{Tr}(L_1L_2\cdots L_n)
