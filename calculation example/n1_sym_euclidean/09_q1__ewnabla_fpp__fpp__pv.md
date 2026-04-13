@@ -27,11 +27,8 @@ J^\mu_{Q_1}=J^\mu_-,
 \partial_\mu J^\mu_{Q_1}=\partial_\mu J^\mu_-.
 $$
 
-
 $$
-w\cdot\nabla_+ := w^{+\dot\alpha}\nabla_{+\dot\alpha},
-\qquad
-w\cdot p_a := w^{+\dot\alpha}p_{a,+\dot\alpha}.
+w\cdot\nabla_+ := w^{+\dot\alpha}\nabla_{+\dot\alpha}.
 $$
 
 $$
@@ -43,78 +40,141 @@ f_{++}^B(p_2)\,
 \delta_{p-p_1-p_2}.
 $$
 
+$$
+Q_- f_{++}^B=iD_{+\dot\gamma}\bar\lambda^{B\dot\gamma}.
+$$
+
+$$
+\big[\delta_{Q_-}^{\rm cl}\mathcal O_w^{AB}\big]_{L}
+:=
+\delta_{Q_-}^{\rm cl}\big(e^{w\cdot\nabla_+}f_{++}^A\big)\,
+f_{++}^B.
+$$
+
+$$
+\big[\delta_{Q_-}^{\rm cl}\mathcal O_w^{AB}\big]_{R}
+:=
+\big(e^{w\cdot\nabla_+}f_{++}^A\big)\,
+\big(iD_{+\dot\gamma}\bar\lambda^{B\dot\gamma}\big).
+$$
+
+$$
+\delta_{Q_-}^{\rm cl}\mathcal O_w^{AB}
+=
+\big[\delta_{Q_-}^{\rm cl}\mathcal O_w^{AB}\big]_{L}
++
+\big[\delta_{Q_-}^{\rm cl}\mathcal O_w^{AB}\big]_{R}.
+$$
+
+$$
+J^\mu_-=J^{\mu,(2)}_-+J^{\mu,(3)}_-,
+\qquad
+J^{(2)}_-\sim (\partial A)\bar\lambda,
+\qquad
+J^{(3)}_-\sim [A,A]\bar\lambda.
+$$
+
+$$
+\langle f_{++}(x)f_{++}(y)\rangle_0=0,
+\qquad
+\langle f_{+-}(x)f_{++}(y)\rangle_0=0,
+\qquad
+\langle f_{--}(x)f_{++}(y)\rangle_0=2K(x-y).
+$$
+
 ## Step 2: Wick contraction
 
 ![](../../assets/step4/calculation_triangles/n1_q1_expw_fpp_fpp_triangle_pair.png)
 
 $$
-\mathcal I\!\left[Q_1\mathcal O_w^{AB}(p)\right]_{\rm PV,\,1\text{-}loop,\,loc}
+\big\langle \partial_\mu J^\mu_-(x)\,\mathcal O_w^{AB}(y)\big\rangle_{\rm conn,loc}
 =
-\widehat\Gamma_{12}^{AB}(w)
+T_L^{AB}(w;x,y)
 +
-\widehat\Gamma_{21}^{AB}(w).
-$$
-
-## Step 3: Local part
-
-$$
-X_{12}:=(x+z)p_1+z p_2,
-\qquad
-Y_{12}:=y p_1+(x+y)p_2,
+T_R^{AB}(w;x,y).
 $$
 
 $$
-X_{21}:=z p_1+(x+z)p_2,
-\qquad
-Y_{21}:=(x+y)p_1+y p_2.
+T_L^{AB}(w)
+=
+T_{L,\rm lin-lin}^{AB}(w)
++
+T_{L,\rm lin-quad}^{AB}(w)
++
+T_{L,\rm quad-lin}^{AB}(w).
 $$
 
-## Step 4: Regularization and final local anomaly
+$$
+T_R^{AB}(w)
+=
+T_{R,\rm lin-lin}^{AB}(w)
++
+T_{R,\rm lin-quad}^{AB}(w)
++
+T_{R,\rm quad-lin}^{AB}(w).
+$$
 
 $$
-\widehat{\mathcal G}_{12,+\dot\beta}(w;p_1,p_2)
-:=
-\int_\Delta e^{\,i w\cdot X_{12}}\,Y_{12,+\dot\beta},
-\qquad
-\widehat{\mathcal G}_{21,+\dot\beta}(w;p_1,p_2)
-:=
-\int_\Delta e^{\,i w\cdot X_{21}}\,Y_{21,+\dot\beta}.
+T_L^{AB}(w;x,y)
+\Longrightarrow
+\delta^{(4)}(x-y)\,
+\big[\delta_{Q_-}^{\rm cl}\mathcal O_w^{AB}(y)\big]_{L}.
+$$
+
+$$
+T_R^{AB}(w;x,y)
+\Longrightarrow
+\delta^{(4)}(x-y)\,
+\big[\delta_{Q_-}^{\rm cl}\mathcal O_w^{AB}(y)\big]_{R}.
+$$
+
+## Step 3: WT contact reconstruction
+
+$$
+T_L^{AB}(w)
++
+T_R^{AB}(w)
+\Longrightarrow
+\delta^{(4)}(x-y)\,
+\delta_{Q_-}^{\rm cl}\mathcal O_w^{AB}(y).
+$$
+
+$$
+t^0(\cdots)=\Gamma_{\rm cl}.
+$$
+
+## Step 4: Regularization and consistency condition
+
+$$
+\big\langle \partial_\mu J^\mu_-(x)\,\mathcal O_w^{AB}(y)\big\rangle_{\rm PV,loc}
+=
+\delta^{(4)}(x-y)\,
+\delta_{Q_-}^{\rm cl}\mathcal O_w^{AB}(y).
+$$
+
+$$
+t^0(\cdots)-\Gamma_{\rm cl}=0.
 $$
 
 $$
 \boxed{
-\mathcal I\!\left[Q_1\mathcal O_w^{AB}(p)\right]_{\rm PV,\,1\text{-}loop,\,loc}
-=
--\frac{g^2}{8\pi^2}
-\int_{p_1,p_2}\delta_{p-p_1-p_2}
-\Big[
-\widehat{\mathcal G}_{12,+\dot\beta}(w;p_1,p_2)\,\mathscr F_{12}^{AB,\dot\beta}
-+
-\widehat{\mathcal G}_{21,+\dot\beta}(w;p_1,p_2)\,\mathscr F_{21}^{AB,\dot\beta}
-\Big].
-}
-$$
-
-$$
-\widehat{\mathbb D}_{12,+\dot\beta}(w)
-:=
-\int_\Delta
-e^{\,w\cdot\big((x+z)\nabla_+^{(1)}+z\nabla_+^{(2)}\big)}
-\Big(y\nabla_{+\dot\beta}^{(1)}+(x+y)\nabla_{+\dot\beta}^{(2)}\Big),
-$$
-
-$$
-\widehat{\mathbb D}_{21,+\dot\beta}(w)
-:=
-\int_\Delta
-e^{\,w\cdot\big(z\nabla_+^{(1)}+(x+z)\nabla_+^{(2)}\big)}
-\Big((x+y)\nabla_{+\dot\beta}^{(1)}+y\nabla_{+\dot\beta}^{(2)}\Big).
+\text{no new pure-SYM gauge-invariant local remainder in the }\partial_\mu J^\mu_-\text{ channel}
+}.
 $$
 
 ## Step 5: Simplification examples
 
 $$
-\widehat{\mathcal G}_{12,+\dot\beta}(0)=\frac16(p_1+2p_2)_{+\dot\beta},
-\qquad
-\widehat{\mathcal G}_{21,+\dot\beta}(0)=\frac16(2p_1+p_2)_{+\dot\beta}.
+\mathcal O_{w=0}^{AB}=\mathcal O_{ff}^{AB}.
+$$
+
+$$
+\big\langle \partial_\mu J^\mu_-(x)\,\mathcal O_{w=0}^{AB}(y)\big\rangle_{\rm conn,loc}
+\Longrightarrow
+\delta^{(4)}(x-y)\,
+\delta_{Q_-}^{\rm cl}\mathcal O_{ff}^{AB}(y).
+$$
+
+$$
+t^0(\cdots)-\Gamma_{\rm cl}=0.
 $$

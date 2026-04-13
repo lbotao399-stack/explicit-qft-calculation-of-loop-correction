@@ -27,7 +27,6 @@ J^\mu_{Q_1}=J^\mu_-,
 \partial_\mu J^\mu_{Q_1}=\partial_\mu J^\mu_-.
 $$
 
-
 $$
 \mathcal O_{\dot\theta\dot\beta}^{AB}(p)
 :=
@@ -38,7 +37,32 @@ f_{++}^A(p_1)\,
 $$
 
 $$
-p=p_1+p_2.
+Q_- f_{++}^A=iD_{+\dot\gamma}\bar\lambda^{A\dot\gamma},
+\qquad
+Q_-\bar\lambda_{\dot\beta}^B=0.
+$$
+
+$$
+\big[\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\theta\dot\beta}^{AB}\big]_{f_{++}\text{-active}}
+=
+\big(iD_{+\dot\gamma}\bar\lambda^{A\dot\gamma}\big)\,
+\nabla_{+\dot\theta}\bar\lambda_{\dot\beta}^B.
+$$
+
+$$
+J^\mu_-=J^{\mu,(2)}_-+J^{\mu,(3)}_-,
+\qquad
+J^{(2)}_-\sim (\partial A)\bar\lambda,
+\qquad
+J^{(3)}_-\sim [A,A]\bar\lambda.
+$$
+
+$$
+\langle f_{++}(x)f_{++}(y)\rangle_0=0,
+\qquad
+\langle f_{+-}(x)f_{++}(y)\rangle_0=0,
+\qquad
+\langle f_{--}(x)f_{++}(y)\rangle_0=2K(x-y).
 $$
 
 ## Step 2: Wick contraction
@@ -46,146 +70,80 @@ $$
 ![](../../assets/step4/calculation_triangles/n1_q1_fpp_nabla_barlambda_triangle_pair.png)
 
 $$
-\mathcal I\!\left[Q_1\mathcal O_{\dot\theta\dot\beta}^{AB}(p)\right]_{\rm PV,\,1\text{-}loop,\,loc}
+\big\langle \partial_\mu J^\mu_-(x)\,\mathcal O_{\dot\theta\dot\beta}^{AB}(y)\big\rangle_{\rm conn,loc}
 =
-\Gamma_{12,\dot\theta\dot\beta}^{AB}(p)
-+
-\Gamma_{21,\dot\theta\dot\beta}^{AB}(p).
+T_{\rm lin-lin,\dot\theta\dot\beta}^{AB}(x,y)
++T_{\rm lin-quad,\dot\theta\dot\beta}^{AB}(x,y)
++T_{\rm quad-lin,\dot\theta\dot\beta}^{AB}(x,y).
 $$
 
-## Step 3: Local part
+$$
+T_{\rm lin-lin,\dot\theta\dot\beta}^{AB}(x,y)
+\Longrightarrow
+\delta^{(4)}(x-y)\,
+\big(i\partial_{+\dot\gamma}\bar\lambda^{A\dot\gamma}\big)\,
+\nabla_{+\dot\theta}\bar\lambda_{\dot\beta}^B(y).
+$$
 
 $$
-\Gamma_{12;M}^{\rm PV\text{-}loop}{}_{\dot\theta\dot\beta}
+T_{\rm lin-quad,\dot\theta\dot\beta}^{AB}(x,y)
+\Longrightarrow
+\delta^{(4)}(x-y)\,
+\frac{i}{2}[A_{+\dot\gamma},\bar\lambda^{\dot\gamma}]^A\,
+\nabla_{+\dot\theta}\bar\lambda_{\dot\beta}^B(y).
+$$
+
+$$
+T_{\rm quad-lin,\dot\theta\dot\beta}^{AB}(x,y)
+\Longrightarrow
+\delta^{(4)}(x-y)\,
+\frac{i}{2}[A_{+\dot\gamma},\bar\lambda^{\dot\gamma}]^A\,
+\nabla_{+\dot\theta}\bar\lambda_{\dot\beta}^B(y).
+$$
+
+## Step 3: WT contact reconstruction
+
+$$
+T_{\rm lin-lin,\dot\theta\dot\beta}^{AB}
++T_{\rm lin-quad,\dot\theta\dot\beta}^{AB}
++T_{\rm quad-lin,\dot\theta\dot\beta}^{AB}
+\Longrightarrow
+\delta^{(4)}(x-y)\,
+\big[\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\theta\dot\beta}^{AB}(y)\big]_{f_{++}\text{-active}}.
+$$
+
+$$
+t^0(\cdots)=\Gamma_{\rm cl}.
+$$
+
+## Step 4: Regularization and consistency condition
+
+$$
+\big\langle \partial_\mu J^\mu_-(x)\,\mathcal O_{\dot\theta\dot\beta}^{AB}(y)\big\rangle_{\rm PV,loc}
 =
-2i g^2\int_q
-\frac{(q-p_2)_{+\dot\theta}(q-p_2)_{+\dot\beta}}
-{(q^2+M^2)\big((q-p_2)^2+M^2\big)}\,
-\mathscr C_{12}
+\delta^{(4)}(x-y)\,
+\big[\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\theta\dot\beta}^{AB}(y)\big]_{f_{++}\text{-active}}.
 $$
 
 $$
-\qquad
--2i g^2M^2\int_q
-\frac{(q-p_2)_{+\dot\theta}(q-p_2)_{+\dot\beta}}
-{(q^2+M^2)\big((q+p_1)^2+M^2\big)\big((q-p_2)^2+M^2\big)}\,
-\mathscr C_{12},
-$$
-
-$$
-\Gamma_{21;M}^{\rm PV\text{-}loop}{}_{\dot\theta\dot\beta}
-=
-2i g^2\int_q
-\frac{(q-p_1)_{+\dot\theta}(q-p_1)_{+\dot\beta}}
-{(q^2+M^2)\big((q-p_1)^2+M^2\big)}\,
-\mathscr C_{21}
-$$
-
-$$
-\qquad
--2i g^2M^2\int_q
-\frac{(q-p_1)_{+\dot\theta}(q-p_1)_{+\dot\beta}}
-{(q^2+M^2)\big((q+p_2)^2+M^2\big)\big((q-p_1)^2+M^2\big)}\,
-\mathscr C_{21}.
-$$
-
-## Step 4: Regularization and final local anomaly
-
-$$
-\frac{1}{(q^2+M^2)\big((q+p_1)^2+M^2\big)\big((q-p_2)^2+M^2\big)}
-=
-2\int_\Delta
-\frac{1}{\big[(q+y p_1-z p_2)^2+M^2+\Delta\big]^3},
-$$
-
-$$
-\ell=q+y p_1-z p_2,
-\qquad
-q-p_2=\ell-y p-x p_2.
-$$
-
-$$
-\Xi_{12,+\dot\theta,+\dot\beta}(p_1,p_2)
-:=
-p_{1,+\dot\theta}p_{1,+\dot\beta}
-+
-3p_{1,+(\dot\theta}p_{2,+\dot\beta)}
-+
-3p_{2,+\dot\theta}p_{2,+\dot\beta},
-$$
-
-$$
-\Xi_{21,+\dot\theta,+\dot\beta}(p_1,p_2)
-:=
-3p_{1,+\dot\theta}p_{1,+\dot\beta}
-+
-3p_{1,+(\dot\theta}p_{2,+\dot\beta)}
-+
-p_{2,+\dot\theta}p_{2,+\dot\beta}.
-$$
-
-$$
-\Gamma_{12}^{({\rm anom,loc})}{}_{\dot\theta\dot\beta}
-=
--\frac{i g^2}{96\pi^2}\,
-\Xi_{12,+\dot\theta,+\dot\beta}(p_1,p_2)\,
-\mathscr C_{12},
-$$
-
-$$
-\Gamma_{21}^{({\rm anom,loc})}{}_{\dot\theta\dot\beta}
-=
--\frac{i g^2}{96\pi^2}\,
-\Xi_{21,+\dot\theta,+\dot\beta}(p_1,p_2)\,
-\mathscr C_{21}.
+t^0(\cdots)-\Gamma_{\rm cl}=0.
 $$
 
 $$
 \boxed{
-\mathcal I\!\left[Q_1\mathcal O_{\dot\theta\dot\beta}^{AB}(p)\right]_{\rm PV,\,1\text{-}loop,\,loc}
-=
--\frac{i g^2}{96\pi^2}
-\int_{p_1,p_2}\delta_{p-p_1-p_2}
-\Big[
-\Xi_{12,+\dot\theta,+\dot\beta}\,\mathscr C_{12}^{AB}
-+
-\Xi_{21,+\dot\theta,+\dot\beta}\,\mathscr C_{21}^{AB}
-\Big].
-}
+\text{no new pure-SYM gauge-invariant local remainder in the }\partial_\mu J^\mu_-\text{ channel}
+}.
 $$
 
 ## Step 5: Simplification examples
 
 $$
-\mathscr C_{12}^{AB}(p_1,p_2)
-=
-\epsilon^{\dot\gamma\dot\delta}
-f^{CA}{}_{E}f^{DB}{}_{E}\,
-\bar\lambda_{\dot\gamma}^{C}(p_1)\,
-\bar\lambda_{\dot\delta}^{D}(p_2),
-\qquad
-\mathscr C_{21}^{AB}(p_1,p_2)=\mathscr C_{12}^{AB}(p_2,p_1).
+\big\langle \partial_\mu J^\mu_-(x)\,\operatorname{Tr}\!\big(f_{++}\nabla_{+\dot\theta}\bar\lambda_{\dot\beta}\big)(y)\big\rangle_{\rm conn,loc}
+\Longrightarrow
+\delta^{(4)}(x-y)\,
+\operatorname{Tr}\!\big((Q_-^{\rm cl}f_{++})\nabla_{+\dot\theta}\bar\lambda_{\dot\beta}\big)(y).
 $$
 
 $$
-\mathcal B_{\dot\theta\dot\beta}^{AB}(x)
-:=
-\epsilon^{\dot\gamma\dot\delta}
-f^{CA}{}_{E}f^{DB}{}_{E}
-\Big[
-(\nabla_{+(\dot\theta}\nabla_{+\dot\beta)}\bar\lambda_{\dot\gamma}^{C})\bar\lambda_{\dot\delta}^{D}
-+
-3(\nabla_{+(\dot\theta}\bar\lambda_{\dot\gamma}^{C})(\nabla_{+\dot\beta)}\bar\lambda_{\dot\delta}^{D})
-+
-3\bar\lambda_{\dot\gamma}^{C}(\nabla_{+(\dot\theta}\nabla_{+\dot\beta)}\bar\lambda_{\dot\delta}^{D})
-\Big],
-$$
-
-$$
-\boxed{
-Q_1\mathcal O_{\dot\theta\dot\beta}^{AB}(x)\Big|_{\rm PV,\,1\text{-}loop,\,loc}
-=
-\frac{i g^2}{48\pi^2}\,
-\mathcal B_{\dot\theta\dot\beta}^{AB}(x).
-}
+t^0(\cdots)-\Gamma_{\rm cl}=0.
 $$

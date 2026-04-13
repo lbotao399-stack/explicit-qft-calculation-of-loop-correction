@@ -27,3 +27,7 @@
 - 下一步：
   - `Q_1(f_{++}f_{++}) / DR` 已改成 pure-SYM divergence consistency page
   - 下一步继续把同族 `n1_sym_euclidean` 计算页依次迁成 current-divergence 版 Step 2 / Step 3 / Step 4
+- 同日补充完成：
+  - `01/02/04/05/06/07/08/09/10/11` 已全部迁成 `Q_-` 显式投影 + current-piece selection + WT contact reconstruction 版；
+  - 对带 `\nabla` 与 `e^{w\cdot\nabla_+}` 的 slot，当前页面统一保留 `\delta_{Q_-}^{\rm cl}` 的 active-slot 记法，不在页面内额外展开 `[\delta_{Q_-},\nabla]` 的树项；
+  - `03_q1__fpp_fpp__dr.md` 继续作为 pure-SYM divergence consistency 的基准页。

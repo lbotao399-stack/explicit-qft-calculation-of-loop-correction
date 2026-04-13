@@ -7,6 +7,14 @@
 - `loop_order: 1`
 - `Q_1 \equiv Q_-`
 
+统一工作口径：
+
+- `Q_1 \equiv Q_-`
+- `\partial_\mu J^\mu_-` 只作为 WT contact-term insertion
+- `J^\mu_- = J^{\mu,(2)}_- + J^{\mu,(3)}_-`
+- `current-piece selection + local WT reconstruction`
+- pure-SYM divergence channel 一律满足 `t^0(\cdots)-\Gamma_{\rm cl}=0`
+
 再按 `regularization` 与 `operator` 区分。
 
 ## Current files
