@@ -5,6 +5,7 @@
 - `theory: N=1 SYM (Euclidean)`
 - `supercharge: Q_-`
 - `loop_order: 1`
+- `Q_1 \equiv Q_-`
 
 再按 `regularization` 与 `operator` 区分。
 

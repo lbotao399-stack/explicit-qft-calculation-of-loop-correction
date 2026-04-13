@@ -7,6 +7,38 @@ status: working
 
 # N=1 SYM (Euclidean): current-divergence working convention
 
+## Global alias
+
+$$
+\boxed{
+Q_1\equiv Q_-
+}.
+$$
+
+$$
+\delta_{Q_1}=\delta_{Q_-},
+\qquad
+J^\mu_{Q_1}=J^\mu_-,
+\qquad
+\partial_\mu J^\mu_{Q_1}=\partial_\mu J^\mu_-.
+$$
+
+$$
+Q_-=\left.Q_-^4\right|_{N=4\to N=1\text{ gauge truncation}}.
+$$
+
+$$
+\delta_{Q_-}\Phi
+:=
+\delta_{\rm raw}\Phi\Big|_{\varepsilon^-=1,\ \varepsilon^+=0,\ \bar\varepsilon^{\dot\pm}=0}.
+$$
+
+$$
+Q_-^2=0,
+\qquad
+\{Q_-,\bar Q_{\dot\alpha}\}=2\,\sigma^\mu_{-\dot\alpha}P_\mu.
+$$
+
 ## Current choice
 
 $$
@@ -75,27 +107,64 @@ $$
 ## \(Q_1\) projection
 
 $$
-J^\mu_{Q_1}:=v_{Q_1}^\alpha J^\mu_\alpha.
+J^\mu_-:=v_-^\alpha J^\mu_\alpha.
 $$
 
 $$
 \boxed{
-J^\mu_{Q_1}\equiv \big(J_{\mu\alpha}^{\rm rel}\big)\text{ 对应 }Q_1\text{ 的那一支}
+J^\mu_-\equiv \big(J_{\mu\alpha}^{\rm rel}\big)\text{ 对应 }Q_-\text{ 的那一支}
 }.
+$$
+
+$$
+J^\mu_-=
+C_J\Big(f_{+-}\Xi^{\mu +}+f_{--}\Xi^{\mu -}\Big).
+$$
+
+## Component extraction rule
+
+$$
+\delta_\varepsilon f_{\alpha\beta}
+=
+C_f\Big(
+\varepsilon^\gamma\epsilon_{\gamma\alpha}\,D_{\beta\dot\beta}\chi^{\dot\beta}
++
+\varepsilon^\gamma\epsilon_{\gamma\beta}\,D_{\alpha\dot\beta}\chi^{\dot\beta}
+\Big).
+$$
+
+$$
+s:=\epsilon_{-+},
+\qquad
+s^2=1.
+$$
+
+$$
+Q_- f_{++}=2\,s\,C_f\,D_{+\dot\beta}\chi^{\dot\beta},
+\qquad
+Q_- f_{+-}=s\,C_f\,D_{-\dot\beta}\chi^{\dot\beta},
+\qquad
+Q_- f_{--}=0.
+$$
+
+$$
+Q_-\,\operatorname{Tr}(f_{++}f_{++})
+=
+4\,s\,C_f\,\operatorname{Tr}\!\big(f_{++}D_{+\dot\beta}\chi^{\dot\beta}\big).
 $$
 
 ## Divergence rule
 
 $$
-\big\langle \partial_\mu J^\mu_{Q_1}(x),\mathcal O(y_1)\cdots \mathcal O(y_n)\big\rangle
+\big\langle \partial_\mu J^\mu_-(x),\mathcal O(y_1)\cdots \mathcal O(y_n)\big\rangle
 =
 -\sum_i \delta(x-y_i)\,
-\big\langle \delta_{Q_1}^{\rm cl}\mathcal O_i(y_i)\prod_{j\neq i}\mathcal O_j(y_j)\big\rangle.
+\big\langle \delta_{Q_-}^{\rm cl}\mathcal O_i(y_i)\prod_{j\neq i}\mathcal O_j(y_j)\big\rangle.
 $$
 
 $$
 \boxed{
-\partial_\mu J^\mu_{Q_1}\ \text{acts only by WT contact terms}
+\partial_\mu J^\mu_-\ \text{acts only by WT contact terms}
 }.
 $$
 
@@ -120,7 +189,29 @@ J^{(3)}\sim [A,A]\bar\lambda.
 $$
 
 $$
-\partial_\mu J^\mu_{Q_1}(x)\cdot f_{++}(y).
+\langle f_{\alpha\beta}^a(x)\,f_{\gamma\delta}^b(y)\rangle_0
+=
+\delta^{ab}\,K(x-y)\,
+\Big(\epsilon_{\alpha\gamma}\epsilon_{\beta\delta}
++\epsilon_{\alpha\delta}\epsilon_{\beta\gamma}\Big).
+$$
+
+$$
+\langle f_{++}(x)f_{++}(y)\rangle_0=0,
+\qquad
+\langle f_{+-}(x)f_{++}(y)\rangle_0=0,
+\qquad
+\langle f_{--}(x)f_{++}(y)\rangle_0=2\,K(x-y).
+$$
+
+$$
+\boxed{
+\text{only the }f_{--}\Xi^{\mu -}\text{ branch of }J^\mu_-\text{ can feed into an external }f_{++}
+}.
+$$
+
+$$
+\partial_\mu J^\mu_-(x)\cdot f_{++}(y).
 $$
 
 $$
@@ -154,7 +245,7 @@ $$
 $$
 \boxed{
 \text{the short-distance contraction only reconstructs }
-\delta_{Q_1}^{\rm cl}f_{++}
+\delta_{Q_-}^{\rm cl}f_{++}
 }.
 $$
 

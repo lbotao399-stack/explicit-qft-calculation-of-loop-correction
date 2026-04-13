@@ -114,6 +114,20 @@ $$
 
 ## N=1 SYM 当前工作约定
 
+$$
+\boxed{
+Q_1\equiv Q_- \text{ throughout }n1\_sym\_euclidean
+}
+$$
+
+$$
+\delta_{Q_1}=\delta_{Q_-},
+\qquad
+J^\mu_{Q_1}=J^\mu_-,
+\qquad
+\partial_\mu J^\mu_{Q_1}=\partial_\mu J^\mu_-.
+$$
+
 对 `n1_sym_euclidean`，当前统一采用 properly-normalized canonical / WZ-gauge supercurrent
 
 $$
@@ -139,15 +153,15 @@ $$
 对具体 supercharge `Q_1`，工作投影统一写成
 
 $$
-J^\mu_{Q_1}:=v_{Q_1}^\alpha J^\mu_\alpha,
+J^\mu_-:=v_-^\alpha J^\mu_\alpha,
 \qquad
-\partial_\mu J^\mu_{Q_1}\ \text{as the insertion}.
+\partial_\mu J^\mu_-\ \text{as the insertion}.
 $$
 
 pure SYM 的这组页面里，
 
 $$
-\partial_\mu J^\mu_{Q_1}
+\partial_\mu J^\mu_-
 \text{ 只通过 WT contact term 起作用，}
 $$
 
@@ -166,7 +180,7 @@ $$
 对 `Q_1(f_{++}f_{++})` 及其同族页面，只保留那些足以重建
 
 $$
-\delta_{Q_1}^{\rm cl}f_{++}\sim D\bar\lambda
+\delta_{Q_-}^{\rm cl}f_{++}\sim D\bar\lambda
 $$
 
 的 contraction，并要求
@@ -194,6 +208,18 @@ $$
 作为独立 anomaly-channel insertion。
 
 pure SYM 的真正一圈 anomaly 保留在 gamma-trace / superconformal channel，不并入这些 \(\partial_\mu J^\mu\) 页面。
+
+free self-dual propagator 的 index 选择规则固定为
+
+$$
+\langle f_{++}f_{++}\rangle_0=0,
+\qquad
+\langle f_{+-}f_{++}\rangle_0=0,
+\qquad
+\langle f_{--}f_{++}\rangle_0\neq0.
+$$
+
+因此 Step 2 中，只有 `J_-` 里能真正 feed into external `f_{++}` 的那一支才保留。
 
 ## 原始材料
 

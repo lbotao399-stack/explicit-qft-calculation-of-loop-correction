@@ -12,19 +12,36 @@ status: canonical
 ## Step 1: Operator / current / vertex
 
 $$
+\boxed{Q_1\equiv Q_-}.
+$$
+
+$$
+\boxed{\text{same }Q_-\text{ as in }conventions\_and\_rules.md;\ \text{parent }N=4\text{ notation: }Q_-^4.}
+$$
+
+$$
+\delta_{Q_1}=\delta_{Q_-},
+\qquad
+J^\mu_{Q_1}=J^\mu_-,
+\qquad
+\partial_\mu J^\mu_{Q_1}=\partial_\mu J^\mu_-.
+$$
+
+
+$$
 \mathcal O_{ff}^{AB}(p):=\int_{p_1,p_2}f_{++}^A(p_1)f_{++}^B(p_2)\,\delta_{p-p_1-p_2},
 \qquad
 p=p_1+p_2.
 $$
 
 $$
-J^\mu_{Q_1}:=v_{Q_1}^\alpha J^\mu_\alpha,
+J^\mu_-:=v_-^\alpha J^\mu_\alpha,
 \qquad
 J_{\mu\alpha}^{\rm rel}=-\frac{c_f}{2g_0}\,f_{\alpha\beta}^C(\sigma_\mu)^{\beta\dot\beta}\bar\lambda_{\dot\beta}^C.
 $$
 
 $$
-\partial_\mu J^\mu_{Q_1}(x)\cdot \mathcal O_{ff}^{AB}(y).
+\partial_\mu J^\mu_-(x)\cdot \mathcal O_{ff}^{AB}(y).
 $$
 
 $$
@@ -47,13 +64,13 @@ $$
 $$
 
 $$
-J^\mu_{Q_1}
+J^\mu_-
 =
-J^{\mu,(2)}_{Q_1}+J^{\mu,(3)}_{Q_1},
+J^{\mu,(2)}_-+J^{\mu,(3)}_-,
 \qquad
-J^{(2)}_{Q_1}\sim (\partial A)\bar\lambda,
+J^{(2)}_-\sim (\partial A)\bar\lambda,
 \qquad
-J^{(3)}_{Q_1}\sim [A,A]\bar\lambda.
+J^{(3)}_-\sim [A,A]\bar\lambda.
 $$
 
 $$
@@ -62,12 +79,24 @@ $$
 \langle \lambda_\alpha^a(p)\bar\lambda_{\dot\beta}^b(-p)\rangle=-\frac{i\delta^{ab}p_{\alpha\dot\beta}}{p^2}.
 $$
 
+$$
+\langle f_{++}(x)f_{++}(y)\rangle_0=0,
+\qquad
+\langle f_{+-}(x)f_{++}(y)\rangle_0=0,
+\qquad
+\langle f_{--}(x)f_{++}(y)\rangle_0=2K(x-y).
+$$
+
+$$
+\text{only the }f_{--}\Xi^{\mu -}\text{ branch of }J^\mu_-\text{ feeds into the external }f_{++}\text{ leg}.
+$$
+
 ## Step 2: Wick contraction
 
 ![](../../assets/step4/calculation_triangles/n1_q1_fpp_fpp_triangle_pair.png)
 
 $$
-\big\langle \partial_\mu J^\mu_{Q_1}(x)\,\mathcal O_{ff}^{AB}(y)\big\rangle_{\rm conn,loc}
+\big\langle \partial_\mu J^\mu_-(x)\,\mathcal O_{ff}^{AB}(y)\big\rangle_{\rm conn,loc}
 =
 T_{\rm lin-lin}^{AB}(x,y)
 +T_{\rm lin-quad}^{AB}(x,y)
@@ -119,16 +148,16 @@ iD_{+\dot\beta}\bar\lambda^{A\dot\beta}\,f_{++}^B
 $$
 
 $$
-\delta_{Q_1}^{\rm cl}f_{++}^A
+\delta_{Q_-}^{\rm cl}f_{++}^A
 =
 iD_{+\dot\beta}\bar\lambda^{A\dot\beta}.
 $$
 
 $$
-\big\langle \partial_\mu J^\mu_{Q_1}(x)\,\mathcal O_{ff}^{AB}(y)\big\rangle_{\rm conn,loc}
+\big\langle \partial_\mu J^\mu_-(x)\,\mathcal O_{ff}^{AB}(y)\big\rangle_{\rm conn,loc}
 \Longrightarrow
 \delta^{(4)}(x-y)\,
-\delta_{Q_1}^{\rm cl}\mathcal O_{ff}^{AB}(y).
+\delta_{Q_-}^{\rm cl}\mathcal O_{ff}^{AB}(y).
 $$
 
 $$
@@ -138,10 +167,10 @@ $$
 ## Step 4: Regularization and consistency condition
 
 $$
-\big\langle \partial_\mu J^\mu_{Q_1}(x)\,\mathcal O_{ff}^{AB}(y)\big\rangle_{\rm DR,loc}
+\big\langle \partial_\mu J^\mu_-(x)\,\mathcal O_{ff}^{AB}(y)\big\rangle_{\rm DR,loc}
 =
 \delta^{(4)}(x-y)\,
-\delta_{Q_1}^{\rm cl}\mathcal O_{ff}^{AB}(y).
+\delta_{Q_-}^{\rm cl}\mathcal O_{ff}^{AB}(y).
 $$
 
 $$
@@ -149,7 +178,7 @@ t^0(\cdots)-\Gamma_{\rm cl}=0.
 $$
 
 $$
-\delta_{Q_1}^{\rm cl}\mathcal O_{ff}^{AB}(x)
+\delta_{Q_-}^{\rm cl}\mathcal O_{ff}^{AB}(x)
 =
 \big(iD_{+\dot\beta}\bar\lambda^{A\dot\beta}\big)f_{++}^B
 +f_{++}^A\big(iD_{+\dot\beta}\bar\lambda^{B\dot\beta}\big).
@@ -157,23 +186,23 @@ $$
 
 $$
 \boxed{
-\text{no new pure-SYM gauge-invariant local remainder in the }\partial_\mu J^\mu_{Q_1}\text{ channel}
+\text{no new pure-SYM gauge-invariant local remainder in the }\partial_\mu J^\mu_-\text{ channel}
 }.
 $$
 
 ## Step 5: Simplification examples
 
 $$
-\big\langle \partial_\mu J^\mu_{Q_1}(x)\,\operatorname{Tr}(f_{++}f_{++})(y)\big\rangle_{\rm conn,loc}
+\big\langle \partial_\mu J^\mu_-(x)\,\operatorname{Tr}(f_{++}f_{++})(y)\big\rangle_{\rm conn,loc}
 \Longrightarrow
 2\,\delta^{(4)}(x-y)\,
-\operatorname{Tr}\!\big((Q_1^{\rm cl}f_{++})f_{++}\big)(y).
+\operatorname{Tr}\!\big((Q_-^{\rm cl}f_{++})f_{++}\big)(y).
 $$
 
 $$
-\delta_{Q_1}^{\rm cl}\operatorname{Tr}(f_{++}f_{++})
+\delta_{Q_-}^{\rm cl}\operatorname{Tr}(f_{++}f_{++})
 =
-2\,\operatorname{Tr}\!\big((Q_1^{\rm cl}f_{++})f_{++}\big).
+2\,\operatorname{Tr}\!\big((Q_-^{\rm cl}f_{++})f_{++}\big).
 $$
 
 $$

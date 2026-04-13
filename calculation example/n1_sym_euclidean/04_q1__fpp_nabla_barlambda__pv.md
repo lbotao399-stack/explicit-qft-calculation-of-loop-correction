@@ -12,6 +12,23 @@ status: canonical
 ## Step 1: Operator / current / vertex
 
 $$
+\boxed{Q_1\equiv Q_-}.
+$$
+
+$$
+\boxed{\text{same }Q_-\text{ as in }conventions\_and\_rules.md;\ \text{parent }N=4\text{ notation: }Q_-^4.}
+$$
+
+$$
+\delta_{Q_1}=\delta_{Q_-},
+\qquad
+J^\mu_{Q_1}=J^\mu_-,
+\qquad
+\partial_\mu J^\mu_{Q_1}=\partial_\mu J^\mu_-.
+$$
+
+
+$$
 \mathcal O_{\dot\theta\dot\beta}^{AB}(p)
 :=
 \int_{p_1,p_2}

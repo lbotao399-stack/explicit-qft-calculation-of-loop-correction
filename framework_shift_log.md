@@ -9,10 +9,12 @@
   - local-term extraction
 - `n1_general` 的 Konishi 页已作为 current-divergence 模板保留。
 - `n1_sym_euclidean` 当前工作约定固定为：
+  - `Q_1 \equiv Q_-`，不做新的 basis / rescaling / phase；
   - current 取 properly-normalized canonical / WZ-gauge supercurrent；
   - current 的 \(f\bar\lambda\) 系数与 raw SUSY 中 \(\delta\lambda=c_f f\varepsilon+\cdots\) 的 \(c_f\) 做 coefficient matching；
-  - 工作插入统一取 \(\partial_\mu J^\mu_{Q_1}\)；
+  - 工作插入统一取 \(\partial_\mu J^\mu_-\)；
   - current vertex 必须同时展开为 \(J^{(2)}\sim (\partial A)\bar\lambda\) 与 \(J^{(3)}\sim [A,A]\bar\lambda\)；
+  - `f` propagator 的 spinor selection rule 固定为只有 `f_{--}` 支能直接 contract 到 external `f_{++}`；
   - pure SYM 的这组页面不再把 \(\partial_\mu J^\mu\) 读成独立 anomaly channel；
   - `Q_1(f_{++}f_{++})` 页面只要求短程 contraction 重建 classical covariant variation；
   - 在该 channel 中一致性条件固定为 \(t^0(\cdots)-\Gamma_{\rm cl}=0\)。

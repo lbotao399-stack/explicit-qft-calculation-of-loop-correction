@@ -12,6 +12,23 @@ status: canonical
 ## Step 1: Operator / current / vertex
 
 $$
+\boxed{Q_1\equiv Q_-}.
+$$
+
+$$
+\boxed{\text{same }Q_-\text{ as in }conventions\_and\_rules.md;\ \text{parent }N=4\text{ notation: }Q_-^4.}
+$$
+
+$$
+\delta_{Q_1}=\delta_{Q_-},
+\qquad
+J^\mu_{Q_1}=J^\mu_-,
+\qquad
+\partial_\mu J^\mu_{Q_1}=\partial_\mu J^\mu_-.
+$$
+
+
+$$
 w\cdot\nabla_+ := w^{+\dot\alpha}\nabla_{+\dot\alpha},
 \qquad
 w\cdot p_a := w^{+\dot\alpha}p_{a,+\dot\alpha}.
