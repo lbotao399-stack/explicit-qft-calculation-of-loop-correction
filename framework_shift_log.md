@@ -67,3 +67,9 @@
   - `X\Psi_{\rm raw}\to F_{\rm raw}` 与 `\Psi_{\rm raw}X\to F_{\rm raw}` 两页统一采用 `\mathbb P_F=(1/2g_{\rm YM}^2)f^{\rm raw}_{--}`；
   - raw-to-normalized conversion 固定为 `a=-2i\,a_{\rm raw}` 与 `b_{L,R}=-2\sqrt2\,i\,b_{L,R,\rm raw}`；
   - bare-probe language 只作为 inverse two-point amputation 的等价重述，不再单独作为项目主定义。
+- 同日再次修正 `n4_ordinary_space` 的问题缩约：
+  - 否定了“全体 no-derivative bi-letter 统一压成 universal `2->1` kernel”的假设；
+  - `Q_1(\Tr(F_{\rm raw}F_{\rm raw}))` 被确认为第一真实 seed；
+  - `FF` 输入的一圈局域余项必须落在导数二字母基底 `{ \mathcal K_{F\bar\Lambda}^{\rm raw}, \mathcal K_{\Psi X}^{\rm raw} }`；
+  - `FF` 页只保留五类 cubic triangle：`J_F^{(3)} x V_AAA`, `J_F^{(3)} x V_{A\Lambda\bar\Lambda}`, `J_\psi^{(3)} x V_AAA`, `J_\psi^{(3)} x V_{AX\bar X}`, `J_\psi^{(3)} x V_{A\Psi\bar\Psi}`；
+  - 旧 `XX->Psi`, `XPsi->F`, `PsiX->F` 页面全部降级为 deferred legacy pages，等待 input-by-input basis classification 完成后再重新判定其角色。

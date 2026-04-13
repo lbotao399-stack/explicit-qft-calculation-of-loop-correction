@@ -1,34 +1,34 @@
 ---
-title: "Q_1 triangle zero-channel summary"
+title: "Q_1 triangle deferred zero-channel summary"
 doc_type: calculation
 theory: "N=4 SYM ordinary-space"
 loop_order: 1
 supercharge: "Q_-^4"
-status: working
+status: deferred
 ---
 
-# Q_1 triangle zero-channel summary
+# Q_1 triangle deferred zero-channel summary
 
 $$
-\mathfrak q_{1,\triangle}(X_i,F)=0,
-\qquad
-\mathfrak q_{1,\triangle}(F,X_i)=0,
-$$
-
-$$
-\mathfrak q_{1,\triangle}(\Psi^i,\Psi^j)=0,
+\boxed{
+\text{this page is deferred.}
+}
 $$
 
 $$
-\mathfrak q_{1,\triangle}(\Psi^i,F)=0,
-\qquad
-\mathfrak q_{1,\triangle}(F,\Psi^i)=0,
-\qquad
-\mathfrak q_{1,\triangle}(F,F)=0.
+\text{The earlier }2\to1\text{ zero-channel summary is not the project-wide master statement any more.}
+$$
+
+$$
+\text{Before declaring a channel zero, first classify }
+\mathcal B_{L_1L_2}^{1\text{-loop}}
+\text{ for that specific input.}
 $$
 
 $$
 \boxed{
-\text{all zero by quantum numbers in the no-derivative }2\to1\text{ sector}.
+\text{The current first seed is }Q_1(\Tr(F_{\rm raw}F_{\rm raw})),
+\text{ with basis }
+\{\mathcal K_{F\bar\Lambda}^{\rm raw},\mathcal K_{\Psi X}^{\rm raw}\}.
 }
 $$

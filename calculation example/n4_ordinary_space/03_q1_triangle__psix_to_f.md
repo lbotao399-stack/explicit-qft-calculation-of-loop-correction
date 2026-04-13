@@ -1,13 +1,19 @@
 ---
-title: "Q_1 triangle seed: Psi^j X_i -> F"
+title: "Q_1 triangle legacy seed: Psi^j X_i -> F"
 doc_type: calculation
 theory: "N=4 SYM ordinary-space"
 loop_order: 1
 supercharge: "Q_-^4"
-status: seed_setup
+status: deferred_legacy
 ---
 
-# Q_1 triangle seed: \(\Psi^jX_i\to F\)
+# Q_1 triangle legacy seed: \(\Psi^jX_i\to F\)
+
+$$
+\boxed{
+\text{legacy page only; no longer the project-wide first seed after the }FF\text{ correction.}
+}
+$$
 
 ## Step 1: Ordered input / current / vertex / probe
 

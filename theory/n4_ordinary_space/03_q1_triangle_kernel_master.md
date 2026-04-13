@@ -1,374 +1,280 @@
 ---
-title: "N=4 ordinary-space: Q_1 triangle kernel master"
+title: "N=4 ordinary-space: Q_1 one-loop local basis master"
 doc_type: theory
 theory: "N=4 SYM ordinary-space"
 status: working
 ---
 
-# N=4 ordinary-space: Q_1 triangle kernel master
+# N=4 ordinary-space: Q_1 one-loop local basis master
 
-## 1. Full \(Q_1\) on the no-derivative sector
-
-$$
-Q_1^{\rm full}
-=
-Q_1^{[1\to 2]}
-+
-\frac{g_{\rm YM}^2}{8\pi^2}\,Q_{1,\triangle}^{[2\to 1]}
-+
-O(g_{\rm YM}^4).
-$$
-
-$$
-\mathfrak q_1^{[1\to2]}:\mathbb B_0\to T^2(\mathbb B_0),
-\qquad
-\mathfrak q_{1,\triangle}^{[2\to1]}:\mathbb B_0\otimes\mathbb B_0\to \mathbb B_0.
-$$
-
-对 ordered bi-letters
-$$
-Q_{1,\triangle}^{[2\to1]}(LM)=\mathfrak q_{1,\triangle}^{[2\to1]}(L,M),
-\qquad
-L,M\in\mathbb B_0.
-$$
-
-## 2. Raw-to-normalized workflow
+## 1. Correction to the old reduction
 
 $$
 \boxed{
-\text{raw action}
+\text{the no-derivative bi-letter problem is not a universal }2\to1\text{ kernel problem.}
+}
+$$
+
+对
+$$
+\mathcal O_{FF}(y):=\Tr\!\big(F_{\rm raw}F_{\rm raw}\big)(y),
+\qquad
+\Delta(F_{\rm raw})=2,
+\qquad
+\Delta(Q_1)=\frac12,
+$$
+有
+$$
+\Delta\!\big(Q_1\mathcal O_{FF}\big)=\frac92.
+$$
+
+因此一圈修正不能落到单个 no-derivative letter 上，而必须落到导数二字母 sector。
+
+$$
+\boxed{
+Q_1(\Tr(F_{\rm raw}F_{\rm raw}))\text{ at one loop is a }2\to2\text{ derivative problem.}
+}
+$$
+
+## 2. Correct general workflow
+
+对任意输入
+$$
+\mathcal O_{L_1L_2}=\Tr(L_1L_2),
+\qquad
+L_1,L_2\in\{X_i,\Psi^i,F\},
+$$
+先做
+$$
+\mathcal B_{L_1L_2}^{1\text{-loop}}
+$$
+的局域基底分类，再去算系数。
+
+$$
+\boxed{
+\text{input bi-letter}
 \ \to\
-\text{raw Noether current}
+\text{classical }Q_1\text{ target}
 \ \to\
-\text{raw triangle remainder}
+\text{1-loop local basis classification}
 \ \to\
-\text{normalized pair-kernel}.
+\text{relevant current branches}
+\ \to\
+\text{all admissible cubic triangle classes}
+\ \to\
+\text{local reduction onto the chosen basis}.
 }
 $$
 
-令 raw seed coefficients 为
-$$
-\mathfrak q_{1,\triangle}^{\rm raw}(X_i,X_j)
-=
-a_{\rm raw}\,\epsilon_{ijk}\Psi_{\rm raw}^k,
-$$
+## 3. First true seed: \(Q_1(FF)\)
 
+raw notation:
 $$
-\mathfrak q_{1,\triangle}^{\rm raw}(X_i,\Psi_{\rm raw}^j)
-=
-b_{L,{\rm raw}}\,\delta_i^{\,j}F_{\rm raw},
-$$
-
-$$
-\mathfrak q_{1,\triangle}^{\rm raw}(\Psi_{\rm raw}^j,X_i)
-=
-b_{R,{\rm raw}}\,\delta_i^{\,j}F_{\rm raw}.
-$$
-
-又因为
-$$
-\Psi_{\rm raw}^i=-2i\,\Psi^i,
+\mathcal O_{FF}(y):=\Tr\!\big(F_{\rm raw}F_{\rm raw}\big)(y),
 \qquad
-F_{\rm raw}=-2\sqrt2\,i\,F,
-$$
-所以 normalized coefficients 为
-$$
-a=-2i\,a_{\rm raw},
+F_{\rm raw}=f^{\rm raw}_{++}.
 $$
 
+classical target:
 $$
-b_L=-2\sqrt2\,i\,b_{L,{\rm raw}},
-\qquad
-b_R=-2\sqrt2\,i\,b_{R,{\rm raw}}.
-$$
-
-## 3. Three-coefficient ansatz
-
-$$
-\mathfrak q_{1,\triangle}(X_i,X_j)
+Q_1F_{\rm raw}
 =
-a\,\epsilon_{ijk}\Psi^k,
-$$
-
-$$
-\mathfrak q_{1,\triangle}(X_i,\Psi^j)
-=
-b_L\,\delta_i^{\,j}F,
-$$
-
-$$
-\mathfrak q_{1,\triangle}(\Psi^j,X_i)
-=
-b_R\,\delta_i^{\,j}F.
-$$
-
-其余全部为零：
-$$
-\mathfrak q_{1,\triangle}(X_i,F)=0,
-\qquad
-\mathfrak q_{1,\triangle}(F,X_i)=0,
-$$
-
-$$
-\mathfrak q_{1,\triangle}(\Psi^i,\Psi^j)=0,
-$$
-
-$$
-\mathfrak q_{1,\triangle}(\Psi^i,F)=0,
-\qquad
-\mathfrak q_{1,\triangle}(F,\Psi^i)=0,
-\qquad
-\mathfrak q_{1,\triangle}(F,F)=0.
+i\,\nabla_{+\dot\alpha}\bar\Lambda^{\dot\alpha},
 $$
 
 $$
 \boxed{
-\text{all no-derivative bi-letter one-loop data reduce to }\{a,b_L,b_R\}.
-}
-$$
-
-## 4. Ordered probe-amputated extraction
-
-seed coefficient 不从裸的
-$$
-\langle \partial\!\cdot\!J,\Tr(LM)\rangle
-$$
-读取。
-
-先把输入写成 ordered open product
-$$
-\mathcal O_{LM}(y_1,y_2):=L(y_1)M(y_2),
-\qquad
-y_1\to y,\ y_2\to y\ \text{only at the end}.
-$$
-
-定义 probe-amputated correlator
-$$
-\mathcal G_{LM\to N}(x;y_1,y_2;z)
-:=
-\left\langle
-\big[\partial_\mu J^\mu_{Q_1}(x)\,\mathcal O_{LM}(y_1,y_2)\big]^{1\text{-loop}}_{\rm conn,loc}
-\,
-\mathbb P_N(z)
-\right\rangle_0.
-$$
-
-其中 \(\mathbb P_N\) 满足
-$$
-\boxed{
-\langle N(y)\,\mathbb P_M(z)\rangle_0
+Q_1^{\rm cl}\mathcal O_{FF}
 =
-\delta_{N,M}\,\delta^{(4)}(y-z).
-}
-$$
-
-## 5. Amputated probes
-
-对 \(\Psi_{\rm raw}^k=\Psi^k_+\) 输出：
-$$
-\boxed{
-\mathbb P_{\Psi,k}(z)
-:=
--\frac{i}{g_{\rm YM}^2}\,
-\partial_z^{+\dot\alpha}\bar\Psi_{k\dot\alpha}(z).
-}
-$$
-
-$$
-\boxed{
-\langle \Psi_+^{i\,a}(y)\,\mathbb P_{\Psi,k}^{\,b}(z)\rangle_0
-=
-\delta^i_k\,\delta^{ab}\,\delta^{(4)}(y-z).
-}
-$$
-
-对 \(F_{\rm raw}=f^{\rm raw}_{++}\) 输出：
-$$
-\boxed{
-\mathbb P_F(z):=
-\frac{1}{2g_{\rm YM}^2}\,f^{\rm raw}_{--}(z).
-}
-$$
-
-$$
-\langle f^{\rm raw\,a}_{\alpha\beta}(y)\,
-f^{\rm raw\,b}_{\gamma\delta}(z)\rangle_0
-=
-g_{\rm YM}^2\,\delta^{ab}\,
-\big(
-\epsilon_{\alpha\gamma}\epsilon_{\beta\delta}
+i\,\Tr\!\Big[
+(\nabla_{+\dot\alpha}\bar\Lambda^{\dot\alpha})\,F_{\rm raw}
 +
-\epsilon_{\alpha\delta}\epsilon_{\beta\gamma}
-\big)\,
-\delta^{(4)}(y-z),
-$$
-
-从而
-$$
-\boxed{
-\langle F_{\rm raw}^a(y)\,\mathbb P_F^{\,b}(z)\rangle_0
-=
-\delta^{ab}\,\delta^{(4)}(y-z).
+F_{\rm raw}\,(\nabla_{+\dot\alpha}\bar\Lambda^{\dot\alpha})
+\Big].
 }
 $$
 
-bare-probe language 与 inverse 2-point amputation 等价：
-$$
-\mathcal A_{\Psi_+}^{\dot\alpha}
-=
--\frac{i}{g_{\rm YM}^2}\,\partial_z^{+\dot\alpha}
-\quad \text{acting on } \bar\Psi_{k\dot\alpha}(z),
-$$
-
-$$
-\mathcal A_F
-=
-\frac{1}{2g_{\rm YM}^2}
-\quad \text{acting on } f^{\rm raw}_{--}(z).
-$$
-
+The corrected AWI ansatz is
 $$
 \boxed{
-\text{Use probe-amputated legs from the start.}
+\big[\partial_\mu J^\mu_{Q_1}(x)\,\mathcal O_{FF}(y)\big]^{1\text{-loop}}_{\rm loc}
+=
+-\delta^{(4)}(x-y)\,Q_1^{\rm cl}\mathcal O_{FF}(y)
+-\frac{g_{\rm YM}^2}{8\pi^2}\,\delta^{(4)}(x-y)\,
+\Big(
+c_{F\bar\Lambda}^{\rm raw}\,\mathcal K_{F\bar\Lambda}^{\rm raw}
++
+c_{\Psi X}^{\rm raw}\,\mathcal K_{\Psi X}^{\rm raw}
+\Big)(y).
 }
 $$
 
-## 6. Coefficient extraction equations
+## 4. Minimal independent raw basis for \(Q_1(FF)\)
 
-`XX -> Psi_raw`:
 $$
-\mathcal G_{ij|k}(x;y_1,y_2;z)
+\boxed{
+\mathcal K_{F\bar\Lambda}^{\rm raw}
 :=
-\left\langle
-\big[\partial_\mu J^\mu_{Q_1}(x)\,X_i(y_1)X_j(y_2)\big]^{1\text{-loop}}_{\rm conn,loc}
-\,
-\mathbb P_{\Psi,k}(z)
-\right\rangle_0.
+\Tr\!\big[
+(\nabla_{+\dot\alpha}F_{\rm raw})\,\bar\Lambda^{\dot\alpha}
+\big],
+}
 $$
 
 $$
 \boxed{
-\mathcal G_{ij|k}(x;y,z)
-=
--\frac{g_{\rm YM}^2}{8\pi^2}\,
-a_{\rm raw}\,
-\epsilon_{ijk}\,
-\delta^{(4)}(x-y)\,
-\delta^{(4)}(y-z).
-}
-$$
-
-`X Psi_raw -> F_raw`:
-$$
-\mathcal G^{L}_{i}{}^{j}(x;y_1,y_2;z)
+\mathcal K_{\Psi X}^{\rm raw}
 :=
-\left\langle
-\big[\partial_\mu J^\mu_{Q_1}(x)\,X_i(y_1)\Psi^j_+(y_2)\big]^{1\text{-loop}}_{\rm conn,loc}
-\,
-\mathbb P_F(z)
-\right\rangle_0.
-$$
-
-$$
-\boxed{
-\mathcal G^{L}_{i}{}^{j}(x;y,z)
-=
--\frac{g_{\rm YM}^2}{8\pi^2}\,
-b_{L,{\rm raw}}\,
-\delta_i^{\,j}\,
-\delta^{(4)}(x-y)\,
-\delta^{(4)}(y-z).
+\Tr\!\big[
+(\nabla_{+\dot\alpha}\Psi^i_+)\,(\nabla_+^{\dot\alpha}X_i)
+\big].
 }
 $$
 
-`Psi_raw X -> F_raw`:
 $$
-\mathcal G^{R}_{i}{}^{j}(x;y_1,y_2;z)
-:=
-\left\langle
-\big[\partial_\mu J^\mu_{Q_1}(x)\,\Psi^j_+(y_1)X_i(y_2)\big]^{1\text{-loop}}_{\rm conn,loc}
-\,
-\mathbb P_F(z)
-\right\rangle_0.
+\nabla_{+\dot\alpha}\Tr(F_{\rm raw}\bar\Lambda^{\dot\alpha})
+=
+\Tr\!\big[(\nabla_{+\dot\alpha}F_{\rm raw})\bar\Lambda^{\dot\alpha}\big]
++
+\Tr\!\big[F_{\rm raw}\nabla_{+\dot\alpha}\bar\Lambda^{\dot\alpha}\big].
 $$
+
+第二项正是 classical \(Q_1F_{\rm raw}\) channel，所以不是新的 one-loop basis element。
+
+$$
+\nabla_{+\dot\alpha}\Tr(\Psi^i_+\nabla_+^{\dot\alpha}X_i)
+=
+\Tr\!\big[(\nabla_{+\dot\alpha}\Psi^i_+)(\nabla_+^{\dot\alpha}X_i)\big]
++
+\Tr\!\big[\Psi^i_+\,\nabla_{+\dot\alpha}\nabla_+^{\dot\alpha}X_i\big].
+$$
+
+所以二导数打在 \(X_i\) 上的项可化到 \(\mathcal K_{\Psi X}^{\rm raw}\) 加 total derivative。
 
 $$
 \boxed{
-\mathcal G^{R}_{i}{}^{j}(x;y,z)
+\mathcal B_{FF}^{1\text{-loop,raw}}
 =
--\frac{g_{\rm YM}^2}{8\pi^2}\,
-b_{R,{\rm raw}}\,
-\delta_i^{\,j}\,
-\delta^{(4)}(x-y)\,
-\delta^{(4)}(y-z).
+\left\{
+\mathcal K_{F\bar\Lambda}^{\rm raw},
+\ \mathcal K_{\Psi X}^{\rm raw}
+\right\}.
 }
 $$
 
-## 7. Universal local triangle integral
+## 5. Relevant current branches and admissible cubic triangle classes
 
-$$
-[\Delta(x)^2]_{\rm R}
-=
--\frac{1}{64\pi^4}\,
-\square\!\left(\frac{\ln(\mu^2 x^2)}{x^2}\right).
-$$
+对 \(FF\) 输入，quadratic current pieces 不给 genuine \(2\to2\) local correction。
 
-$$
-I_{\triangle}^{\rm loc}(x)
-:=
-\mu\frac{\partial}{\partial\mu}[\Delta(x)^2]_{\rm R}
-=
-\frac{1}{8\pi^2}\,\delta^{(4)}(x).
-$$
-
+只保留 cubic current branches：
 $$
 \boxed{
-\text{all seed channels should be reduced to }
-(\text{spinor factor})\times(\text{color factor})\times I_{\triangle}^{\rm loc}(x-y).
+J_{F{\rm -branch}}^{(3)\mu,{\rm raw}}
+=
+\frac{i}{2g_{\rm YM}^2}
+\Tr\!\left(
+[A_\rho,A_\sigma]\,
+(\sigma^{\rho\sigma}\sigma^\mu\bar\Lambda)_-
+\right),
 }
 $$
 
-DR-compatible statement:
-$$
-\Delta_\epsilon(x)
-=
-\frac{\Gamma(1-\epsilon)}{4\pi^{2-\epsilon}}\,
-\frac{1}{(x^2)^{1-\epsilon}},
-$$
-
-$$
-\mu^{2\epsilon}\Delta_\epsilon(x)^2
-=
--\frac{1}{16\pi^2}\frac{1}{\epsilon}\,\delta^{(4)}(x)
--\frac{1}{64\pi^4}\,
-\square\!\left(\frac{\ln(\mu^2 x^2)}{x^2}\right)
-+O(\epsilon),
-$$
-
 $$
 \boxed{
-\text{minimal subtraction leaves }
-I_{\triangle}^{\rm loc}(x)=\frac{1}{8\pi^2}\delta^{(4)}(x).
+J_{\psi{\rm -branch}}^{(3)\mu,{\rm raw}}
+=
+-\frac{i\sqrt2}{g_{\rm YM}^2}
+\Tr\!\left(
+[A_\nu,X_i]\,
+(\sigma^\nu\bar\sigma^\mu\Psi^i)_-
+\right).
 }
 $$
 
-## 8. Planar lift after seed stage
-
+relevant cubic vertices:
 $$
-Q_{1,\triangle}^{[2\to1]}\operatorname{Tr}(L_1L_2\cdots L_n)
+\boxed{
+\mathcal L_{AAA}^{(3)}
 =
-\frac{g_{\rm YM}^2}{8\pi^2}
-\sum_{r=1}^{n-1}
-(-1)^{\sum_{s<r}|L_s|}
-\operatorname{Tr}\!\big(
-L_1\cdots
-\mathfrak q_{1,\triangle}(L_r,L_{r+1})
-\cdots L_n
-\big).
+\frac{i}{g_{\rm YM}^2}\Tr\!\left[
+(\partial_\mu A_\nu-\partial_\nu A_\mu)[A^\mu,A^\nu]
+\right],
+}
 $$
 
 $$
 \boxed{
-\text{first compute }\mathfrak q_{1,\triangle}(L,M)\text{ on ordered bi-letters, then lift.}
+\mathcal L_{A\Lambda\bar\Lambda}^{(3)}
+=
+-\frac{1}{g_{\rm YM}^2}
+\Tr\!\left[
+\Lambda^\alpha\sigma^\mu_{\alpha\dot\alpha}[A_\mu,\bar\Lambda^{\dot\alpha}]
+\right],
+}
+$$
+
+$$
+\boxed{
+\mathcal L_{AX\bar X}^{(3)}
+=
+\frac{i}{g_{\rm YM}^2}
+\Tr\!\left[
+(\partial_\mu X_i)[A^\mu,\bar X^i]
+-(\partial_\mu\bar X^i)[A^\mu,X_i]
+\right],
+}
+$$
+
+$$
+\boxed{
+\mathcal L_{A\Psi\bar\Psi}^{(3)}
+=
+-\frac{1}{g_{\rm YM}^2}
+\Tr\!\left[
+\Psi^{i\alpha}\sigma^\mu_{\alpha\dot\alpha}[A_\mu,\bar\Psi_i^{\dot\alpha}]
+\right].
+}
+$$
+
+Hence the five triangle classes are
+$$
+\boxed{
+J_{F{\rm -branch}}^{(3)}\times V_{AAA},
+\qquad
+J_{F{\rm -branch}}^{(3)}\times V_{A\Lambda\bar\Lambda}.
+}
+$$
+
+$$
+\boxed{
+J_{\psi{\rm -branch}}^{(3)}\times V_{AAA},
+\qquad
+J_{\psi{\rm -branch}}^{(3)}\times V_{AX\bar X},
+\qquad
+J_{\psi{\rm -branch}}^{(3)}\times V_{A\Psi\bar\Psi}.
+}
+$$
+
+Each class also has the mirror Wick contraction that exchanges the two external \(F_{\rm raw}\) legs.
+
+## 6. Deferred status of the old \(2\to1\) pages
+
+旧的
+$$
+X_iX_j\to\Psi^k,
+\qquad
+X_i\Psi^j\to F,
+\qquad
+\Psi^jX_i\to F
+$$
+三页不再作为整个 `n4_ordinary_space` track 的 universal seed reduction。
+
+它们只在 future channel-by-channel basis classification 完成之后，才能重新判定是否作为特定输入的 reduced subproblem 使用。
+
+## 7. Working rule from here
+
+$$
+\boxed{
+\text{first close the }FF\text{ page, then generalize input by input.}
 }
 $$
