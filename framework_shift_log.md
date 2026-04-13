@@ -29,5 +29,10 @@
   - 下一步继续把同族 `n1_sym_euclidean` 计算页依次迁成 current-divergence 版 Step 2 / Step 3 / Step 4
 - 同日补充完成：
   - `01/02/04/05/06/07/08/09/10/11` 已全部迁成 `Q_-` 显式投影 + current-piece selection + WT contact reconstruction 版；
-  - 对带 `\nabla` 与 `e^{w\cdot\nabla_+}` 的 slot，当前页面统一保留 `\delta_{Q_-}^{\rm cl}` 的 active-slot 记法，不在页面内额外展开 `[\delta_{Q_-},\nabla]` 的树项；
+  - 第一轮迁移时，对带 `\nabla` 与 `e^{w\cdot\nabla_+}` 的 slot 先用过 `\delta_{Q_-}^{\rm cl}` active-slot placeholder；
   - `03_q1__fpp_fpp__dr.md` 继续作为 pure-SYM divergence consistency 的基准页。
+- 同日继续固定：
+  - `n1_sym_euclidean` 全组页面改用单一系数 `\kappa_A`；
+  - 统一采用 `\delta_{Q_-}^{\rm cl}f_{++}=2\kappa_A\nabla_{+\dot\beta}\bar\lambda^{\dot\beta}`；
+  - `\nabla_{+\dot\alpha}` 与 `e^{w\cdot\nabla_+}` 的 Step 1 target 已全部改成 explicit tree-level formula；
+  - pure-SYM divergence channel 的 Step 2/3/4 结构保持不变，仍以 `t^0(\cdots)-\Gamma_{\rm cl}=0` 收束。

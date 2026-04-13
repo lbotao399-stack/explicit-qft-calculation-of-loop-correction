@@ -28,6 +28,14 @@ J^\mu_{Q_1}=J^\mu_-,
 $$
 
 $$
+\kappa_A=\frac{i}{2},
+\qquad
+\delta_{Q_-}^{\rm cl}A_{+\dot\alpha}=\kappa_A\,\bar\lambda_{\dot\alpha},
+\qquad
+\delta_{Q_-}^{\rm cl}\bar\lambda_{\dot\alpha}=0.
+$$
+
+$$
 \mathcal O_{\dot\alpha\dot\beta}^{AB}(p)
 :=
 \int_{p_1,p_2}
@@ -37,14 +45,23 @@ $$
 $$
 
 $$
-Q_-\bar\lambda_{\dot\beta}^B=0.
+\delta_{Q_-}^{\rm cl}(\nabla_{+\dot\alpha}f_{++}^A)
+=
+2\kappa_A\,\nabla_{+\dot\alpha}\nabla_{+\dot\gamma}\bar\lambda^{A\dot\gamma}
++
+\kappa_A\,\operatorname{ad}_{\bar\lambda_{\dot\alpha}}f_{++}^A,
+\qquad
+\delta_{Q_-}^{\rm cl}\bar\lambda_{\dot\beta}^B=0.
 $$
 
 $$
-\big[\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\alpha\dot\beta}^{AB}\big]_{f_{++}\text{-active}}
+\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\alpha\dot\beta}^{AB}
 =
-\big(\delta_{Q_-}^{\rm cl}\nabla_{+\dot\alpha}f_{++}^A\big)\,
-\bar\lambda_{\dot\beta}^B.
+\Big(
+2\kappa_A\,\nabla_{+\dot\alpha}\nabla_{+\dot\gamma}\bar\lambda^{A\dot\gamma}
++
+\kappa_A\,\operatorname{ad}_{\bar\lambda_{\dot\alpha}}f_{++}^A
+\Big)\bar\lambda_{\dot\beta}^B.
 $$
 
 $$
@@ -70,41 +87,34 @@ $$
 $$
 \big\langle \partial_\mu J^\mu_-(x)\,\mathcal O_{\dot\alpha\dot\beta}^{AB}(y)\big\rangle_{\rm conn,loc}
 =
-T_{\rm lin-lin,\dot\alpha\dot\beta}^{AB}(x,y)
-+T_{\rm lin-quad,\dot\alpha\dot\beta}^{AB}(x,y)
-+T_{\rm quad-lin,\dot\alpha\dot\beta}^{AB}(x,y).
+T_{\nabla\nabla\bar\lambda,\dot\alpha\dot\beta}^{AB}(x,y)
++
+T_{{\rm ad},\dot\alpha\dot\beta}^{AB}(x,y).
 $$
 
 $$
-T_{\rm lin-lin,\dot\alpha\dot\beta}^{AB}(x,y)
+T_{\nabla\nabla\bar\lambda,\dot\alpha\dot\beta}^{AB}(x,y)
 \Longrightarrow
 \delta^{(4)}(x-y)\,
-\big[\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\alpha\dot\beta}^{AB}(y)\big]^{(\partial\bar\lambda)}_{f_{++}\text{-active}}.
+\big(2\kappa_A\,\nabla_{+\dot\alpha}\nabla_{+\dot\gamma}\bar\lambda^{A\dot\gamma}\big)\bar\lambda_{\dot\beta}^B(y).
 $$
 
 $$
-T_{\rm lin-quad,\dot\alpha\dot\beta}^{AB}(x,y)
+T_{{\rm ad},\dot\alpha\dot\beta}^{AB}(x,y)
 \Longrightarrow
 \delta^{(4)}(x-y)\,
-\big[\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\alpha\dot\beta}^{AB}(y)\big]^{([A,\bar\lambda])}_{f_{++}\text{-active}}.
-$$
-
-$$
-T_{\rm quad-lin,\dot\alpha\dot\beta}^{AB}(x,y)
-\Longrightarrow
-\delta^{(4)}(x-y)\,
-\big[\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\alpha\dot\beta}^{AB}(y)\big]^{([A,\bar\lambda])}_{f_{++}\text{-active}}.
+\big(\kappa_A\,\operatorname{ad}_{\bar\lambda_{\dot\alpha}}f_{++}^A\big)\bar\lambda_{\dot\beta}^B(y).
 $$
 
 ## Step 3: WT contact reconstruction
 
 $$
-T_{\rm lin-lin,\dot\alpha\dot\beta}^{AB}
-+T_{\rm lin-quad,\dot\alpha\dot\beta}^{AB}
-+T_{\rm quad-lin,\dot\alpha\dot\beta}^{AB}
+T_{\nabla\nabla\bar\lambda,\dot\alpha\dot\beta}^{AB}
++
+T_{{\rm ad},\dot\alpha\dot\beta}^{AB}
 \Longrightarrow
 \delta^{(4)}(x-y)\,
-\big[\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\alpha\dot\beta}^{AB}(y)\big]_{f_{++}\text{-active}}.
+\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\alpha\dot\beta}^{AB}(y).
 $$
 
 $$
@@ -117,7 +127,7 @@ $$
 \big\langle \partial_\mu J^\mu_-(x)\,\mathcal O_{\dot\alpha\dot\beta}^{AB}(y)\big\rangle_{\rm PV,loc}
 =
 \delta^{(4)}(x-y)\,
-\big[\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\alpha\dot\beta}^{AB}(y)\big]_{f_{++}\text{-active}}.
+\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\alpha\dot\beta}^{AB}(y).
 $$
 
 $$
@@ -136,7 +146,7 @@ $$
 \big\langle \partial_\mu J^\mu_-(x)\,\operatorname{Tr}\!\big((\nabla_{+\dot\alpha}f_{++})\bar\lambda_{\dot\beta}\big)(y)\big\rangle_{\rm conn,loc}
 \Longrightarrow
 \delta^{(4)}(x-y)\,
-\big[\delta_{Q_-}^{\rm cl}\operatorname{Tr}\!\big((\nabla_{+\dot\alpha}f_{++})\bar\lambda_{\dot\beta}\big)(y)\big]_{f_{++}\text{-active}}.
+\delta_{Q_-}^{\rm cl}\operatorname{Tr}\!\big((\nabla_{+\dot\alpha}f_{++})\bar\lambda_{\dot\beta}\big)(y).
 $$
 
 $$

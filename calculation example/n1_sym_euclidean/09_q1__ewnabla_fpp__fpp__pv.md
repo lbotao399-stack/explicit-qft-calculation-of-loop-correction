@@ -28,6 +28,14 @@ J^\mu_{Q_1}=J^\mu_-,
 $$
 
 $$
+\kappa_A=\frac{i}{2},
+\qquad
+\delta_{Q_-}^{\rm cl}A_{+\dot\alpha}=\kappa_A\,\bar\lambda_{\dot\alpha},
+\qquad
+\delta_{Q_-}^{\rm cl}\bar\lambda_{\dot\alpha}=0.
+$$
+
+$$
 w\cdot\nabla_+ := w^{+\dot\alpha}\nabla_{+\dot\alpha}.
 $$
 
@@ -41,29 +49,32 @@ f_{++}^B(p_2)\,
 $$
 
 $$
-Q_- f_{++}^B=iD_{+\dot\gamma}\bar\lambda^{B\dot\gamma}.
+\delta_{Q_-}^{\rm cl}\!\big(e^{w\cdot\nabla_+}f_{++}^A\big)
+=
+2\kappa_A\,e^{w\cdot\nabla_+}\nabla_{+\dot\beta}\bar\lambda^{A\dot\beta}
++
+\kappa_A
+\int_0^1 ds\;
+e^{s w\cdot\nabla_+}
+\Big(
+w^{\dot\alpha}\operatorname{ad}_{\bar\lambda_{\dot\alpha}}
+\Big)
+e^{(1-s) w\cdot\nabla_+}f_{++}^A,
 $$
 
 $$
-\big[\delta_{Q_-}^{\rm cl}\mathcal O_w^{AB}\big]_{L}
-:=
-\delta_{Q_-}^{\rm cl}\big(e^{w\cdot\nabla_+}f_{++}^A\big)\,
-f_{++}^B.
-$$
-
-$$
-\big[\delta_{Q_-}^{\rm cl}\mathcal O_w^{AB}\big]_{R}
-:=
-\big(e^{w\cdot\nabla_+}f_{++}^A\big)\,
-\big(iD_{+\dot\gamma}\bar\lambda^{B\dot\gamma}\big).
+\delta_{Q_-}^{\rm cl}f_{++}^B
+=
+2\kappa_A\,\nabla_{+\dot\gamma}\bar\lambda^{B\dot\gamma}.
 $$
 
 $$
 \delta_{Q_-}^{\rm cl}\mathcal O_w^{AB}
 =
-\big[\delta_{Q_-}^{\rm cl}\mathcal O_w^{AB}\big]_{L}
+\delta_{Q_-}^{\rm cl}\!\big(e^{w\cdot\nabla_+}f_{++}^A\big)\,f_{++}^B
 +
-\big[\delta_{Q_-}^{\rm cl}\mathcal O_w^{AB}\big]_{R}.
+\big(e^{w\cdot\nabla_+}f_{++}^A\big)\,
+\big(2\kappa_A\,\nabla_{+\dot\gamma}\bar\lambda^{B\dot\gamma}\big).
 $$
 
 $$
@@ -118,14 +129,15 @@ $$
 T_L^{AB}(w;x,y)
 \Longrightarrow
 \delta^{(4)}(x-y)\,
-\big[\delta_{Q_-}^{\rm cl}\mathcal O_w^{AB}(y)\big]_{L}.
+\delta_{Q_-}^{\rm cl}\!\big(e^{w\cdot\nabla_+}f_{++}^A\big)\,f_{++}^B(y).
 $$
 
 $$
 T_R^{AB}(w;x,y)
 \Longrightarrow
 \delta^{(4)}(x-y)\,
-\big[\delta_{Q_-}^{\rm cl}\mathcal O_w^{AB}(y)\big]_{R}.
+\big(e^{w\cdot\nabla_+}f_{++}^A\big)\,
+\big(2\kappa_A\,\nabla_{+\dot\gamma}\bar\lambda^{B\dot\gamma}\big)(y).
 $$
 
 ## Step 3: WT contact reconstruction
@@ -169,10 +181,9 @@ $$
 $$
 
 $$
-\big\langle \partial_\mu J^\mu_-(x)\,\mathcal O_{w=0}^{AB}(y)\big\rangle_{\rm conn,loc}
-\Longrightarrow
-\delta^{(4)}(x-y)\,
-\delta_{Q_-}^{\rm cl}\mathcal O_{ff}^{AB}(y).
+\delta_{Q_-}^{\rm cl}\!\big(e^{0\cdot\nabla_+}f_{++}^A\big)
+=
+2\kappa_A\,\nabla_{+\dot\beta}\bar\lambda^{A\dot\beta}.
 $$
 
 $$

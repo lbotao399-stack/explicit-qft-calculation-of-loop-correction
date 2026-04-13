@@ -28,6 +28,14 @@ J^\mu_{Q_1}=J^\mu_-,
 $$
 
 $$
+\kappa_A=\frac{i}{2},
+\qquad
+\delta_{Q_-}^{\rm cl}A_{+\dot\alpha}=\kappa_A\,\bar\lambda_{\dot\alpha},
+\qquad
+\delta_{Q_-}^{\rm cl}\bar\lambda_{\dot\alpha}=0.
+$$
+
+$$
 \mathcal O_{\dot\theta}^{AB}(p)
 :=
 \int_{p_1,p_2}
@@ -37,29 +45,30 @@ f_{++}^B(p_2)\,
 $$
 
 $$
-Q_- f_{++}^A=iD_{+\dot\gamma}\bar\lambda^{A\dot\gamma}.
+\delta_{Q_-}^{\rm cl}(\nabla_{+\dot\theta}f_{++}^A)
+=
+2\kappa_A\,\nabla_{+\dot\theta}\nabla_{+\dot\gamma}\bar\lambda^{A\dot\gamma}
++
+\kappa_A\,\operatorname{ad}_{\bar\lambda_{\dot\theta}}f_{++}^A,
 $$
 
 $$
-\big[\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\theta}^{AB}\big]_{L}
-:=
-\big(\delta_{Q_-}^{\rm cl}\nabla_{+\dot\theta}f_{++}^A\big)\,
-f_{++}^B.
-$$
-
-$$
-\big[\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\theta}^{AB}\big]_{R}
-:=
-\big(\nabla_{+\dot\theta}f_{++}^A\big)\,
-\big(iD_{+\dot\gamma}\bar\lambda^{B\dot\gamma}\big).
+\delta_{Q_-}^{\rm cl}f_{++}^B
+=
+2\kappa_A\,\nabla_{+\dot\gamma}\bar\lambda^{B\dot\gamma}.
 $$
 
 $$
 \delta_{Q_-}^{\rm cl}\mathcal O_{\dot\theta}^{AB}
 =
-\big[\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\theta}^{AB}\big]_{L}
+\Big(
+2\kappa_A\,\nabla_{+\dot\theta}\nabla_{+\dot\gamma}\bar\lambda^{A\dot\gamma}
 +
-\big[\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\theta}^{AB}\big]_{R}.
+\kappa_A\,\operatorname{ad}_{\bar\lambda_{\dot\theta}}f_{++}^A
+\Big)f_{++}^B
++
+\big(\nabla_{+\dot\theta}f_{++}^A\big)
+\big(2\kappa_A\,\nabla_{+\dot\gamma}\bar\lambda^{B\dot\gamma}\big).
 $$
 
 $$
@@ -76,10 +85,6 @@ $$
 \langle f_{+-}(x)f_{++}(y)\rangle_0=0,
 \qquad
 \langle f_{--}(x)f_{++}(y)\rangle_0=2K(x-y).
-$$
-
-$$
-\text{only the }f_{--}\Xi^{\mu -}\text{ branch of }J^\mu_-\text{ feeds into each external }f_{++}\text{ slot}.
 $$
 
 ## Step 2: Wick contraction
@@ -118,14 +123,18 @@ $$
 T_{L,\dot\theta}^{AB}(x,y)
 \Longrightarrow
 \delta^{(4)}(x-y)\,
-\big[\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\theta}^{AB}(y)\big]_{L}.
+\Big(
+2\kappa_A\,\nabla_{+\dot\theta}\nabla_{+\dot\gamma}\bar\lambda^{A\dot\gamma}
++
+\kappa_A\,\operatorname{ad}_{\bar\lambda_{\dot\theta}}f_{++}^A
+\Big)f_{++}^B(y).
 $$
 
 $$
 T_{R,\dot\theta}^{AB}(x,y)
 \Longrightarrow
 \delta^{(4)}(x-y)\,
-\big[\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\theta}^{AB}(y)\big]_{R}.
+\big(\nabla_{+\dot\theta}f_{++}^A\big)\big(2\kappa_A\,\nabla_{+\dot\gamma}\bar\lambda^{B\dot\gamma}\big)(y).
 $$
 
 ## Step 3: WT contact reconstruction

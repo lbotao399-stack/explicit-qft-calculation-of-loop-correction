@@ -28,6 +28,14 @@ J^\mu_{Q_1}=J^\mu_-,
 $$
 
 $$
+\kappa_A=\frac{i}{2},
+\qquad
+\delta_{Q_-}^{\rm cl}A_{+\dot\alpha}=\kappa_A\,\bar\lambda_{\dot\alpha},
+\qquad
+\delta_{Q_-}^{\rm cl}\bar\lambda_{\dot\alpha}=0.
+$$
+
+$$
 \mathcal O_{\dot\alpha\dot\beta\dot\gamma}^{AB}(p)
 :=
 \int_{p_1,p_2}
@@ -37,16 +45,30 @@ $$
 $$
 
 $$
-Q_- f_{++}^A=iD_{+\dot\theta}\bar\lambda^{A\dot\theta},
-\qquad
-Q_-\bar\lambda_{\dot\gamma}^B=0.
+\delta_{Q_-}^{\rm cl}(\nabla_{+\dot\alpha}f_{++}^A)
+=
+2\kappa_A\,\nabla_{+\dot\alpha}\nabla_{+\dot\theta}\bar\lambda^{A\dot\theta}
++
+\kappa_A\,\operatorname{ad}_{\bar\lambda_{\dot\alpha}}f_{++}^A,
 $$
 
 $$
-\big[\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\alpha\dot\beta\dot\gamma}^{AB}\big]_{f_{++}\text{-active}}
-:=
-\big(\delta_{Q_-}^{\rm cl}\nabla_{+\dot\alpha}f_{++}^A\big)\,
-\nabla_{+\dot\beta}\bar\lambda_{\dot\gamma}^B.
+\delta_{Q_-}^{\rm cl}(\nabla_{+\dot\beta}\bar\lambda_{\dot\gamma}^B)
+=
+\kappa_A\,\operatorname{ad}_{\bar\lambda_{\dot\beta}}\bar\lambda_{\dot\gamma}^B.
+$$
+
+$$
+\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\alpha\dot\beta\dot\gamma}^{AB}
+=
+\Big(
+2\kappa_A\,\nabla_{+\dot\alpha}\nabla_{+\dot\theta}\bar\lambda^{A\dot\theta}
++
+\kappa_A\,\operatorname{ad}_{\bar\lambda_{\dot\alpha}}f_{++}^A
+\Big)\nabla_{+\dot\beta}\bar\lambda_{\dot\gamma}^B
++
+\big(\nabla_{+\dot\alpha}f_{++}^A\big)\,
+\kappa_A\,\operatorname{ad}_{\bar\lambda_{\dot\beta}}\bar\lambda_{\dot\gamma}^B.
 $$
 
 $$
@@ -72,45 +94,39 @@ $$
 $$
 \big\langle \partial_\mu J^\mu_-(x)\,\mathcal O_{\dot\alpha\dot\beta\dot\gamma}^{AB}(y)\big\rangle_{\rm conn,loc}
 =
-T_{\rm lin-lin,\dot\alpha\dot\beta\dot\gamma}^{AB}(x,y)
+T_{L,\dot\alpha\dot\beta\dot\gamma}^{AB}(x,y)
 +
-T_{\rm lin-quad,\dot\alpha\dot\beta\dot\gamma}^{AB}(x,y)
+T_{R,\dot\alpha\dot\beta\dot\gamma}^{AB}(x,y).
+$$
+
+$$
+T_{L,\dot\alpha\dot\beta\dot\gamma}^{AB}(x,y)
+\Longrightarrow
+\delta^{(4)}(x-y)\,
+\Big(
+2\kappa_A\,\nabla_{+\dot\alpha}\nabla_{+\dot\theta}\bar\lambda^{A\dot\theta}
 +
-T_{\rm quad-lin,\dot\alpha\dot\beta\dot\gamma}^{AB}(x,y).
+\kappa_A\,\operatorname{ad}_{\bar\lambda_{\dot\alpha}}f_{++}^A
+\Big)\nabla_{+\dot\beta}\bar\lambda_{\dot\gamma}^B(y).
 $$
 
 $$
-T_{\rm lin-lin,\dot\alpha\dot\beta\dot\gamma}^{AB}(x,y)
+T_{R,\dot\alpha\dot\beta\dot\gamma}^{AB}(x,y)
 \Longrightarrow
 \delta^{(4)}(x-y)\,
-\big[\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\alpha\dot\beta\dot\gamma}^{AB}(y)\big]^{(\partial\bar\lambda)}_{f_{++}\text{-active}}.
-$$
-
-$$
-T_{\rm lin-quad,\dot\alpha\dot\beta\dot\gamma}^{AB}(x,y)
-\Longrightarrow
-\delta^{(4)}(x-y)\,
-\big[\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\alpha\dot\beta\dot\gamma}^{AB}(y)\big]^{([A,\bar\lambda])}_{f_{++}\text{-active}}.
-$$
-
-$$
-T_{\rm quad-lin,\dot\alpha\dot\beta\dot\gamma}^{AB}(x,y)
-\Longrightarrow
-\delta^{(4)}(x-y)\,
-\big[\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\alpha\dot\beta\dot\gamma}^{AB}(y)\big]^{([A,\bar\lambda])}_{f_{++}\text{-active}}.
+\big(\nabla_{+\dot\alpha}f_{++}^A\big)\,
+\kappa_A\,\operatorname{ad}_{\bar\lambda_{\dot\beta}}\bar\lambda_{\dot\gamma}^B(y).
 $$
 
 ## Step 3: WT contact reconstruction
 
 $$
-T_{\rm lin-lin,\dot\alpha\dot\beta\dot\gamma}^{AB}
+T_{L,\dot\alpha\dot\beta\dot\gamma}^{AB}
 +
-T_{\rm lin-quad,\dot\alpha\dot\beta\dot\gamma}^{AB}
-+
-T_{\rm quad-lin,\dot\alpha\dot\beta\dot\gamma}^{AB}
+T_{R,\dot\alpha\dot\beta\dot\gamma}^{AB}
 \Longrightarrow
 \delta^{(4)}(x-y)\,
-\big[\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\alpha\dot\beta\dot\gamma}^{AB}(y)\big]_{f_{++}\text{-active}}.
+\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\alpha\dot\beta\dot\gamma}^{AB}(y).
 $$
 
 $$
@@ -123,7 +139,7 @@ $$
 \big\langle \partial_\mu J^\mu_-(x)\,\mathcal O_{\dot\alpha\dot\beta\dot\gamma}^{AB}(y)\big\rangle_{\rm PV,loc}
 =
 \delta^{(4)}(x-y)\,
-\big[\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\alpha\dot\beta\dot\gamma}^{AB}(y)\big]_{f_{++}\text{-active}}.
+\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\alpha\dot\beta\dot\gamma}^{AB}(y).
 $$
 
 $$
@@ -142,7 +158,7 @@ $$
 \big\langle \partial_\mu J^\mu_-(x)\,\operatorname{Tr}\!\big((\nabla_{+\dot\alpha}f_{++})\nabla_{+\dot\beta}\bar\lambda_{\dot\gamma}\big)(y)\big\rangle_{\rm conn,loc}
 \Longrightarrow
 \delta^{(4)}(x-y)\,
-\big[\delta_{Q_-}^{\rm cl}\operatorname{Tr}\!\big((\nabla_{+\dot\alpha}f_{++})\nabla_{+\dot\beta}\bar\lambda_{\dot\gamma}\big)(y)\big]_{f_{++}\text{-active}}.
+\delta_{Q_-}^{\rm cl}\operatorname{Tr}\!\big((\nabla_{+\dot\alpha}f_{++})\nabla_{+\dot\beta}\bar\lambda_{\dot\gamma}\big)(y).
 $$
 
 $$

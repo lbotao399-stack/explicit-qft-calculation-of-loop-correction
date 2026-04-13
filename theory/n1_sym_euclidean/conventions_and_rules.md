@@ -408,7 +408,11 @@ $$
 取 $H_{\rm BRST}^0$ 的 gauge-covariant letters；$A_{\alpha\dot\alpha}$ 不算 basic letter。在 raw basis 下，
 
 $$
-Q_-A_{+\dot\alpha}=i\bar\lambda_{\dot\alpha}.
+Q_-A_{+\dot\alpha}=i\bar\lambda_{\dot\alpha}=2\kappa_A\,\bar\lambda_{\dot\alpha}.
+$$
+
+$$
+\nabla_{\alpha\dot\alpha}:=D_{\alpha\dot\alpha}.
 $$
 
 ### $Q_-$ 的作用( at g=0)
@@ -431,6 +435,120 @@ $$
 
 $$
 Q_-\bar f_{\dot\alpha\dot\beta}=i\partial_{-(\dot\alpha}\bar\lambda_{\dot\beta)}.
+$$
+
+### $Q_-$ projected working coefficient
+
+$$
+\delta_{Q_-}^{\rm cl}A_{+\dot\alpha}=\kappa_A\,\bar\lambda_{\dot\alpha},
+\qquad
+\delta_{Q_-}^{\rm cl}A_{-\dot\alpha}=0,
+\qquad
+\delta_{Q_-}^{\rm cl}\bar\lambda_{\dot\alpha}=0.
+$$
+
+$$
+\delta_{Q_-}^{\rm cl}f_{++}=2\kappa_A\,\nabla_{+\dot\beta}\bar\lambda^{\dot\beta}.
+$$
+
+$$
+\boxed{
+\kappa_A:=\frac12\,\text{coeff}\Big(\delta_{Q_-}^{\rm cl}f_{++},\ \nabla_{+\dot\beta}\bar\lambda^{\dot\beta}\Big)
+\qquad\Longrightarrow\qquad
+\kappa_A=\frac{i}{2}
+}
+$$
+
+$$
+[\delta_{Q_-}^{\rm cl},\nabla_{\alpha\dot\alpha}]X
+=
+\operatorname{ad}_{\delta_{Q_-}^{\rm cl}A_{\alpha\dot\alpha}}X,
+\qquad
+\operatorname{ad}_Y(X)^a:=f^{abc}Y^bX^c.
+$$
+
+$$
+[\delta_{Q_-}^{\rm cl},\nabla_{+\dot\alpha}]
+=
+\kappa_A\,\operatorname{ad}_{\bar\lambda_{\dot\alpha}},
+\qquad
+[\delta_{Q_-}^{\rm cl},\nabla_{-\dot\alpha}]=0.
+$$
+
+$$
+\delta_{Q_-}^{\rm cl}(\nabla_{+\dot\alpha}X)
+=
+\nabla_{+\dot\alpha}(\delta_{Q_-}^{\rm cl}X)
++
+\kappa_A\,\operatorname{ad}_{\bar\lambda_{\dot\alpha}}X,
+$$
+
+$$
+\delta_{Q_-}^{\rm cl}(\nabla_{-\dot\alpha}X)
+=
+\nabla_{-\dot\alpha}(\delta_{Q_-}^{\rm cl}X).
+$$
+
+$$
+\delta_{Q_-}^{\rm cl}(\nabla_{+\dot\alpha}f_{++})
+=
+2\kappa_A\,\nabla_{+\dot\alpha}\nabla_{+\dot\beta}\bar\lambda^{\dot\beta}
++
+\kappa_A\,\operatorname{ad}_{\bar\lambda_{\dot\alpha}}f_{++},
+$$
+
+$$
+\delta_{Q_-}^{\rm cl}(\nabla_{+\dot\alpha}\bar\lambda_{\dot\beta})
+=
+\kappa_A\,\operatorname{ad}_{\bar\lambda_{\dot\alpha}}\bar\lambda_{\dot\beta}.
+$$
+
+$$
+\delta_{Q_-}^{\rm cl}(\nabla_{-\dot\alpha}f_{++})
+=
+2\kappa_A\,\nabla_{-\dot\alpha}\nabla_{+\dot\beta}\bar\lambda^{\dot\beta},
+\qquad
+\delta_{Q_-}^{\rm cl}(\nabla_{-\dot\alpha}\bar\lambda_{\dot\beta})=0.
+$$
+
+$$
+\delta_{Q_-}^{\rm cl}\!\big(e^{w\cdot\nabla_+}X\big)
+=
+e^{w\cdot\nabla_+}\big(\delta_{Q_-}^{\rm cl}X\big)
++
+\kappa_A
+\int_0^1 ds\;
+e^{s w\cdot\nabla_+}
+\Big(
+w^{\dot\alpha}\operatorname{ad}_{\bar\lambda_{\dot\alpha}}
+\Big)
+e^{(1-s) w\cdot\nabla_+}X.
+$$
+
+$$
+\delta_{Q_-}^{\rm cl}\!\big(e^{w\cdot\nabla_+}f_{++}\big)
+=
+2\kappa_A\,e^{w\cdot\nabla_+}\nabla_{+\dot\beta}\bar\lambda^{\dot\beta}
++
+\kappa_A
+\int_0^1 ds\;
+e^{s w\cdot\nabla_+}
+\Big(
+w^{\dot\alpha}\operatorname{ad}_{\bar\lambda_{\dot\alpha}}
+\Big)
+e^{(1-s) w\cdot\nabla_+}f_{++},
+$$
+
+$$
+\delta_{Q_-}^{\rm cl}\!\big(e^{w\cdot\nabla_+}\bar\lambda_{\dot\beta}\big)
+=
+\kappa_A
+\int_0^1 ds\;
+e^{s w\cdot\nabla_+}
+\Big(
+w^{\dot\alpha}\operatorname{ad}_{\bar\lambda_{\dot\alpha}}
+\Big)
+e^{(1-s) w\cdot\nabla_+}\bar\lambda_{\dot\beta}.
 $$
 
 ### Free EOM

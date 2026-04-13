@@ -27,11 +27,32 @@ J^\mu_{Q_1}=J^\mu_-,
 \partial_\mu J^\mu_{Q_1}=\partial_\mu J^\mu_-.
 $$
 
+$$
+\kappa_A=\frac{i}{2},
+\qquad
+\delta_{Q_-}^{\rm cl}A_{+\dot\alpha}=\kappa_A\,\bar\lambda_{\dot\alpha},
+\qquad
+\delta_{Q_-}^{\rm cl}\bar\lambda_{\dot\alpha}=0.
+$$
 
 $$
 \mathcal O_{ff}^{AB}(p):=\int_{p_1,p_2}f_{++}^A(p_1)f_{++}^B(p_2)\,\delta_{p-p_1-p_2},
 \qquad
 p=p_1+p_2.
+$$
+
+$$
+\delta_{Q_-}^{\rm cl}f_{++}^A
+=
+2\kappa_A\,\nabla_{+\dot\beta}\bar\lambda^{A\dot\beta}.
+$$
+
+$$
+\delta_{Q_-}^{\rm cl}\mathcal O_{ff}^{AB}
+=
+\big(2\kappa_A\,\nabla_{+\dot\beta}\bar\lambda^{A\dot\beta}\big)f_{++}^B
++
+f_{++}^A\big(2\kappa_A\,\nabla_{+\dot\beta}\bar\lambda^{B\dot\beta}\big).
 $$
 
 $$
@@ -48,7 +69,8 @@ $$
 \mathcal I[f_{++}^a(p)]
 =
 \mathcal I^{(1)}[f_{++}^a(p)]
-+\mathcal I^{(2)}[f_{++}^a(p)].
++
+\mathcal I^{(2)}[f_{++}^a(p)].
 $$
 
 $$
@@ -108,8 +130,8 @@ T_{\rm lin-lin}^{AB}(x,y)
 \Longrightarrow
 \delta^{(4)}(x-y)\,
 \Big[
-i\,\partial_{+\dot\beta}\bar\lambda^{A\dot\beta}\,f_{++}^B
-+f_{++}^A\,i\,\partial_{+\dot\beta}\bar\lambda^{B\dot\beta}
+2\kappa_A\,\partial_{+\dot\beta}\bar\lambda^{A\dot\beta}\,f_{++}^B
++f_{++}^A\,2\kappa_A\,\partial_{+\dot\beta}\bar\lambda^{B\dot\beta}
 \Big](y).
 $$
 
@@ -118,8 +140,8 @@ T_{\rm lin-quad}^{AB}(x,y)
 \Longrightarrow
 \delta^{(4)}(x-y)\,
 \Big[
-\frac{i}{2}[A_{+\dot\beta},\bar\lambda^{\dot\beta}]^A\,f_{++}^B
-+f_{++}^A\,\frac{i}{2}[A_{+\dot\beta},\bar\lambda^{\dot\beta}]^B
+\kappa_A[A_{+\dot\beta},\bar\lambda^{\dot\beta}]^A\,f_{++}^B
++f_{++}^A\,\kappa_A[A_{+\dot\beta},\bar\lambda^{\dot\beta}]^B
 \Big](y).
 $$
 
@@ -128,8 +150,8 @@ T_{\rm quad-lin}^{AB}(x,y)
 \Longrightarrow
 \delta^{(4)}(x-y)\,
 \Big[
-\frac{i}{2}[A_{+\dot\beta},\bar\lambda^{\dot\beta}]^A\,f_{++}^B
-+f_{++}^A\,\frac{i}{2}[A_{+\dot\beta},\bar\lambda^{\dot\beta}]^B
+\kappa_A[A_{+\dot\beta},\bar\lambda^{\dot\beta}]^A\,f_{++}^B
++f_{++}^A\,\kappa_A[A_{+\dot\beta},\bar\lambda^{\dot\beta}]^B
 \Big](y).
 $$
 
@@ -142,15 +164,9 @@ T_{\rm lin-lin}^{AB}
 \Longrightarrow
 \delta^{(4)}(x-y)\,
 \Big[
-iD_{+\dot\beta}\bar\lambda^{A\dot\beta}\,f_{++}^B
-+f_{++}^A\,iD_{+\dot\beta}\bar\lambda^{B\dot\beta}
+2\kappa_A\,\nabla_{+\dot\beta}\bar\lambda^{A\dot\beta}\,f_{++}^B
++f_{++}^A\,2\kappa_A\,\nabla_{+\dot\beta}\bar\lambda^{B\dot\beta}
 \Big](y).
-$$
-
-$$
-\delta_{Q_-}^{\rm cl}f_{++}^A
-=
-iD_{+\dot\beta}\bar\lambda^{A\dot\beta}.
 $$
 
 $$
@@ -175,13 +191,6 @@ $$
 
 $$
 t^0(\cdots)-\Gamma_{\rm cl}=0.
-$$
-
-$$
-\delta_{Q_-}^{\rm cl}\mathcal O_{ff}^{AB}(x)
-=
-\big(iD_{+\dot\beta}\bar\lambda^{A\dot\beta}\big)f_{++}^B
-+f_{++}^A\big(iD_{+\dot\beta}\bar\lambda^{B\dot\beta}\big).
 $$
 
 $$

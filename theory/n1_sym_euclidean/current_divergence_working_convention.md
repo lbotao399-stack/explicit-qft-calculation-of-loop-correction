@@ -121,36 +121,163 @@ J^\mu_-=
 C_J\Big(f_{+-}\Xi^{\mu +}+f_{--}\Xi^{\mu -}\Big).
 $$
 
-## Component extraction rule
+## Unified coefficient
 
 $$
-\delta_\varepsilon f_{\alpha\beta}
-=
-C_f\Big(
-\varepsilon^\gamma\epsilon_{\gamma\alpha}\,D_{\beta\dot\beta}\chi^{\dot\beta}
-+
-\varepsilon^\gamma\epsilon_{\gamma\beta}\,D_{\alpha\dot\beta}\chi^{\dot\beta}
-\Big).
+\nabla_{\alpha\dot\alpha}:=D_{\alpha\dot\alpha}.
 $$
 
 $$
-s:=\epsilon_{-+},
+\delta_{Q_-}^{\rm cl}A_{+\dot\alpha}=\kappa_A\,\bar\lambda_{\dot\alpha},
 \qquad
-s^2=1.
+\delta_{Q_-}^{\rm cl}A_{-\dot\alpha}=0,
+\qquad
+\delta_{Q_-}^{\rm cl}\bar\lambda_{\dot\alpha}=0.
 $$
 
 $$
-Q_- f_{++}=2\,s\,C_f\,D_{+\dot\beta}\chi^{\dot\beta},
-\qquad
-Q_- f_{+-}=s\,C_f\,D_{-\dot\beta}\chi^{\dot\beta},
-\qquad
-Q_- f_{--}=0.
+\delta_{Q_-}^{\rm cl}f_{++}=2\kappa_A\,\nabla_{+\dot\beta}\bar\lambda^{\dot\beta}.
+$$
+
+$$
+\boxed{
+\kappa_A:=\frac12\,\text{coeff}\Big(\delta_{Q_-}^{\rm cl}f_{++},\ \nabla_{+\dot\beta}\bar\lambda^{\dot\beta}\Big)
+\qquad\Longrightarrow\qquad
+\kappa_A=\frac{i}{2}
+}
 $$
 
 $$
 Q_-\,\operatorname{Tr}(f_{++}f_{++})
 =
-4\,s\,C_f\,\operatorname{Tr}\!\big(f_{++}D_{+\dot\beta}\chi^{\dot\beta}\big).
+4\,\kappa_A\,\operatorname{Tr}\!\big(f_{++}\nabla_{+\dot\beta}\bar\lambda^{\dot\beta}\big).
+$$
+
+## Exact commutators with \(\nabla\)
+
+$$
+[\delta_{Q_-}^{\rm cl},\nabla_{\alpha\dot\alpha}]X
+=
+\operatorname{ad}_{\delta_{Q_-}^{\rm cl}A_{\alpha\dot\alpha}}X,
+\qquad
+\operatorname{ad}_Y(X)^a:=f^{abc}Y^bX^c.
+$$
+
+$$
+[\delta_{Q_-}^{\rm cl},\nabla_{+\dot\alpha}]
+=
+\kappa_A\,\operatorname{ad}_{\bar\lambda_{\dot\alpha}},
+\qquad
+[\delta_{Q_-}^{\rm cl},\nabla_{-\dot\alpha}]=0.
+$$
+
+$$
+\delta_{Q_-}^{\rm cl}(\nabla_{+\dot\alpha}X)
+=
+\nabla_{+\dot\alpha}(\delta_{Q_-}^{\rm cl}X)
++
+\kappa_A\,\operatorname{ad}_{\bar\lambda_{\dot\alpha}}X,
+$$
+
+$$
+\delta_{Q_-}^{\rm cl}(\nabla_{-\dot\alpha}X)
+=
+\nabla_{-\dot\alpha}(\delta_{Q_-}^{\rm cl}X).
+$$
+
+$$
+\delta_{Q_-}^{\rm cl}\!\left(
+\nabla_{+\dot\alpha_1}\cdots\nabla_{+\dot\alpha_n}X
+\right)
+=
+\nabla_{+\dot\alpha_1}\cdots\nabla_{+\dot\alpha_n}(\delta_{Q_-}^{\rm cl}X)
++
+\kappa_A
+\sum_{k=1}^{n}
+\nabla_{+\dot\alpha_1}\cdots\nabla_{+\dot\alpha_{k-1}}
+\operatorname{ad}_{\bar\lambda_{\dot\alpha_k}}
+\nabla_{+\dot\alpha_{k+1}}\cdots\nabla_{+\dot\alpha_n}X.
+$$
+
+## Direct slot formulas
+
+$$
+\delta_{Q_-}^{\rm cl}(\nabla_{+\dot\alpha}f_{++})
+=
+2\kappa_A\,\nabla_{+\dot\alpha}\nabla_{+\dot\beta}\bar\lambda^{\dot\beta}
++
+\kappa_A\,\operatorname{ad}_{\bar\lambda_{\dot\alpha}}f_{++},
+$$
+
+$$
+\delta_{Q_-}^{\rm cl}(\nabla_{-\dot\alpha}f_{++})
+=
+2\kappa_A\,\nabla_{-\dot\alpha}\nabla_{+\dot\beta}\bar\lambda^{\dot\beta},
+$$
+
+$$
+\delta_{Q_-}^{\rm cl}(\nabla_{+\dot\alpha}\bar\lambda_{\dot\beta})
+=
+\kappa_A\,\operatorname{ad}_{\bar\lambda_{\dot\alpha}}\bar\lambda_{\dot\beta},
+\qquad
+\delta_{Q_-}^{\rm cl}(\nabla_{-\dot\alpha}\bar\lambda_{\dot\beta})=0.
+$$
+
+## Exact rule for \(e^{w\cdot\nabla_+}\)
+
+$$
+B_+(w):=w^{\dot\alpha}\nabla_{+\dot\alpha},
+\qquad
+[\delta_{Q_-}^{\rm cl},B_+(w)]
+=
+\kappa_A\,w^{\dot\alpha}\operatorname{ad}_{\bar\lambda_{\dot\alpha}}.
+$$
+
+$$
+\delta_{Q_-}^{\rm cl}e^{B_+}
+=
+\int_0^1 ds\;
+e^{sB_+}\,[\delta_{Q_-}^{\rm cl},B_+]\,e^{(1-s)B_+}.
+$$
+
+$$
+\delta_{Q_-}^{\rm cl}\!\big(e^{w\cdot\nabla_+}X\big)
+=
+e^{w\cdot\nabla_+}\big(\delta_{Q_-}^{\rm cl}X\big)
++
+\kappa_A
+\int_0^1 ds\;
+e^{s w\cdot\nabla_+}
+\Big(
+w^{\dot\alpha}\operatorname{ad}_{\bar\lambda_{\dot\alpha}}
+\Big)
+e^{(1-s) w\cdot\nabla_+}X.
+$$
+
+$$
+\delta_{Q_-}^{\rm cl}\!\big(e^{w\cdot\nabla_+}f_{++}\big)
+=
+2\kappa_A\,e^{w\cdot\nabla_+}\nabla_{+\dot\beta}\bar\lambda^{\dot\beta}
++
+\kappa_A
+\int_0^1 ds\;
+e^{s w\cdot\nabla_+}
+\Big(
+w^{\dot\alpha}\operatorname{ad}_{\bar\lambda_{\dot\alpha}}
+\Big)
+e^{(1-s) w\cdot\nabla_+}f_{++},
+$$
+
+$$
+\delta_{Q_-}^{\rm cl}\!\big(e^{w\cdot\nabla_+}\bar\lambda_{\dot\beta}\big)
+=
+\kappa_A
+\int_0^1 ds\;
+e^{s w\cdot\nabla_+}
+\Big(
+w^{\dot\alpha}\operatorname{ad}_{\bar\lambda_{\dot\alpha}}
+\Big)
+e^{(1-s) w\cdot\nabla_+}\bar\lambda_{\dot\beta}.
 $$
 
 ## Divergence rule

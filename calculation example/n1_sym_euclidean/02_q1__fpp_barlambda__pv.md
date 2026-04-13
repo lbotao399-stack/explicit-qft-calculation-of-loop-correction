@@ -28,6 +28,14 @@ J^\mu_{Q_1}=J^\mu_-,
 $$
 
 $$
+\kappa_A=\frac{i}{2},
+\qquad
+\delta_{Q_-}^{\rm cl}A_{+\dot\alpha}=\kappa_A\,\bar\lambda_{\dot\alpha},
+\qquad
+\delta_{Q_-}^{\rm cl}\bar\lambda_{\dot\alpha}=0.
+$$
+
+$$
 \mathcal O_{\dot\beta}^{AB}(p)
 :=
 \int_{p_1,p_2}
@@ -37,15 +45,15 @@ f_{++}^A(p_1)\,
 $$
 
 $$
-Q_- f_{++}^A=iD_{+\dot\gamma}\bar\lambda^{A\dot\gamma},
+\delta_{Q_-}^{\rm cl}f_{++}^A=2\kappa_A\,\nabla_{+\dot\gamma}\bar\lambda^{A\dot\gamma},
 \qquad
-Q_-\bar\lambda_{\dot\beta}^B=0.
+\delta_{Q_-}^{\rm cl}\bar\lambda_{\dot\beta}^B=0.
 $$
 
 $$
 \delta_{Q_-}^{\rm cl}\mathcal O_{\dot\beta}^{AB}
 =
-\big(iD_{+\dot\gamma}\bar\lambda^{A\dot\gamma}\big)\bar\lambda_{\dot\beta}^B.
+\big(2\kappa_A\,\nabla_{+\dot\gamma}\bar\lambda^{A\dot\gamma}\big)\bar\lambda_{\dot\beta}^B.
 $$
 
 $$
@@ -84,21 +92,21 @@ $$
 T_{\rm lin-lin,\dot\beta}^{AB}(x,y)
 \Longrightarrow
 \delta^{(4)}(x-y)\,
-\big(i\partial_{+\dot\gamma}\bar\lambda^{A\dot\gamma}\big)\bar\lambda_{\dot\beta}^B(y).
+\big(2\kappa_A\,\partial_{+\dot\gamma}\bar\lambda^{A\dot\gamma}\big)\bar\lambda_{\dot\beta}^B(y).
 $$
 
 $$
 T_{\rm lin-quad,\dot\beta}^{AB}(x,y)
 \Longrightarrow
 \delta^{(4)}(x-y)\,
-\frac{i}{2}[A_{+\dot\gamma},\bar\lambda^{\dot\gamma}]^A\,\bar\lambda_{\dot\beta}^B(y).
+\kappa_A[A_{+\dot\gamma},\bar\lambda^{\dot\gamma}]^A\,\bar\lambda_{\dot\beta}^B(y).
 $$
 
 $$
 T_{\rm quad-lin,\dot\beta}^{AB}(x,y)
 \Longrightarrow
 \delta^{(4)}(x-y)\,
-\frac{i}{2}[A_{+\dot\gamma},\bar\lambda^{\dot\gamma}]^A\,\bar\lambda_{\dot\beta}^B(y).
+\kappa_A[A_{+\dot\gamma},\bar\lambda^{\dot\gamma}]^A\,\bar\lambda_{\dot\beta}^B(y).
 $$
 
 ## Step 3: WT contact reconstruction
