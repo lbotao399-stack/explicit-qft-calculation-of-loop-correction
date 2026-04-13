@@ -67,23 +67,19 @@ $$
 
 又因为
 $$
-\Psi_{\rm raw}^i=c_\psi\,\Psi^i,
+\Psi_{\rm raw}^i=-2i\,\Psi^i,
 \qquad
-F_{\rm raw}=c_f\,F,
-\qquad
-c_\psi=-2i,
-\qquad
-c_f=-2\sqrt2 i,
+F_{\rm raw}=-2\sqrt2\,i\,F,
 $$
 所以 normalized coefficients 为
 $$
-a=c_\psi\,a_{\rm raw}=-2i\,a_{\rm raw},
+a=-2i\,a_{\rm raw},
 $$
 
 $$
-b_L=\frac{c_f}{c_\psi}\,b_{L,{\rm raw}}=\sqrt2\,b_{L,{\rm raw}},
+b_L=-2\sqrt2\,i\,b_{L,{\rm raw}},
 \qquad
-b_R=\frac{c_f}{c_\psi}\,b_{R,{\rm raw}}=\sqrt2\,b_{R,{\rm raw}}.
+b_R=-2\sqrt2\,i\,b_{R,{\rm raw}}.
 $$
 
 ## 3. Three-coefficient ansatz
@@ -131,45 +127,184 @@ $$
 }
 $$
 
-## 4. AWI master equation
+## 4. Ordered probe-amputated extraction
 
+seed coefficient 不从裸的
 $$
-\mathcal O_{LM}(y):=\operatorname{Tr}(LM)(y),
+\langle \partial\!\cdot\!J,\Tr(LM)\rangle
+$$
+读取。
+
+先把输入写成 ordered open product
+$$
+\mathcal O_{LM}(y_1,y_2):=L(y_1)M(y_2),
 \qquad
-L,M\in\mathbb B_0.
+y_1\to y,\ y_2\to y\ \text{only at the end}.
+$$
+
+定义 probe-amputated correlator
+$$
+\mathcal G_{LM\to N}(x;y_1,y_2;z)
+:=
+\left\langle
+\big[\partial_\mu J^\mu_{Q_1}(x)\,\mathcal O_{LM}(y_1,y_2)\big]^{1\text{-loop}}_{\rm conn,loc}
+\,
+\mathbb P_N(z)
+\right\rangle_0.
+$$
+
+其中 \(\mathbb P_N\) 满足
+$$
+\boxed{
+\langle N(y)\,\mathbb P_M(z)\rangle_0
+=
+\delta_{N,M}\,\delta^{(4)}(y-z).
+}
+$$
+
+## 5. Amputated probes
+
+对 \(\Psi_{\rm raw}^k=\Psi^k_+\) 输出：
+$$
+\boxed{
+\mathbb P_{\Psi,k}(z)
+:=
+-\frac{i}{g_{\rm YM}^2}\,
+\partial_z^{+\dot\alpha}\bar\Psi_{k\dot\alpha}(z).
+}
 $$
 
 $$
-\big[\partial_\mu J^\mu_{Q_1}(x),\mathcal O_{LM}(y)\big]_{\rm loc}^{1\text{-loop}}
+\boxed{
+\langle \Psi_+^{i\,a}(y)\,\mathbb P_{\Psi,k}^{\,b}(z)\rangle_0
 =
--\delta^{(4)}(x-y)
-\Big(
-Q_1^{[1\to2]}\mathcal O_{LM}
+\delta^i_k\,\delta^{ab}\,\delta^{(4)}(y-z).
+}
+$$
+
+对 \(F_{\rm raw}=f^{\rm raw}_{++}\) 输出：
+$$
+\boxed{
+\mathbb P_F(z):=
+\frac{1}{2g_{\rm YM}^2}\,f^{\rm raw}_{--}(z).
+}
+$$
+
+$$
+\langle f^{\rm raw\,a}_{\alpha\beta}(y)\,
+f^{\rm raw\,b}_{\gamma\delta}(z)\rangle_0
+=
+g_{\rm YM}^2\,\delta^{ab}\,
+\big(
+\epsilon_{\alpha\gamma}\epsilon_{\beta\delta}
 +
-\frac{g_{\rm YM}^2}{8\pi^2}
-Q_{1,\triangle}^{[2\to1]}\mathcal O_{LM}
-\Big).
+\epsilon_{\alpha\delta}\epsilon_{\beta\gamma}
+\big)\,
+\delta^{(4)}(y-z),
 $$
 
-在 page 上真正要抽取的是
+从而
 $$
-\text{triangle local remainder}
+\boxed{
+\langle F_{\rm raw}^a(y)\,\mathbb P_F^{\,b}(z)\rangle_0
 =
--\delta^{(4)}(x-y)\,
-\frac{g_{\rm YM}^2}{8\pi^2}\,
-\mathfrak q_{1,\triangle}(L,M).
+\delta^{ab}\,\delta^{(4)}(y-z).
+}
 $$
 
-对 raw seed pages，对应写法是
+bare-probe language 与 inverse 2-point amputation 等价：
 $$
-\text{triangle local remainder}^{\rm raw}
+\mathcal A_{\Psi_+}^{\dot\alpha}
 =
--\delta^{(4)}(x-y)\,
-\frac{g_{\rm YM}^2}{8\pi^2}\,
-\mathfrak q_{1,\triangle}^{\rm raw}(L,M).
+-\frac{i}{g_{\rm YM}^2}\,\partial_z^{+\dot\alpha}
+\quad \text{acting on } \bar\Psi_{k\dot\alpha}(z),
 $$
 
-## 5. Universal local triangle integral
+$$
+\mathcal A_F
+=
+\frac{1}{2g_{\rm YM}^2}
+\quad \text{acting on } f^{\rm raw}_{--}(z).
+$$
+
+$$
+\boxed{
+\text{Use probe-amputated legs from the start.}
+}
+$$
+
+## 6. Coefficient extraction equations
+
+`XX -> Psi_raw`:
+$$
+\mathcal G_{ij|k}(x;y_1,y_2;z)
+:=
+\left\langle
+\big[\partial_\mu J^\mu_{Q_1}(x)\,X_i(y_1)X_j(y_2)\big]^{1\text{-loop}}_{\rm conn,loc}
+\,
+\mathbb P_{\Psi,k}(z)
+\right\rangle_0.
+$$
+
+$$
+\boxed{
+\mathcal G_{ij|k}(x;y,z)
+=
+-\frac{g_{\rm YM}^2}{8\pi^2}\,
+a_{\rm raw}\,
+\epsilon_{ijk}\,
+\delta^{(4)}(x-y)\,
+\delta^{(4)}(y-z).
+}
+$$
+
+`X Psi_raw -> F_raw`:
+$$
+\mathcal G^{L}_{i}{}^{j}(x;y_1,y_2;z)
+:=
+\left\langle
+\big[\partial_\mu J^\mu_{Q_1}(x)\,X_i(y_1)\Psi^j_+(y_2)\big]^{1\text{-loop}}_{\rm conn,loc}
+\,
+\mathbb P_F(z)
+\right\rangle_0.
+$$
+
+$$
+\boxed{
+\mathcal G^{L}_{i}{}^{j}(x;y,z)
+=
+-\frac{g_{\rm YM}^2}{8\pi^2}\,
+b_{L,{\rm raw}}\,
+\delta_i^{\,j}\,
+\delta^{(4)}(x-y)\,
+\delta^{(4)}(y-z).
+}
+$$
+
+`Psi_raw X -> F_raw`:
+$$
+\mathcal G^{R}_{i}{}^{j}(x;y_1,y_2;z)
+:=
+\left\langle
+\big[\partial_\mu J^\mu_{Q_1}(x)\,\Psi^j_+(y_1)X_i(y_2)\big]^{1\text{-loop}}_{\rm conn,loc}
+\,
+\mathbb P_F(z)
+\right\rangle_0.
+$$
+
+$$
+\boxed{
+\mathcal G^{R}_{i}{}^{j}(x;y,z)
+=
+-\frac{g_{\rm YM}^2}{8\pi^2}\,
+b_{R,{\rm raw}}\,
+\delta_i^{\,j}\,
+\delta^{(4)}(x-y)\,
+\delta^{(4)}(y-z).
+}
+$$
+
+## 7. Universal local triangle integral
 
 $$
 [\Delta(x)^2]_{\rm R}
@@ -217,7 +352,7 @@ I_{\triangle}^{\rm loc}(x)=\frac{1}{8\pi^2}\delta^{(4)}(x).
 }
 $$
 
-## 6. Planar lift after seed stage
+## 8. Planar lift after seed stage
 
 $$
 Q_{1,\triangle}^{[2\to1]}\operatorname{Tr}(L_1L_2\cdots L_n)

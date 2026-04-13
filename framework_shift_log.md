@@ -60,3 +60,10 @@
   - `J_{F{\rm -branch}}^{\rm raw}` 全局改写成 `-(1/g_{\rm YM}^2)f^{\rm raw}_{\alpha\beta}\sigma^{\mu\,\beta\dot\beta}\bar\Lambda_{\dot\beta}`；
   - `F`-output seed pages 统一使用 `\partial_\mu J_{F{\rm -branch},+}^{\mu,{\rm raw}}\to iF_{\rm raw}\delta^{(4)}` 的 operational collapse；
   - universal local triangle kernel 固定为 `I_\triangle^{\rm loc}(x)=\frac{1}{8\pi^2}\delta^{(4)}(x)`，并与 DR 口径对齐。
+- 同日继续固定 `n4_ordinary_space` 的 seed extraction 口径：
+  - seed coefficient 不再从裸的 `\langle \partial\!\cdot\!J,\Tr(LM)\rangle` 读取；
+  - 改用 ordered open product `\mathcal O_{LM}(y_1,y_2)` 与 single-output probe-amputated correlator `\mathcal G_{LM\to N}(x;y_1,y_2;z)`；
+  - `XX\to\Psi_{\rm raw}` 页统一采用 `\mathbb P_{\Psi,k}=-(i/g_{\rm YM}^2)\partial^{+\dot\alpha}\bar\Psi_{k\dot\alpha}`；
+  - `X\Psi_{\rm raw}\to F_{\rm raw}` 与 `\Psi_{\rm raw}X\to F_{\rm raw}` 两页统一采用 `\mathbb P_F=(1/2g_{\rm YM}^2)f^{\rm raw}_{--}`；
+  - raw-to-normalized conversion 固定为 `a=-2i\,a_{\rm raw}` 与 `b_{L,R}=-2\sqrt2\,i\,b_{L,R,\rm raw}`；
+  - bare-probe language 只作为 inverse two-point amputation 的等价重述，不再单独作为项目主定义。

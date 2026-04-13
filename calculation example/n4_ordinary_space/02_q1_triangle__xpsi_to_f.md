@@ -9,10 +9,12 @@ status: seed_setup
 
 # Q_1 triangle seed: \(X_i\Psi^j\to F\)
 
-## Step 1: Operator / current / vertex
+## Step 1: Ordered input / current / vertex / probe
 
 $$
-\mathcal O_{i,{\rm raw}}{}^j(y):=\operatorname{Tr}(X_i\Psi_{\rm raw}^j)(y).
+\mathcal O_{i,{\rm raw}}{}^j(y_1,y_2):=X_i(y_1)\Psi^j_+(y_2),
+\qquad
+y_1\to y,\ y_2\to y\ \text{only at the end}.
 $$
 
 $$
@@ -22,9 +24,7 @@ b_{L,{\rm raw}}\,\delta_i^{\,j}F_{\rm raw}.
 $$
 
 $$
-Q_1^{[1\to2]}\mathcal O_{i,{\rm raw}}{}^j(y)
-=
-\operatorname{Tr}\!\big(X_i\,Q_1\Psi_{\rm raw}^j\big)(y).
+Q_1^{[1\to2]}(X_i\Psi_+^j)\sim X_iXX.
 $$
 
 $$
@@ -38,32 +38,44 @@ f^{\rm raw}_{+\beta}\,
 $$
 
 $$
-\langle \Lambda_+^a(z)\,\bar\Lambda_{\dot\beta}^{\,b}(x)\rangle_0
-=
-i\,g_{\rm YM}^2\,\delta^{ab}\,\partial_{+\dot\beta}\Delta(z-x).
-$$
-
-$$
 V_{X\Lambda\Psi}.
 $$
 
-## Step 2: Triangle local remainder
-
 $$
-\partial_\mu J^\mu_{Q_1}(x)\cdot \mathcal O_{i,{\rm raw}}{}^j(y)
-\quad\leadsto\quad
-\text{connected one-loop triangle local remainder}.
-$$
-
-$$
-\big[\partial_\mu J^\mu_{Q_1}(x),\mathcal O_{i,{\rm raw}}{}^j(y)\big]^{1\text{-loop}}_{\rm tri,loc}
+\mathbb P_F(z):=
+\frac{1}{2g_{\rm YM}^2}\,f^{\rm raw}_{--}(z),
+\qquad
+\langle F_{\rm raw}^a(y)\,\mathbb P_F^{\,b}(z)\rangle_0
 =
--\delta^{(4)}(x-y)\,
-\frac{g_{\rm YM}^2}{8\pi^2}\,
-b_{L,{\rm raw}}\,\delta_i^{\,j}\operatorname{Tr}(F_{\rm raw})(y).
+\delta^{ab}\,\delta^{(4)}(y-z).
 $$
 
-Operational local collapse:
+## Step 2: Probe-amputated local correlator
+
+$$
+\mathcal G^{L}_{i}{}^{j}(x;y_1,y_2;z)
+:=
+\left\langle
+\big[\partial_\mu J^\mu_{Q_1}(x)\,X_i(y_1)\Psi^j_+(y_2)\big]^{1\text{-loop}}_{\rm conn,loc}
+\,
+\mathbb P_F(z)
+\right\rangle_0.
+$$
+
+ordered limit \(y_1,y_2\to y\):
+$$
+\boxed{
+\mathcal G^{L}_{i}{}^{j}(x;y,z)
+=
+-\frac{g_{\rm YM}^2}{8\pi^2}\,
+b_{L,{\rm raw}}\,
+\delta_i^{\,j}\,
+\delta^{(4)}(x-y)\,
+\delta^{(4)}(y-z).
+}
+$$
+
+Operational collapse used inside this seed:
 $$
 \partial_\mu^x
 J_{F{\rm -branch},+}^{\mu,{\rm raw}}(x)
@@ -71,6 +83,12 @@ J_{F{\rm -branch},+}^{\mu,{\rm raw}}(x)
 \xrightarrow[\langle \bar\Lambda\,\Lambda_+\rangle_0]{{\rm local}}
 \quad
 i\,F_{\rm raw}(x)\,\delta^{(4)}(x-z).
+$$
+
+$$
+Q_1^{[1\to2]}(X_i\Psi_+^j)\sim X_iXX
+\qquad\Longrightarrow\qquad
+\text{the single-letter probe }\mathbb P_F\text{ kills tree contamination.}
 $$
 
 ## Step 3: Reduced coefficient form
@@ -86,21 +104,19 @@ I_\triangle^{\rm loc}(x-y).
 $$
 
 $$
-\Psi_{\rm raw}^j=-2i\,\Psi^j,
-\qquad
-F_{\rm raw}=-2\sqrt2 i\,F
-\qquad\Longrightarrow\qquad
-b_L=\frac{c_f}{c_\psi}\,b_{L,{\rm raw}}=\sqrt2\,b_{L,{\rm raw}}.
+b_L=-2\sqrt2\,i\,b_{L,{\rm raw}}.
 $$
 
 ## Step 4: To compute
 
 $$
 \boxed{
-\text{remaining task: use the collapse }
-\partial_\mu J_{F{\rm -branch},+}^{\mu,{\rm raw}}\to iF_{\rm raw}\delta^{(4)}
-\text{ and evaluate the ordered raw Wick contraction with }V_{X\Lambda\Psi}
-\text{ in the amputated correlator that uses a conjugate probe to receive }F_{\rm raw},
-\text{ to read off }b_{L,{\rm raw}}.
+\text{remaining task: evaluate }
+\mathcal G^{L}_{i}{}^{j}
+\text{ by the ordered raw Wick contraction of }
+J_{F{\rm -branch}}^{(2,3)\mu,\rm raw}
+\text{ with }V_{X\Lambda\Psi}
+\text{ and the amputated probe }\mathbb P_F,
+\text{ then read off }b_{L,{\rm raw}}.
 }
 $$

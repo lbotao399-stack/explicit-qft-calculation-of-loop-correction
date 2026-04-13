@@ -7,9 +7,9 @@
 1. `01_q1_triangle__xx_to_psi.md`
    - raw seed coefficient \(a_{\rm raw}\) for \(X_iX_j\to \Psi_{\rm raw}^k\), then \(a=-2i\,a_{\rm raw}\)
 2. `02_q1_triangle__xpsi_to_f.md`
-   - raw seed coefficient \(b_{L,{\rm raw}}\) for \(X_i\Psi_{\rm raw}^j\to F_{\rm raw}\), then \(b_L=\sqrt2\,b_{L,{\rm raw}}\)
+   - raw seed coefficient \(b_{L,{\rm raw}}\) for \(X_i\Psi_{\rm raw}^j\to F_{\rm raw}\), then \(b_L=-2\sqrt2\,i\,b_{L,{\rm raw}}\)
 3. `03_q1_triangle__psix_to_f.md`
-   - raw seed coefficient \(b_{R,{\rm raw}}\) for \(\Psi_{\rm raw}^jX_i\to F_{\rm raw}\), then \(b_R=\sqrt2\,b_{R,{\rm raw}}\)
+   - raw seed coefficient \(b_{R,{\rm raw}}\) for \(\Psi_{\rm raw}^jX_i\to F_{\rm raw}\), then \(b_R=-2\sqrt2\,i\,b_{R,{\rm raw}}\)
 
 ## Closure / lift pages
 

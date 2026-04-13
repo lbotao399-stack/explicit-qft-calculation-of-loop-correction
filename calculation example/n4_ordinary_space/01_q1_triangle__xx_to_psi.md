@@ -9,7 +9,7 @@ status: seed_setup
 
 # Q_1 triangle seed: \(X_iX_j\to\Psi^k\)
 
-## Step 1: Operator / current / vertex
+## Step 1: Ordered input / current / vertex / probe
 
 $$
 \boxed{
@@ -18,7 +18,9 @@ Q_1:=Q_-^4.
 $$
 
 $$
-\mathcal O_{ij}(y):=\operatorname{Tr}(X_iX_j)(y).
+\mathcal O_{ij}(y_1,y_2):=X_i(y_1)X_j(y_2),
+\qquad
+y_1\to y,\ y_2\to y\ \text{only at the end}.
 $$
 
 $$
@@ -26,7 +28,7 @@ $$
 $$
 
 $$
-Q_1^{[1\to2]}\mathcal O_{ij}(y)=0.
+Q_1^{[1\to2]}(X_iX_j)=0.
 $$
 
 $$
@@ -61,29 +63,45 @@ V_{A X\bar X}.
 $$
 
 $$
-\langle X_i^a(x)\,\bar X^{j\,b}(y)\rangle_0
-=
-g_{\rm YM}^2\,\delta_i^{\ j}\,\delta^{ab}\,\Delta(x-y),
+\mathbb P_{\Psi,k}(z)
+:=
+-\frac{i}{g_{\rm YM}^2}\,
+\partial_z^{+\dot\alpha}\bar\Psi_{k\dot\alpha}(z),
 \qquad
-\langle A_\mu^a(x)\,A_\nu^b(y)\rangle_0
+\langle \Psi_+^{i\,a}(y)\,\mathbb P_{\Psi,k}^{\,b}(z)\rangle_0
 =
-g_{\rm YM}^2\,\delta^{ab}\,\delta_{\mu\nu}\,\Delta(x-y).
+\delta^i_k\,\delta^{ab}\,\delta^{(4)}(y-z).
 $$
 
-## Step 2: Triangle local remainder
+## Step 2: Probe-amputated local correlator
 
 $$
-\partial_\mu J^\mu_{Q_1}(x)\cdot \mathcal O_{ij}(y)
-\quad\leadsto\quad
-\text{connected one-loop triangle local remainder}.
+\mathcal G_{ij|k}(x;y_1,y_2;z)
+:=
+\left\langle
+\big[\partial_\mu J^\mu_{Q_1}(x)\,X_i(y_1)X_j(y_2)\big]^{1\text{-loop}}_{\rm conn,loc}
+\,
+\mathbb P_{\Psi,k}(z)
+\right\rangle_0.
 $$
 
+ordered limit \(y_1,y_2\to y\):
 $$
-\big[\partial_\mu J^\mu_{Q_1}(x),\mathcal O_{ij}(y)\big]^{1\text{-loop}}_{\rm tri,loc}
+\boxed{
+\mathcal G_{ij|k}(x;y,z)
 =
--\delta^{(4)}(x-y)\,
-\frac{g_{\rm YM}^2}{8\pi^2}\,
-a_{\rm raw}\,\epsilon_{ijk}\operatorname{Tr}(\Psi_{\rm raw}^k)(y).
+-\frac{g_{\rm YM}^2}{8\pi^2}\,
+a_{\rm raw}\,
+\epsilon_{ijk}\,
+\delta^{(4)}(x-y)\,
+\delta^{(4)}(y-z).
+}
+$$
+
+$$
+Q_1^{[1\to2]}(X_iX_j)=0
+\qquad\Longrightarrow\qquad
+\text{this seed has no tree contamination.}
 $$
 
 ## Step 3: Reduced coefficient form
@@ -99,8 +117,6 @@ I_\triangle^{\rm loc}(x-y).
 $$
 
 $$
-\Psi_{\rm raw}^k=-2i\,\Psi^k
-\qquad\Longrightarrow\qquad
 a=-2i\,a_{\rm raw}.
 $$
 
@@ -108,10 +124,12 @@ $$
 
 $$
 \boxed{
-\text{remaining task: perform the ordered raw Wick contraction of }
-J_{\psi{\rm -branch}}^{(2,3)\mu,{\rm raw}}
+\text{remaining task: evaluate }
+\mathcal G_{ij|k}
+\text{ by the ordered raw Wick contraction of }
+J_{\psi{\rm -branch}}^{(2,3)\mu,\rm raw}
 \text{ with }V_{A X\bar X}
-\text{ inside the amputated correlator that uses a conjugate probe to receive }\Psi_{\rm raw}^k,
-\text{ and reduce the local part to }a_{\rm raw}\,I_\triangle^{\rm loc}(x-y).
+\text{ and the amputated probe }\mathbb P_{\Psi,k},
+\text{ then read off }a_{\rm raw}.
 }
 $$
