@@ -92,7 +92,28 @@ $$
 \langle f_{--}(x)f_{++}(y)\rangle_0=2K(x-y).
 $$
 
-## Step 2: Wick contraction
+## Step C: local WT extraction
+
+$$
+\sum_{\rm diagrams}
+\big[\partial_\mu J_-^\mu(x)\cdot \mathcal O(y)\big]_{\rm local}
+$$
+
+$$
+\text{keep only local pieces matching }
+-\delta^{(4)}(x-y)\,Q_-^{\rm cl}\mathcal O(y).
+$$
+
+$$
+\text{discard }
+\text{nonlocal},
+\qquad
+\text{improvement},
+\qquad
+\gamma_\mu S^\mu\text{-channel},
+\qquad
+R\text{-current/trace-channel}.
+$$
 
 ![](../../assets/step4/calculation_triangles/n1_q1_fpp_expw_barlambda_triangle_pair.png)
 
@@ -136,14 +157,14 @@ f_{++}^A\,
 \delta_{Q_-}^{\rm cl}\!\big(e^{w\cdot\nabla_+}\bar\lambda_{\dot\beta}^B\big)(y).
 $$
 
-## Step 3: WT contact reconstruction
+### Target-matching regrouping
 
 $$
 T_L^{AB}(w)
 +
 T_R^{AB}(w)
 \Longrightarrow
-\delta^{(4)}(x-y)\,
+-\delta^{(4)}(x-y)\,
 \delta_{Q_-}^{\rm cl}\mathcal O_{w,\dot\beta}^{AB}(y).
 $$
 
@@ -151,13 +172,13 @@ $$
 t^0(\cdots)=\Gamma_{\rm cl}.
 $$
 
-## Step 4: Regularization and consistency condition
+## Step D: consistency closure
 
 $$
-\big\langle \partial_\mu J^\mu_-(x)\,\mathcal O_{w,\dot\beta}^{AB}(y)\big\rangle_{\rm PV,loc}
+\sum_{\rm diagrams}
+\big[\partial_\mu J_-^\mu(x)\cdot \mathcal O(y)\big]_{\rm local}
 =
-\delta^{(4)}(x-y)\,
-\delta_{Q_-}^{\rm cl}\mathcal O_{w,\dot\beta}^{AB}(y).
+-\delta^{(4)}(x-y)\,Q_-^{\rm cl}\mathcal O(y),
 $$
 
 $$
@@ -166,9 +187,10 @@ $$
 
 $$
 \boxed{
-\text{no new pure-SYM gauge-invariant local remainder in the }\partial_\mu J^\mu_-\text{ channel}
-}.
+\text{pure }N=1\ \text{SYM divergence channel closes as a WT contact term only.}
+}
 $$
+
 
 ## Step 5: Simplification examples
 

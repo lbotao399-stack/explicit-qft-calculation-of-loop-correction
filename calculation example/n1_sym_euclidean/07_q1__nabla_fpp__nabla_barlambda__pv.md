@@ -87,7 +87,28 @@ $$
 \langle f_{--}(x)f_{++}(y)\rangle_0=2K(x-y).
 $$
 
-## Step 2: Wick contraction
+## Step C: local WT extraction
+
+$$
+\sum_{\rm diagrams}
+\big[\partial_\mu J_-^\mu(x)\cdot \mathcal O(y)\big]_{\rm local}
+$$
+
+$$
+\text{keep only local pieces matching }
+-\delta^{(4)}(x-y)\,Q_-^{\rm cl}\mathcal O(y).
+$$
+
+$$
+\text{discard }
+\text{nonlocal},
+\qquad
+\text{improvement},
+\qquad
+\gamma_\mu S^\mu\text{-channel},
+\qquad
+R\text{-current/trace-channel}.
+$$
 
 ![](../../assets/step4/calculation_triangles/n1_q1_nabla_fpp_nabla_barlambda_triangle_pair.png)
 
@@ -118,14 +139,14 @@ T_{R,\dot\alpha\dot\beta\dot\gamma}^{AB}(x,y)
 \kappa_A\,\operatorname{ad}_{\bar\lambda_{\dot\beta}}\bar\lambda_{\dot\gamma}^B(y).
 $$
 
-## Step 3: WT contact reconstruction
+### Target-matching regrouping
 
 $$
 T_{L,\dot\alpha\dot\beta\dot\gamma}^{AB}
 +
 T_{R,\dot\alpha\dot\beta\dot\gamma}^{AB}
 \Longrightarrow
-\delta^{(4)}(x-y)\,
+-\delta^{(4)}(x-y)\,
 \delta_{Q_-}^{\rm cl}\mathcal O_{\dot\alpha\dot\beta\dot\gamma}^{AB}(y).
 $$
 
@@ -133,13 +154,13 @@ $$
 t^0(\cdots)=\Gamma_{\rm cl}.
 $$
 
-## Step 4: Regularization and consistency condition
+## Step D: consistency closure
 
 $$
-\big\langle \partial_\mu J^\mu_-(x)\,\mathcal O_{\dot\alpha\dot\beta\dot\gamma}^{AB}(y)\big\rangle_{\rm PV,loc}
+\sum_{\rm diagrams}
+\big[\partial_\mu J_-^\mu(x)\cdot \mathcal O(y)\big]_{\rm local}
 =
-\delta^{(4)}(x-y)\,
-\delta_{Q_-}^{\rm cl}\mathcal O_{\dot\alpha\dot\beta\dot\gamma}^{AB}(y).
+-\delta^{(4)}(x-y)\,Q_-^{\rm cl}\mathcal O(y),
 $$
 
 $$
@@ -148,16 +169,17 @@ $$
 
 $$
 \boxed{
-\text{no new pure-SYM gauge-invariant local remainder in the }\partial_\mu J^\mu_-\text{ channel}
-}.
+\text{pure }N=1\ \text{SYM divergence channel closes as a WT contact term only.}
+}
 $$
+
 
 ## Step 5: Simplification examples
 
 $$
 \big\langle \partial_\mu J^\mu_-(x)\,\operatorname{Tr}\!\big((\nabla_{+\dot\alpha}f_{++})\nabla_{+\dot\beta}\bar\lambda_{\dot\gamma}\big)(y)\big\rangle_{\rm conn,loc}
 \Longrightarrow
-\delta^{(4)}(x-y)\,
+-\delta^{(4)}(x-y)\,
 \delta_{Q_-}^{\rm cl}\operatorname{Tr}\!\big((\nabla_{+\dot\alpha}f_{++})\nabla_{+\dot\beta}\bar\lambda_{\dot\gamma}\big)(y).
 $$
 
