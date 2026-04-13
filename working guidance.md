@@ -8,7 +8,16 @@ $$
 Q^{\mathrm{Loop}}O:=Q(O)_{\mathrm{bare}}-Q_0(O).
 $$
 
-`Q(O)_{bare}` 是对组合算符每个 letter 代入不模去运动方程的 raw SUSY 变换，`Q_0(O)` 是再代入 EOM 后得到的完全 onshell / classical SUSY 变换。
+`Q(O)_{bare}` 是不模去运动方程的 raw SUSY 变换，`Q_0(O)` 是对应的 classical / onshell 项。
+
+当前 project 的规范实现不再直接从“raw letter 逐项代入”出发，而统一改成：
+
+- 用 SUSY current insertion 写 Ward identity；
+- 在含 current 动量 `q` 的振幅里抽取局域项；
+- 用 classical / formal-4d collapse 代表 `Q_0`；
+- 用 `t^0` Taylor subtraction 之后留下的 evanescent local term 代表 `Q_{\mathrm{bare}}-Q_0`。
+
+因此，`Q^{\mathrm{Loop}}O` 的实际计算口径统一写成 `susy current diagram / anomaly Ward identity`。
 
 ## 理论输入
 
@@ -19,6 +28,7 @@ $$
 - `theory/n1_sym_euclidean/`
 - `theory/n1_general/`
 - `theory/n4_sym/`
+- `theory/superspace_approach/`
 
 ## 计算文档格式
 
@@ -48,49 +58,47 @@ $$
 
 ## 标准 Step 模板
 
-### Step 1: Operator set up
+### Step 1: Operator / current / vertex
 
-在动量空间引入含总动量 `p` 的外线算符 `O(p)`，并直接写出它的 momentum-space form。
+写出待研究的外线算符 `O(p)`、SUSY current 或其 divergence、相关 interaction vertex、传播子、以及当前正规化约定。
 
-### Step 2: Act supercharge Q on O (off-shell)
+### Step 2: Wick contraction
 
-默认选定 `Q_-`，按莱布尼兹律作用到 `O` 上，并代入不模去运动方程的 SUSY 变换，得到
+写出 current insertion 与 operator insertion 的相关 contraction。
+
+这一步只保留真正进入 anomaly sector 的图与其振幅表达式。
+
+### Step 3: Local part = Taylor subtraction
+
+对发散子图做 `t^0` 局域抽取。
+
+`Q_{\mathrm{bare}}-Q_0` 的差在这里实现为：
 
 $$
-Q(O)_{\mathrm{bare}}.
+\text{local Taylor part}
+\;-\;
+\text{classical / formal-4d collapse}.
 $$
 
-### Step 3: Subtracting tree level Q
+### Step 4: DR integral
 
-写出
+对 Step 3 剩下的 evanescent local term 施加 DR / DRED-style 计算，完成极限并得到有限局域系数。
 
-$$
-Q^{\mathrm{Loop}}O=Q(O)_{\mathrm{bare}}-Q_0(O).
-$$
+### Step 5: Final local anomaly
 
-若 tree level `Q_0(O)=0`，则直接写成同一步骤中的最终式。
+写出最终的 momentum-space local term、`q\to0` 极限下的 `Q^{\mathrm{Loop}}O`、以及对应的 local operator form。
 
-### Step 4: All related Feynman Diagrams (Wick contractions) at this order
-
-只放该阶所有相关 Wick contraction 图。
-
-当前可以暂时使用占位图；后续统一替换成更好的规范绘图。
-
-### Step 5: Estimate the Feynman Diagrams
-
-只写图对应的 Wick contraction、传播子、顶点、内部动量分配、以及由费曼规则得到的表达式。
-
-### Step 6: Do the regularization and Estimate the ultimate result
-
-从 Step 5 的表达式出发施加正规化并完成积分，写出最终 momentum-space result 与 local operator result。
-
-后续统一目标是 DR；但对尚未重算的历史文件，先保留其原正规化并按同一 Step 模板整理。
-
-### Step 7: Simplification examples
+### Step 6: Simplification examples
 
 这一步可选。
 
-仅当当前算例额外做了 single-trace、特定表示、特定群论化简、或其他非主结果所必需的化简时，才把这些内容放入 Step 7。
+仅当当前算例额外做了 single-trace、特定表示、特定群论化简、或其他非主结果所必需的化简时，才把这些内容放入这一步。
+
+## 旧文件说明
+
+旧的 component-style 计算页里仍可能保留“先写 raw SUSY，再减 classical SUSY”的老编号。
+
+后续新写或重写的文件，统一优先采用上面的 `current / Ward identity / local term extraction` 版本。
 
 ## 原始材料
 

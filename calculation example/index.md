@@ -19,13 +19,18 @@
 - `n1_sym_euclidean/`
   - 当前全部显式算例都在这里。
 - `n1_general/`
-  - 预留给一般 `N=1` 理论的显式算例。
+  - 一般 `N=1` 理论的显式算例，当前已加入 Konishi anomaly 的 DR current-diagram 版本。
 - `n4_sym/`
   - 已加入 `N=4 SYM` 的 `Q_1(f_{++}f_{++})` 及其 generating-kernel PV / DR 笔记。
 - `archive/grouped_archive/`
   - 旧的主题打包稿，只作归档与对照。
 
 ## 当前算例
+
+### N=1 General
+
+1. `n1_general/01_q1__psi_plus_phidag__dr.md`
+   - `Q_1(O)（\frac{1}{\sqrt2}\psi_+\phi^\dagger） / DR`
 
 ### N=1 SYM (Euclidean)
 

@@ -66,6 +66,12 @@ d=4-2\epsilon,\qquad
 $$
 
 $$
+k^\mu=\bar k^\mu+\widehat k^\mu,\qquad
+k_{\alpha\dot\alpha}=\bar k_{\alpha\dot\alpha},\qquad
+\bar k^2=k^2-\widehat k^2.
+$$
+
+$$
 \int_\Delta:=\int_0^1dx\,dy\,dz\,\delta(1-x-y-z).
 $$
 
@@ -74,6 +80,11 @@ $$
 \frac{\widehat\ell^2}{(\ell^2+\Delta)^3}\Big|_{\rm loc}
 =
 -\frac{1}{32\pi^2}.
+$$
+
+$$
+\widehat k^2\ \longrightarrow\ \frac{d-4}{d}\,k^2
+=-\frac{2\epsilon}{4-2\epsilon}\,k^2.
 $$
 
 $$

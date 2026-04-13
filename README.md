@@ -1,6 +1,12 @@
 # Explicit QFT Calculation of Loop correction
 
-这个目录把当前已有材料按“理论输入 / 显式计算 / 原始归档”三层整理，尽量只重排，不改写原始推导。
+这个目录把当前已有材料按“理论输入 / 显式计算 / 原始归档”三层整理。
+
+当前规范计算口径已经切到：
+
+- `Q_{\rm bare}-Q_0` 的定义不变；
+- 实现方式统一改成 `susy current diagram / anomaly Ward identity`；
+- 局域 anomaly 统一通过 `t^0` local-term extraction 与 DR / DRED-style evanescent term 读取。
 
 ## 目录说明
 
@@ -42,4 +48,4 @@
 ## 备注
 
 - 原始图像链接已经改成相对 `source_archive/` 的路径，拆分后的算例文件仍可直接对照图。
-- 当前材料里同时保留了 DR 与 PV 的计算记录；后续若统一到 DR，可以在现有分类下继续往更高 loop 或别的 SUSY 理论扩展。
+- 当前材料里同时保留了 DR 与 PV 的计算记录；后续主线统一优先写 DR / DRED-style。
