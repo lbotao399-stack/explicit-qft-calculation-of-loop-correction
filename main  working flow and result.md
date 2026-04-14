@@ -86,104 +86,36 @@ $$
 
 最后改写成 position-space 的 local operator。
 
-## 当前核心结论
+## 当前固定原则
 
-### 1. 1-loop anomaly 的核心来自局域项，不来自 naive ordinary triangle
+### 1. anomaly 只从局域项读取
 
-当前材料表明，ordinary triangle 的 `q\to0` 极限本身通常不给 anomaly。
+ordinary triangle 的 naive `q\to0` 极限不作为 anomaly 的定义。
 
-真正留下有限系数的是
+工作上只保留
 
 $$
 t^0(\text{diagram})
 \;-\;
-\text{classical collapse}
+\text{classical / formal-4d collapse}
 $$
 
-之后的 evanescent local term。
+之后留下的局域项。
 
-### 2. `Q_1(f_{++}\bar\lambda_{\dot\alpha})` 已给出稳定基准
+### 2. current insertion 是统一入口
 
-这个基准算例已经在 DR 与 PV 两种正规化下给出一致的 1-loop local anomaly，最紧凑写法是
-
-$$
-\mathcal I\!\left[
-\mathcal O_{\dot\beta}^{(1)\,\mathrm{loc}}(p)
-\right]
-=
--\frac{g^2}{16\pi^2}\,
-p_{+\dot\beta}\,
-\mathscr B(p),
-$$
-
-等价地
+后续 calculation 若重新建立，统一从
 
 $$
-\mathcal O_{\dot\beta}^{(1)\,\mathrm{loc}}(x)
-=
-\frac{g^2}{16\pi^2}\,
-i\partial_{+\dot\beta}\mathscr B(x).
+\partial_\mu J^\mu
 $$
 
-### 3. Konishi anomaly 已并入同一工作流
+的 Ward identity 插入出发，而不再回到旧的“逐字母 raw 代入”主线。
 
-对一般 `N=1` chiral matter 的基础算例
+### 3. component track 与 superspace track 分开
 
-$$
-K_+(p)=\frac{1}{\sqrt2}\int_k \psi_+(k)\phi^\dagger(p-k),
-$$
-
-当前已经按同一套 `Q_{\mathrm{bare}}-Q_0` / local term extraction 工作流改写成 current-diagram 形式，并得到
-
-$$
-Q_-^{\mathrm{Loop}}
-\left(\frac{1}{\sqrt2}\psi_+\phi^\dagger\right)(p)
-=
-\frac{g^2}{16\pi^2}\,\bar\lambda^2(p).
-$$
-
-其 anomaly 来自
-
-$$
-t^0(T_1+T_2)
-\;-\;
-\text{classical / formal-4d collapse},
-$$
-
-而不是 ordinary triangle 的 naive `q\to0`。
-
-### 4. `Q_1(f_{++}f_{++})` 与更高导数算例仍保持局域
-
-当前已有的
-
-- `Q_1(f_{++}f_{++})`
-- `Q_1(f_{++}\nabla_{+\dot\gamma}\bar\lambda_{\dot\alpha})`
-- `Q_1((\nabla_{+\dot\alpha}f_{++})f_{++})`
-- `Q_1((\nabla_{+\dot\alpha}f_{++})\bar\lambda_{\dot\beta})`
-- `Q_1((\nabla_{+\dot\alpha}f_{++})\nabla_{+\dot\beta}\bar\lambda_{\dot\gamma})`
-
-都支持同一个判断：1-loop anomaly 的最终结果仍是 local operator。
-
-其中单迹形式的一个干净例子是
-
-$$
-Q_1\,\operatorname{Tr}(f_{++}f_{++})(x)
-=
-\frac{g^2}{16\pi^2}\,
-i\partial_{+\dot\beta}\operatorname{Tr}\big(f_{++}\widetilde\lambda^{\dot\beta}\big)(x).
-$$
-
-### 5. 生成函数统一了一串带导数算符
-
-对
-
-- `Q_1(f_{++}e^{w\cdot\nabla}f_{++})`
-- `Q_1(e^{w\cdot\nabla}f_{++}f_{++})`
-- `Q_1(f_{++}e^{w\cdot\nabla}\bar\lambda_{\dot\beta})`
-
-已经得到 compact generating kernels。
-
-`w=0` 与 `O(w)` 展开会退化回已经单独算过的低导数结果。
+- component current-diagram track：作为 coefficient 与 local basis 的 source of truth
+- superspace track：只做 dictionary 与 bookkeeping，不回写 component divergence pages
 
 ## 当前文件分工
 
@@ -193,11 +125,6 @@ $$
 - `theory/n4_sym/`：`N=4 SYM` 的 component 输入；
 - `theory/n4_ordinary_space/`：`N=4 SYM` 在 ordinary-space AWI 路线下的 no-derivative bi-letter kernel master pages；
 - `theory/superspace_approach/`：独立的 superspace 公式体系；
-- `calculation example/n1_sym_euclidean/`：`N=1 SYM (Euclidean)` 显式算例；
-- `calculation example/n1_general/`：一般 `N=1` 理论显式算例，当前已加入 Konishi anomaly 的 DR current-diagram 版本；
-- `calculation example/n4_sym/`：`N=4 SYM` 显式算例；
-- `calculation example/n4_ordinary_space/`：`N=4 SYM` no-derivative bi-letter triangle seed pages；
-- `source_archive/`：完整原始材料。
 
 ## 当前双轨组织
 
@@ -209,8 +136,8 @@ $$
   - 只做 operator dictionary 与 anomaly multiplet bookkeeping
   - 不把 superspace anomaly equation 直接回写到 component divergence pages
 
-## 下一步最自然的延伸
+## 后续重建原则
 
-- 先继续完成 component diagram pages 的封口与 DR 化；
-- 再单独推进 superspace track，不再和 component coefficient 混写；
-- 用同一套 current-diagram 口径继续做更一般的 `N=1` matter / superpotential 算符。
+- 若重新建立 calculation pages，先固定 operator、classical target、local basis 与 relevant current branches。
+- 具体积分与正规化只在 theory / workflow 已冻结后再写。
+- 所有新 calculation 文档都应被视为可重建产物，而不是当前仓库的 source of truth。

@@ -1,81 +1,30 @@
 # framework shift log
 
-## 2026-04-12
+## 2026-04
 
-- repository `lbotao399-stack/explicit-qft-calculation-of-loop-correction` 已切为 public。
-- project 主计算口径从 “raw \(Q_{\rm bare}-Q_0\) 逐字母代入” 固定为
-  - susy current diagram
-  - anomaly Ward identity
-  - local-term extraction
-- `n1_general` 的 Konishi 页已作为 current-divergence 模板保留。
-- `n1_sym_euclidean` 当前工作约定固定为：
-  - `Q_1 \equiv Q_-`，不做新的 basis / rescaling / phase；
-  - current 取 properly-normalized canonical / WZ-gauge supercurrent；
-  - current 的 \(f\bar\lambda\) 系数与 raw SUSY 中 \(\delta\lambda=c_f f\varepsilon+\cdots\) 的 \(c_f\) 做 coefficient matching；
-  - 工作插入统一取 \(\partial_\mu J^\mu_-\)；
-  - current vertex 必须同时展开为 \(J^{(2)}\sim (\partial A)\bar\lambda\) 与 \(J^{(3)}\sim [A,A]\bar\lambda\)；
-  - `f` propagator 的 spinor selection rule 固定为只有 `f_{--}` 支能直接 contract 到 external `f_{++}`；
-  - pure SYM 的这组页面不再把 \(\partial_\mu J^\mu\) 读成独立 anomaly channel；
-  - `Q_1(f_{++}f_{++})` 页面只要求短程 contraction 重建 classical covariant variation；
-  - 在该 channel 中一致性条件固定为 \(t^0(\cdots)-\Gamma_{\rm cl}=0\)。
-- `n1_sym_euclidean` 暂不把以下对象作为独立 anomaly-channel insertion：
-  - \(X_{\rm gf}+X_{c\bar c}\)
-  - \(X_{\rm Fierz}\)
-  - improvement terms
-  - conjugate current \(\bar J\)
-  - 对 `Q_1(f_{++}f_{++})` 这一族页面的 auxiliary \(D\)-piece
-- 下一步：
-  - `Q_1(f_{++}f_{++}) / DR` 已改成 pure-SYM divergence consistency page
-  - 下一步继续把同族 `n1_sym_euclidean` 计算页依次迁成 current-divergence 版 Step 2 / Step 3 / Step 4
-- 同日补充完成：
-  - `01/02/04/05/06/07/08/09/10/11` 已全部迁成 `Q_-` 显式投影 + current-piece selection + WT contact reconstruction 版；
-  - 第一轮迁移时，对带 `\nabla` 与 `e^{w\cdot\nabla_+}` 的 slot 先用过 `\delta_{Q_-}^{\rm cl}` active-slot placeholder；
-  - `03_q1__fpp_fpp__dr.md` 继续作为 pure-SYM divergence consistency 的基准页。
-- 同日继续固定：
-  - `n1_sym_euclidean` 全组页面改用单一系数 `\kappa_A`；
-  - 统一采用 `\delta_{Q_-}^{\rm cl}f_{++}=2\kappa_A\nabla_{+\dot\beta}\bar\lambda^{\dot\beta}`；
-  - `\nabla_{+\dot\alpha}` 与 `e^{w\cdot\nabla_+}` 的 Step 1 target 已全部改成 explicit tree-level formula；
-  - pure-SYM divergence channel 的 Step 2/3/4 结构保持不变，仍以 `t^0(\cdots)-\Gamma_{\rm cl}=0` 收束。
-- 同日再整理：
-  - component / superspace 正式拆成 two-track organization；
-  - component track source of truth 固定到 `theory/n1_sym_euclidean/component_diagram_master_targets.md`；
-  - freeze 拍板为 `Q_1\equiv Q_-`, `\kappa_A=i/2`, `\partial_\mu J_-^\mu` WT-only；
-  - superspace track 明确降级为 second-track cross-check，不再回写 component divergence pages。
-- 同日封口完成：
-  - `01` 到 `11` 全部改成统一的 page-closing template；
-  - 各页 Step C 只保留 target-matching 的 local WT pieces；
-  - 各页 Step D 统一写成 `\sum_{\rm diagrams}[\partial_\mu J_-^\mu\cdot \mathcal O]_{\rm local}=-\delta^{(4)}Q_-^{\rm cl}\mathcal O` 与 `t^0(\cdots)-\Gamma_{\rm cl}=0`；
-  - `component track status = sealed`。
-- 次日开启：
-  - 新建 `n4_ordinary_space` track；
-  - 目标改写为 no-derivative bi-letter universal pair kernel；
-  - 当前阶段只开 `{a,b_L,b_R}` 三个 seed pages，不从 “all operators” 直接展开。
-  - 随后改为：先用 localized Noether identity 推 raw off-shell current；
-  - `J_{\psi{\rm -branch}}^{\rm raw}` 与 `J_{F{\rm -branch}}^{\rm raw}` 成为 seed pages 的真正 current input；
-  - bare action vertices 固定为 `V_{A X\bar X}` 与 `V_{X\Lambda\Psi}`，旧 `V_{AXX}`, `V_{X\Psi\bar\Lambda}` 降为 effective shorthand；
-  - raw triangle remainder 只在最终一步归一到 normalized pair-kernel `{a,b_L,b_R}`。
-- 同日继续固定 `n4_ordinary_space` 的 exact convention block：
-  - free propagators 统一采用 Feynman gauge ordinary-space normalization；
-  - self-dual projector 固定为 `F_{\rho\sigma}(\sigma^{\rho\sigma})_{\alpha\beta}=2f^{\rm raw}_{\alpha\beta}`；
-  - `J_{F{\rm -branch}}^{\rm raw}` 全局改写成 `-(1/g_{\rm YM}^2)f^{\rm raw}_{\alpha\beta}\sigma^{\mu\,\beta\dot\beta}\bar\Lambda_{\dot\beta}`；
-  - `F`-output seed pages 统一使用 `\partial_\mu J_{F{\rm -branch},+}^{\mu,{\rm raw}}\to iF_{\rm raw}\delta^{(4)}` 的 operational collapse；
-  - universal local triangle kernel 固定为 `I_\triangle^{\rm loc}(x)=\frac{1}{8\pi^2}\delta^{(4)}(x)`，并与 DR 口径对齐。
-- 同日继续固定 `n4_ordinary_space` 的 seed extraction 口径：
-  - seed coefficient 不再从裸的 `\langle \partial\!\cdot\!J,\Tr(LM)\rangle` 读取；
-  - 改用 ordered open product `\mathcal O_{LM}(y_1,y_2)` 与 single-output probe-amputated correlator `\mathcal G_{LM\to N}(x;y_1,y_2;z)`；
-  - `XX\to\Psi_{\rm raw}` 页统一采用 `\mathbb P_{\Psi,k}=-(i/g_{\rm YM}^2)\partial^{+\dot\alpha}\bar\Psi_{k\dot\alpha}`；
-  - `X\Psi_{\rm raw}\to F_{\rm raw}` 与 `\Psi_{\rm raw}X\to F_{\rm raw}` 两页统一采用 `\mathbb P_F=(1/2g_{\rm YM}^2)f^{\rm raw}_{--}`；
-  - raw-to-normalized conversion 固定为 `a=-2i\,a_{\rm raw}` 与 `b_{L,R}=-2\sqrt2\,i\,b_{L,R,\rm raw}`；
-  - bare-probe language 只作为 inverse two-point amputation 的等价重述，不再单独作为项目主定义。
-- 同日再次修正 `n4_ordinary_space` 的问题缩约：
-  - 否定了“全体 no-derivative bi-letter 统一压成 universal `2->1` kernel”的假设；
-  - `Q_1(\Tr(F_{\rm raw}F_{\rm raw}))` 被确认为第一真实 seed；
-  - `FF` 输入的一圈局域余项必须落在导数二字母基底 `{ \mathcal K_{F\bar\Lambda}^{\rm raw}, \mathcal K_{\Psi X}^{\rm raw} }`；
-  - `FF` 页只保留五类 cubic triangle：`J_F^{(3)} x V_AAA`, `J_F^{(3)} x V_{A\Lambda\bar\Lambda}`, `J_\psi^{(3)} x V_AAA`, `J_\psi^{(3)} x V_{AX\bar X}`, `J_\psi^{(3)} x V_{A\Psi\bar\Psi}`；
-  - 旧 `XX->Psi`, `XPsi->F`, `PsiX->F` 页面全部降级为 deferred legacy pages，等待 input-by-input basis classification 完成后再重新判定其角色。
-- 同日继续完成 `FF` 页的 five-class sum reduction：
-  - 采用先前 `n4_sym` 的 DR local result 作为 cross-check；
-  - 五类 cubic triangles 的总和压到 `Q_1^{1-loop}\Tr(F_{\rm raw}F_{\rm raw})` 的两维 raw basis 上；
-  - 得到 `c_{F\bar\Lambda}^{\rm raw}=iC_A/2`；
-  - 得到 `c_{\Psi X}^{\rm raw}=\sqrt2\,C_A/2`；
-  - 因而当前 `n4_ordinary_space` 的第一条已闭合输入是 `FF`。
+### 1. Main shift
+
+project 主计算口径从
+
+- raw \(Q_{\rm bare}-Q_0\) 逐字母代入
+
+切到
+
+- susy current diagram
+- anomaly Ward identity
+- local-term extraction
+
+### 2. Frozen principles
+
+- `Q_{\rm bare}-Q_0` 的概念定义保留不变；
+- 实现上统一通过 `\partial_\mu J^\mu` 插入与局域 Ward 项抽取；
+- component current-diagram track 作为 source of truth；
+- superspace track 只做 dictionary / bookkeeping；
+- coefficient、selection rule、local basis 先固定，再写具体积分；
+- naive ordinary triangle 的 `q\to0` 不作为 anomaly 读取方式。
+
+### 3. Current repository policy
+
+- 当前仓库只保留 notation、theory input、workflow definition；
+- calculation pages、原始计算归档、枚举渲染脚本与中间结果不再作为当前仓库内容；
+- 后续若重建 calculation，必须以现有 theory 与 guidance 文件为入口重新生成。

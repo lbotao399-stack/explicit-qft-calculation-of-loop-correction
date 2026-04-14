@@ -32,7 +32,7 @@ $$
 
 ## 计算文档格式
 
-所有具体计算继续放在 `calculation example/`，并先按理论分桶。
+若后续重新建立具体计算，先按理论分桶单独开 calculation pages。
 
 每个具体计算文件的标题统一采用：
 
@@ -92,9 +92,9 @@ $$
 
 ## 旧文件说明
 
-旧的 component-style 计算页里仍可能保留“先写 raw SUSY，再减 classical SUSY”的老编号。
+旧 calculation pages 已整体移除。
 
-后续新写或重写的文件，统一优先采用上面的 `current / Ward identity / local term extraction` 版本。
+后续若重写，统一优先采用上面的 `current / Ward identity / local term extraction` 版本。
 
 ## Current-divergence implementation rules
 
@@ -220,7 +220,3 @@ $$
 $$
 
 因此 Step 2 中，只有 `J_-` 里能真正 feed into external `f_{++}` 的那一支才保留。
-
-## 原始材料
-
-未经整理的总笔记、原始图、旧尝试版本，继续保留在 `source_archive/`。
